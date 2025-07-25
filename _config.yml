@@ -11,6 +11,18 @@ telegram_username: capitalgainru
 locale: ru
 timezone: Asia/Omsk
 show_excerpts: true
+# GitHub Pages defaults
+lsi: false
+safe: true
+source: "./"
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+# End of GitHub Pages
 defaults:
   - scope:
       path: ""
@@ -22,13 +34,4 @@ sass:
   style: compressed
 plugins:
   - jekyll-feed
-  - jektex
-jektex:
-  cache_dir: ".jektex-cache"
-  ignore: ["*.xml"]
-  silent: false
-  macros:
-    - ["\\Q", "\\mathbb{Q}"]
-    - ["\\C", "\\mathbb{C}"]
-exclude:
-  - .jektex-cache/
+  - jekyll-seo-tag
