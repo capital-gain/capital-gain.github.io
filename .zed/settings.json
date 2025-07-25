@@ -1,0 +1,18 @@
+{
+  "preferred_line_length": 80,
+
+  "file_types": {
+    "Liquid": ["html"]
+  },
+
+  "languages": {
+    "Liquid": {
+      "format_on_save": "off",
+
+      "prettier": {
+        "allowed": true,
+        "plugins": ["@shopify/prettier-plugin-liquid"]
+      }
+    }
+  }
+}

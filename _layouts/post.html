@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <header class="post-header">
+    {%- if page.title %}
+      <h1 class="post-title p-name" itemprop="name headline">
+        {{ page.title }}
+      </h1>
+    {%- endif %}
+    <p class="post-meta">
+      <time
+        class="dt-published"
+        datetime="{{ page.date | date_to_xmlschema }}"
+        itemprop="datePublished"
+      >
+        {{ page.date | date: "%d.%m.%Y" }}
+      </time>
+      {% if page.categories and page.categories.size > 0 %} •
+        {{ page.categories | join: ", " }}
+      {% endif %}
+    </p>
+  </header>
+
+  {%- if page.excerpt and page.excerpt != content %}
+    <p class="post-excerpt">{{ page.excerpt }}</p>
+  {%- endif %}
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if page.tags and page.tags.size > 0 %}
+  <div class="post-tags">
+      {% for tag in page.tags %}
+      <span class="post-tag">#{{ tag }}</span>
+      {% endfor %}
+  </div>
+  {% endif %}
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

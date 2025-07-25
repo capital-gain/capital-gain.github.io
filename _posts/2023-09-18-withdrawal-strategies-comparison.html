@@ -1,0 +1,450 @@
+---
+layout: post
+status: publish
+published: true
+title: 'Жизнь с капитала на российском рынке: сравнение стратегий'
+author:
+  display_name: Дмитрий Никитенко
+  login: Dmitry
+  email: dima.nikitenko@gmail.com
+  url: https://capital-gain.ru
+author_login: Dmitry
+author_email: dima.nikitenko@gmail.com
+author_url: https://capital-gain.ru
+excerpt: Кроме тех стратегий вывода денег из портфеля на текущие расходы, что были
+  представлены в первой статье (SWR и правила Гайтона/Клингера), есть и многие другие.
+  Мы с вами тоже могли бы изобрести парочку. Но пока не будем, а лучше сравним как
+  восемь стратегий из уже существующих ведут себя на российском рынке.
+wordpress_id: 15838
+wordpress_url: https://capital-gain.ru/?p=15838
+date: '2023-09-18 07:00:00 +0600'
+date_gmt: '2023-09-18 04:00:00 +0600'
+categories:
+- Авторские тексты
+tags:
+- Пенсия
+- Риск
+- Инвестирование
+- Планирование
+comments:
+- id: 7036
+  author: Дмитрий Никитенко
+  author_email: dima.nikitenko@gmail.com
+  author_url: https://capital-gain.ru
+  date: '2023-09-19 04:52:18 +0600'
+  date_gmt: '2023-09-19 01:52:18 +0600'
+  content: |-
+    Дополнительно посчитал новую схему изъятий, предложенную в комментариях в Телеграме - использовать для вывода средств только депозиты, доля которых будет восстанавливаться при ежегодной ребалансировке. Результаты до медианы почти такие же, как при использовании &laquo;правила управления портфелем&raquo; из статьи Гайтона/Клингера (&plusmn;1-2%), но 95 процентиль и максимумы становятся чуть лучше (по моей догадке потому, что в случаях экстремального роста активов мы так позволяем им чуть дольше расти, расходуя депозиты до ребалансировки). В общем, главный плюс тут в удобстве, а не в результатах.
+
+    <a href="/assets/images/wd-period-15-frontloading-0-deposits-withdrawals-only.png" target="_blank" rel="noopener ugc"><img src="/assets/images/wd-period-15-frontloading-0-deposits-withdrawals-only.png" alt="" style="max-width: 100%;" /></a>
+---
+<p><!-- wp:paragraph --></p>
+<p>Для этого я дописал свой код из <a href="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/" data-type="post" data-id="15572">первой статьи</a>, добавив в него новые стратегии и расширив данные в прошлое, и сравнил результаты всех этих стратегий между собой.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:luckywp/tableofcontents /--></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Расширение данных</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Набор активов и их распределение в портфеле относительно прошлой статьи никак не изменились - это портфель из 50% российских акций, 30% российских облигаций, 10% рублевых депозитов и 10% золота.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>В прошлый раз в качестве акций и облигаций я использовал данные по основным индексам МосБиржи полной доходности, которые начинаются в 2003 году. Строго говоря, MCFTR начинается в 2005, а до этого данные МосБиржи по нему совпадают с ценовым индексом IMOEX, но из-за небольших в то время дивидендов это не столь важно.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Для этой статьи данные будут начинаться в конце сентября 1997 года. До начала индекса MCFTR используется его ценовая версия IMOEX. Вместо индекса ОФЗ RGBITR в качестве облигаций до 2003 года я использовал данные активного <a rel="noreferrer noopener" href="https://www.first-am.ru/individuals/fund/opif-obligatsiy-fond-ros-obligatsiy/" data-type="URL" data-id="https://www.first-am.ru/individuals/fund/opif-obligatsiy-fond-ros-obligatsiy/" target="_blank">фонда российских облигаций от УК &laquo;Первая&raquo;</a> (цены пая, т. е. после вычета комиссий), они начинаются 6 января 1997 года. Раньше фонд назывался более звучно - &laquo;Илья Муромец&raquo;. В те времена фонд управлялся УК &laquo;Тройка Диалог&raquo; Рубена Варданяна, а затем <a href="https://www.kommersant.ru/doc/2061347" data-type="URL" data-id="https://www.kommersant.ru/doc/2061347">достался</a> УК Сбербанка. После даты начала данных RGBITR по-прежнему используется этот индекс.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Первый прирост в анализируемых портфелях будет за октябрь 1997 года (конец октября / конец сентября), потому что IMOEX начинается 22 сентября, и первый общий полный месяц данных среди всех имеющихся рядов - это октябрь 1997 года. По остальным активам данные изначально уходили в 90-е, так что их не пришлось склеивать с какими-то другими.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Стоит также упомянуть, что в 1 января 1998 года в России прошла деноминация с коэффициентом 1000:1 - за 1 новый рубль давали 1000 старых, сбережения россиян и цены в магазинах уменьшились соответственно. Поэтому значения курса рубля к доллару до 1998 года поделены на 1000. Курс используется только для конвертации долларового ряда данных фьючерса на золото с COMEX в рубли.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":16362,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/wd-data-1.png" target="_blank" rel="noopener"><img src="/assets/images/wd-data-1.png" alt="" class="wp-image-16362"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16363,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/wd-underwater.png" target="_blank" rel="noopener"><img src="/assets/images/wd-underwater.png" alt="" class="wp-image-16363"/></a></figure>
+<p><!-- /wp:image --><br />
+<figcaption class="blocks-gallery-caption wp-element-caption">Все изображения кликабельны.</figcaption>
+</figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:gallery {"imageCrop":false,"linkTarget":"_blank","linkTo":"media","sizeSlug":"full"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default"><!-- wp:image {"id":16364,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-cpi.png" target="_blank" rel="noopener"><img src="/assets/images/wd-cpi.png" alt="" class="wp-image-16364"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16367,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-correlations.png" target="_blank" rel="noreferrer noopener"><img src="/assets/images/wd-correlations.png" alt="" class="wp-image-16367"/></a></figure>
+<p><!-- /wp:image --></figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:paragraph --></p>
+<p>В итоге данные для анализа расширились примерно на 5 лет в прошлое, и скользящих 15-летних интервалов с шагом в месяц стало в два раза больше, чем в прошлой статье - 131. К тому же в статистику были включены такие события второй половины 90-х годов как гиперинфляция (рост цен до 40% за месяц) и <a rel="noreferrer noopener" href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B8%D0%B7%D0%B8%D1%81_%D0%B2_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_(1998)#%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D0%B5%D1%84%D0%BE%D0%BB%D1%82_%D0%B8_%D0%BE%D0%B1%D0%B5%D1%81%D1%86%D0%B5%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%80%D1%83%D0%B1%D0%BB%D1%8F" data-type="URL" data-id="https://ru.wikipedia.org/wiki/%D0%AD%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B8%D0%B7%D0%B8%D1%81_%D0%B2_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_(1998)#%D0%A2%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D0%B5%D1%84%D0%BE%D0%BB%D1%82_%D0%B8_%D0%BE%D0%B1%D0%B5%D1%81%D1%86%D0%B5%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D1%80%D1%83%D0%B1%D0%BB%D1%8F" target="_blank">дефолт по ГКО</a>. Думаю, никто не станет утверждать, что эти 26 лет были легкой прогулкой.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>С расширением данных заманчивой кажется идея проверить не только 15-летние, но и 20-летние периоды, каких будет 71. Но я отбросил её по причине того, что в этом случае старшие интервалы начинаются в 2003 году, из-за чего мы потеряли бы показательные с точки зрения риска последовательности доходностей периоды, начинающиеся незадолго до кризиса 2008 года. Если их отбросить, результаты в части сохранения стоимости портфелей и сумм изъятий станут близкими к 100% даже в худших из 20-летних периодов, но это скорее самообман из-за недостаточной длины данных, чем закономерность, на которую стоит рассчитывать. Для этого анализа ценее иметь больше разных условий начала жизни с капитала, чем более длинные периоды.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Стратегии изъятий</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>В этой статье мы с вами сравним целых <strong>восемь</strong> стратегий изъятий, две из которых уже видели в прошлой. Для начала я кратко опишу суть новых. Первыми разберем более стабильные стратегии, в которых сумма расходов меняется небыстро, а затем будет блок стратегий, которые полностью или частично зависят от происходяшего на рынке.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Примечание 1. Авторы стратегий обычно применяют ассоциированные с ними правила ежегодно, а не ежемесячно, как делается в моем анализе, поэтому там, где это нужно, я масштабирую годовые правила в месячные. Например, если надо увеличить ежегодную сумму изъятия на 10% (в 1,1 раза), я увеличу ежемесячную на 1,1 ^ (1 / 12) &asymp; 1,00797, что даст ту же скорость изменений на 10% в год (1,00797 ^ 12 &asymp; 1,1), но более плавно.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Примечание 2. Основная причина, по которой я использую ежемесячные изъятия и, соответственно, ежемесячную индексацию и применение правил - это российская инфляция. Если индексировать ежегодно, в реальном выражении график сумм изъятий становится похож на пилу - в промежутках между индексацией они снижаются на величину инфляции, а затем резко возрастают до нового уровня. Особенно ближе к началу данных, когда инфляция была выше. Учитывая, что цены в магазинах растут каждый день, а не раз в год, справедливо индексировать чаще.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Примечание 3. Все стратегии используют <a rel="noreferrer noopener" href="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_upravlenia_portfelem" data-type="URL" data-id="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_upravlenia_portfelem" target="_blank">правило управления портфелем</a> для финансирования расходов и ежегодную ребалансировку.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">SWR (или &laquo;постоянная сумма&raquo;)</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Эта стратегия вам <a rel="noreferrer noopener" href="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Bezopasnaa_stavka_izatij_safe_withdrawal_rate_SWR" data-type="URL" data-id="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Bezopasnaa_stavka_izatij_safe_withdrawal_rate_SWR" target="_blank">уже знакома</a>, повторяться не буду.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Правила Гайтона/Клингера</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Стратегия представляет собой совокупность правил поверх обычной стратегии SWR, которые я <a rel="noreferrer noopener" href="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_inflacii" data-type="URL" target="_blank">уже описал</a> в предыдущей статье.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Target Percentage Adjustment</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Можно криво перевести как корректировка под целевой процент. Придумана Дэвидом Золтом и <a rel="noreferrer noopener" href="https://www.financialplanningassociation.org/article/journal/JAN13-how-achieve-higher-safe-withdrawal-rate-target-percentage-adjustment" data-type="URL" data-id="https://www.financialplanningassociation.org/article/journal/JAN13-how-achieve-higher-safe-withdrawal-rate-target-percentage-adjustment" target="_blank">опубликована</a> в Journal of Financial Planning в 2013 году. Идея стратегии заключается в том, что основной причиной неудачных исходов стратегий на основе &laquo;постоянной суммы&raquo; является безусловная индексация суммы изъятия на инфляцию, что и делает её &laquo;постоянной&raquo;.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Если же предложить схему отказа от индексации в некоторых случаях, это позволит либо увеличить шансы на успех (неисчерпание капитала до конца жизни), либо использовать более высокую изначальную ставку изъятия, не увеличив при этом шансы на досрочное исчерпание капитала. Так можно получить изначально более высокую сумму изъятий ценой последующего отказа от её индексации на &laquo;медвежьих рынках&raquo;, и за счет этого изначального повышения суммы потерять в покупательной способности не больше, чем предлагают другие стратегии с динамическими расходами.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Иными словами, мы переносим возможные повышения суммы изъятия сверх инфляции в начало периода расходования капитала, а затем она либо индексируется на инфляцию полностью (в большинстве случаев), либо индексируется частично (иногда), чтобы контролировать скорость уменьшения капитала.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>По расчётам автора на американских данных эффективность стратегии, выраженная как увеличение изначальной безопасной ставки изъятий на единицу снижения покупательной способности сумм изъятий, даже выше, чем у правил Гайтона/Клингера, что нам предстоит проверить на данных российских.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Сама стратегия работает так - мы заранее определяем срок пенсии, например, 45 лет, и составляем <a href="/assets/images/Zolt-Table-3.jpg" data-type="URL" data-id="https://www.financialplanningassociation.org/sites/default/files/styles/750/public/2021-04/JAN13-Zolt-Table-3.jpg?itok=UFnGpyBB" target="_blank" rel="noreferrer noopener">таблицу (график)</a> изъятий из портфеля, используя четыре параметра - начальная сумма капитала и ставка изъятия, ожидаемая инфляция и доходность портфеля. Последняя подбирается так, чтобы капитала хватило на весь ожидаемый срок пенсии (в последнем году остается 0).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>По данным этой таблицы в каждом году (в нашем случае месяце, ведь данные месячные) определяется <strong>целевой процент</strong> (target percentage) - это просто текущая ставка изъятия, т. е. сколько мы вывели из портфеля / текущая расчетная сумма капитала. По мере приближения к концу срока плана целевой процент должен приближаться к 100%, если ваша цель - проесть весь капитал. Но можно запланировать и сколько-нибудь оставить, в таком случае сокращения расходов будут случаться чаще.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Далее начинается самое интересное. <strong>Корректировкой</strong> (adjustment) автор называет то, как сокращается реальная сумма изъятия в зависимости от того, как <em>текущая</em> ставка вывода средств согласуется с <em>целевой</em> по нашему графику. Если она превышает целевую, то <em>предварительная</em> сумма вывода (предыдущая сумма, увеличенная на изменение ИПЦ за предыдущий период), уменьшается на выбранный процент или же на полный размер изменения ИПЦ в этом периоде. Вы сами выбираете на сколько уменьшать сумму изъятия - на 2%, 3%, 4% или на весь прирост ИПЦ. Чем больше будет снижение, тем выше может быть выбрана изначальная ставка, но и больше будет потенциальное снижение покупательной способности.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Какой вариант вы бы не выбрали, сумма изъятия при этом не может уменьшаться в номинальном выражении. Например, если инфляция за период была 1%, а согласно своему варианту стратегии при превышении целевого процента вы уменьшаете сумму изъятия на 2%, то в этом периоде она уменьшится только на 1%. В случае дефляции действия тоже могут быть разными - сумму изъятия можно уменьшить на размер дефляции, а можно оставить как есть. По данным автора более эффективен вариант без уменьшения суммы изъятия при дефляции.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Эту стратегию довольно тяжело сравнивать с другими, потому что здесь много произвольных параметров. Сам автор пишет, что для сравения с правилами Гайтона/Клингера подходит вариант его стратегии, в котором в случае превышения целевого процента мы уменьшаем индексацию в текущем периоде на на минимум из двух значений: ИПЦ или 2%.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>В своей реализации я использую именно этот вариант корректировки, срок для графика целевых процентов 45 лет, ожидаемую инфляцию 4%, доходность портфеля 7,158%/г при изначальной ставке изъятия 4%/г. Такая комбинация параметров уменьшает капитал в последнем месяце 45-го года до нуля.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Наверняка эта стратегия показалась вам сложной (мне тоже). Теперь можно выдохнуть, дальше будут очень простые.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Kitces Ratchet</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Автор стратегии - Майкл Китсес, он предложил её в <a rel="noreferrer noopener" href="https://www.kitces.com/blog/the-ratcheting-safe-withdrawal-rate-a-more-dominant-version-of-the-4-rule/" data-type="URL" data-id="https://www.kitces.com/blog/the-ratcheting-safe-withdrawal-rate-a-more-dominant-version-of-the-4-rule/" target="_blank">своём блоге</a> как вариант улучшения правила 4% (обычной стратегии SWR), которое в хороших для пенсионера сценариях оставляет неиспользованными слишком много денег - портфель растет, а расходы в реальном выражении остаются прежними.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Ratchet переводится как храповик - это такой <a rel="noreferrer noopener" href="/assets/images/ratchet.jpg" data-type="URL" data-id="/assets/images/ratchet.jpg" target="_blank">механизм</a>, который позволяет вращение только в одну сторону, но не в обратную. Стратегия Китсеса предполгает периодическое увеличение суммы изъятия выше инфляции, но не предполагает её уменьшение, откуда и взялось название.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Правило простое - если текущая стоимость портфеля превысила изначальную на 50%, сумма изъятия после индексации на инфляцию увеличивается ещё на 10%. Чтобы не повышать расходы слишком быстро, операция повторяется не чаще одного раза в 3 года. Каждый раз мы сравниваем текущую сумму капитала с изначальной, а не с той, что была в момент последнего увеличения.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Я не нашел упоминания о том, надо ли сравнивать текущий капитал с изначальным в его номинальном или реальном выражении. В российских условиях высчитывать увеличения номинального капитала на 50%, когда инфляция в одном из месяцев была под 40%, и в то же время рынок летел в ад, выглядит странно, поэтому в своей реализации стратегии я повышаю траты на 10% только при увеличении капитала на 50% в реальном выражении.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Vanguard Dynamic Spending</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Простая стратегия от известной компании <a href="https://capital-gain.ru/posts/funds-history/#Poavlenie_indeksnyh_fondov" data-type="URL" data-id="https://capital-gain.ru/posts/funds-history/#Poavlenie_indeksnyh_fondov" target="_blank" rel="noreferrer noopener">Vanguard</a>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Сумма первого изъятия определяется по ставке аналогично стратегии SWR.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>В следующих периодах рассчитываются:<!-- wp:list {"ordered":true} -->
+<ol><!-- wp:list-item --></p>
+<li>увеличенная на инфляцию предыдущего периода прошлая сумма изъятия, так же как в SWR;</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>сумма изъятия по той же изначальной ставке, но уже от текущей рыночной стоимости портфеля;</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>минимальная сумма изъятия - сумма из п.1, уменьшенная на 2,5%;</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>максимальная сумма изъятия - сумма из п. 1, увеличенная на 5%;</li>
+<p><!-- /wp:list-item --></ol>
+<p><!-- /wp:list --></li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Очередная сумма изъятия определяется как рыночная из п. 2, но не меньше суммы в п. 3 и не больше суммы в п. 4.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Таким образом долосрочно мы берем от портфеля то, что позволяет нам взять рынок. Учитывая, что со временем он растёт, расти будет и сумма изъятий. Но краткосрочно мы сильно ограничиваем рыночную волатильность, потому что расходы меняются очень плавно - растут не быстрее, чем на 5% в год, и снижаются не быстрее, чем на 2,5% в год (в реальном выражении).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Эти проценты, по моему мнению, в Vanguard хитро подобрали так, чтобы рост с запасом успевал компенсировать снижение, учитывая, что мы используем прошлую сумму в п. 1, т. е. процесс у нас геометрический.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Подробнее об этой стратегии можно прочитать <a rel="noreferrer noopener" href="https://www.vanguardinvestor.co.uk/articles/latest-thoughts/retirement/flexible-approach-support-retirees-good-bad-times" data-type="URL" data-id="https://www.vanguardinvestor.co.uk/articles/latest-thoughts/retirement/flexible-approach-support-retirees-good-bad-times" target="_blank">на официальном сайте Vanguard</a>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Постоянный процент</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Переходим ко второму блоку стратегий, в которых сумма изъятий сильнее зависит от динамики рынка.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Самая простая из них - это вывод из портфеля фиксированного процента. Например, мы решаем выводить 4% ежегодно, и каждый год для определения следующей суммы изъятия текущую рыночную стоимость портфеля умножаем на 4%.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Если портфель упал на 50%, значит нужно будет тратить на 50% меньше, чем в прошлом году, и наоборот. Явной индексации на инфляцию в этой стратегии нет, она рассчитана на то, что фондовый рынок долгосрочно растёт быстрее инфляции. Пожалуй, главным плюсом стратегии является то, что ваши расходы будут сильно расти в позитивных сценариях вслед за ростом рынка, т. е. вы полнее используете накопленный капитал.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Пол и потолок</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Стратегия Floor &amp; Ceiling была <a rel="noreferrer noopener" href="https://finalytiq.co.uk/wp-content/uploads/2017/02/Conserving-Client-Portfolios-During-Retirement-Part-IV.pdf" data-type="URL" data-id="https://finalytiq.co.uk/wp-content/uploads/2017/02/Conserving-Client-Portfolios-During-Retirement-Part-IV.pdf" target="_blank">предложена</a> Уильямом Бенгеном в 2001 году. Представляет собой то же, что и постоянный процент, но устанавливается проиндексированный на инфляцию пол и потолок суммы изъятия (минимальный и максимальный лимиты).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Позволяем суммам изъятий расти вместе со стоимостью портфеля, но не более чем на 25% от сегодняшней стоимости (увеличенной на инфляцию) изначальной суммы изъятия.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Позволяем суммам изъятий снижаться вместе со стоимостью портфеля, но не более чем на 10% от сегодняшней стоимости изначальной суммы изъятия.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Значения пола и потолка можно выбирать любые, и чем они шире, тем больше стратегия будет похожа на &laquo;постоянный процент&raquo;.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3 class="wp-block-heading">Правило 95%</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Эту стратегию предложил Боб Клят в своей книге <a href="https://www.amazon.com/Work-Less-Live-More-Semi-Retirement/dp/1413307051">Work Less, Live More</a>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Как и в &laquo;постоянном проценте&raquo;, сумма вывода определяется по выбранной ставке от текущей рыночной стоимости портфеля. Например, 4%. Во второй и последующий год вы либо выводите из портфеля те же 4% от его текущей стоимости, либо 95% той суммы, что вы выводили в прошлом году, в зависимости от того какая сумма окажется больше.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>В итоге ваши расходы могут расти вместе с рынком, но снижаться будут не быстрее, чем на 5% в год. Явной индексации на инфляцию в стратегии тоже нет.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Критерии оценки стратегий</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>В этот раз мы используем чуть больше метрик для оценки успешности стратегий - кроме доли портфелей, в которых к концу периода осталось хоть что-то, посмотрим и на долю портфелей, сохранивших свою реальную изначальную стоимость, а также на волатильность сумм изъятий.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><strong>Успешность (остаток выше нуля), % попыток</strong> - количество попыток со стоимостью портфеля в конце периода > 0 / общее количество попыток. Попыткой считается один из скользящих 15-летних периодов с шагом в 1 месяц.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Успешность (остаток выше изначального), % попыток</strong> - количество попыток со стоимостью портфеля в конце периода &ge; изначальной стоимости * изменение ИПЦ за период попытки / общее количество попыток.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Сохранение покупательной способности (ПС) текущего капитала, %</strong> - <em>текущая</em> сумма капитала в одном из месяцев / (изначальная сумма капитала * изменение ИПЦ за период попытки);</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Сохранение покупательной способности (ПС) конечного капитала, %</strong> - <em>конечная</em> сумма капитала в последнем месяце периода / (изначальная сумма капитала * изменение ИПЦ за период попытки);</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Сохранение покупательной способности (ПС) сумм изъятий, %</strong> - <em>текущая</em> сумма изъятия в одном из месяцев / (изначальная сумма изъятия * изменение ИПЦ за период попытки);</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li><strong>Волатильность сумм изъятий, %/г</strong> - стандартное отклонение ежемесячных изменений сумм изъятий в ходе попытки, значение приведено к годовому.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Метрики сохранения покупательной способности капитала и сумм изъятий будут представлены в таблицах по процентилям - минимум (0-й), 5-ый, 25-ый, медиана (50-ый), 75-ый, 95-ый процентиль, максимум (100-й).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><mark>Отличием от прошлой статьи будет то, что статистика по сохранению покупательной способности изъятий будет посчитана не на конец периода, а по значениям во всех месяцах всех периодов (включая все промежуточные от первого до последнего месяца), что позволит увидеть распределение не только конечных исходов, но и что инвестору пришлось бы терпеть в ходе каждого из периодов.</mark> Это заменит собой блочные диаграммы из прошлой статьи, которых было бы слишком много, учитывая количество анализируемых стратегий. К метрикам успешности это не относится - они оценивают портфели по состоянию на конец периода. Сохранение ПС капитала оценим и по текущим, и по конечным значениям.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2 class="wp-block-heading">Анализ результатов</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Учитывая расширение данных, теперь мы можем посмотреть на поведение стратегий в 131 периоде длиной 15 лет с шагом в 1 месяц.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Стратегии Target Percentage Adjustment и правил Гайтона/Клингера дают возможность увеличить изначальную сумму изъятия по сравнению с той, что даёт нам выбрать обычная стратегия SWR, сохранив примерно тот же уровень выживаемости портфелей. Поэтому для них мы рассмотрим два варианта - по изначальной ставке изъятий 4% и по увеличенной на 20% ставке (4,8%).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Поскольку стратегии VDS и правило 95%, как и TPA, и ГК предполагают цепочки возможных снижений предыдущих сумм изъятий, для них тоже имеет смысл рассмотреть два варианта. В таблице слева все стратегии будут стартовать с 4%, а справа в этих 4 стратегиях начальная сумма изъятия будет увеличена на 20%.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":16512,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/wd-period-15-frontloading-0.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-frontloading-0-1024x1013.png" alt="" class="wp-image-16512"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16513,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/wd-period-15-frontloading-20.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-frontloading-20-1024x1013.png" alt="" class="wp-image-16513"/></a></figure>
+<p><!-- /wp:image --><br />
+<figcaption class="blocks-gallery-caption wp-element-caption">SWR = постоянная сумма. TPA = Target Percent Adjustment. KR = Kitces Ratchet. ГК = правила Гайтона/Клингера. VDS = Vanguard Dynamic Spending. ПП = постоянный процент. F&amp;C = пол и потолок. 95% = правило 95%. n = число периодов. wr = изначальная ставка изъятий, если стратегией не предусмотрена иная. frontloading = увеличение изначальной суммы изъятий для стратегий TPA, ГК, VDS, 95%. Изображения кликабельны.</figcaption>
+</figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:paragraph --></p>
+<p>Как читать результаты по процентилям в таблице?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Например, если в 5-ом процентиле для сумм изъятий значение 74%, значит 5% <em>времени</em> (случаев, месяцев в периоде) инвестору пришлось бы жить на 74% от изначальной суммы изъятия в реальном выражении <em>или меньше</em>. Иначе говоря, <em>вероятность</em> того, что расходы придётся урезать на 26% или больше составляет 5%.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Если в 50-ом процентиле (медиане) значение капитала 123%, то в половине из 15 лет капитал инвстора составлял до 123% от изначального размера с учетом инфляции, а в другой половине - больше этого значения.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Если в 95-м процентиле для сумм изъятий значение 199%, значит 95% времени (или с вероятностью 95%) инвестор жил бы на сумму до 199% от проиндексированной изначальной, или 5% времени - на сумму свыше 199% от изначальной.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Минимум и максимум - это одно конкретное значение, минимальное или максимальное среди всей выборки, т. е. самый плохой или самый хороший месяц.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Для лучшего понимания работы стратегий приведу три сводных графика изменения реальных сумм изъятий из портфелей и размера капитала за крайние 15-летние периоды и средний, на которых видно поведение всех стратегий. Слева период с 31.10.1997 по 31.10.2012, по центру - с 30.06.2002 по 30.06.2017, а справа - с 31.08.2008 по 31.08.2023.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":16436,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-left.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-left.png" alt="" class="wp-image-16436"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16437,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-center.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-center.png" alt="" class="wp-image-16437"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16438,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-right.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-right.png" alt="" class="wp-image-16438"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16439,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-left-capital.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-left-capital.png" alt="" class="wp-image-16439"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16440,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-center-capital.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-center-capital.png" alt="" class="wp-image-16440"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16441,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-right-capital.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-right-capital.png" alt="" class="wp-image-16441"/></a></figure>
+<p><!-- /wp:image --><br />
+<figcaption class="blocks-gallery-caption wp-element-caption">Вертикальные шкалы выражены как отношение текущей суммы изъятий или капитала к изначальной, проиндексированной на текущую инфляцию конкретного периода. Шкалы логарифмические.</figcaption>
+</figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:paragraph --></p>
+<p>И графики с вариантами стратегий TPA, ГК, VDS и правила 95% с 20%-ым увеличением изначальной суммы изъятия:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":16452,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-left-frontloading-20.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-left-frontloading-20.png" alt="" class="wp-image-16452"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16455,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-center-frontloading-20.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-center-frontloading-20.png" alt="" class="wp-image-16455"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16457,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-right-frontloading-20.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-right-frontloading-20.png" alt="" class="wp-image-16457"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16453,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-left-capital-frontloading-20.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-left-capital-frontloading-20.png" alt="" class="wp-image-16453"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16456,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-center-capital-frontloading-20.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-center-capital-frontloading-20.png" alt="" class="wp-image-16456"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":16458,"sizeSlug":"full","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-full"><a href="/assets/images/wd-period-15-right-capital-frontloading-20.png" target="_blank" rel="noopener"><img src="/assets/images/wd-period-15-right-capital-frontloading-20.png" alt="" class="wp-image-16458"/></a></figure>
+<p><!-- /wp:image --></figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:paragraph --></p>
+<p>Как уже говорилось, стратегии явно можно поделить на две категории: &laquo;более рыночные&raquo; и &laquo;более фиксированные&raquo;.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Первые точнее следуют за динамикой рынка, позволяя выводить максимальное количество денег в периоды бурного роста. Их основной особенностью является волатильность предполагаемых расходов, ведь они не так сильно ограничиваются правилами. Максимальную сумму при росте рынка выводить никто не заставляет, но вот при падении придется соответственно ужиматься, если хотите следовать такой стратегии. Возможный вариант - с излишков в жирные годы формировать резервы на время коррекций и кризисов.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Вторые, наоборот, пытаются стабилизировать расходы и делают это явно, они более предписывающие - всё это в разных ситуациях может быть как плюсом, так и минусом, и по-разному влиять на перечисленные в таблицах метрики.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Как видно по показателям успешности, ни одна из стратегий не завершилась преждевременно - деньги оставались во всех стратегиях до конца каждого из 131 периода, в том числе при увеличенных на 20% расходах в четырех стратегиях. И хоть мы и рассматриваем только довольно короткие периоды, учитывая то, через что проходили портфели на фоне регулярных многолетних изъятий, это уже впечатляет.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Более того, <mark>около трех четвертей портфелей спустя 15 лет сохраняют или превышают свою изначальную стоимость в реальном выражении</mark>. Из этого можно предположить, что <em>часто</em> капитала может не просто хватить на &laquo;стандартные&raquo; для таких исследований 30 лет или до конца жизни, но он с течением времени даже не будет уменьшаться.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Здесь стоит учитывать, что успешность сохранения реальной стоимости портфелей с увеличением периода анализа с 15 до 20, 30 и т. д. лет при использовании не слишком высокой (безопасной) ставки изъятия должна расти в сторону 100%, потому что снижение реальной стоимости капитала особенно заметно после первых лет начала изъятий, а затем она постепенно восстанавливается. Такое поведение видно и на <a rel="noreferrer noopener" href="https://capital-gain.ru/app/planning" data-type="URL" data-id="https://capital-gain.ru/app/planning" target="_blank">Монте-Карло симуляциях</a>.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Что интересно, результаты по успешности мало зависят от выбранной стратегии - по всем восьми они плюс-минус одинаковые. И даже старт с увеличенных на 20% расходов в стратегиях, которые дают такую опцию, не слишком-то повлиял на &laquo;вечность&raquo; портфелей.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>В то же время более детальная статистика распределения сохранения покупательной способности <em>конечного</em> капитала по процентилям показывает, что динамические стратегии в худших сценариях доходности портфеля значительно помогают сохранить его реальную стоимость в сравнении со стратегией вывода постоянной суммы, строго индексирующейся на инфляцию.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Эффект лучшего сохранения капитала в динамических стратегиях раскрывается со временем, что видно из аналогичной статистики по <em>текущему</em> капиталу, где прирост в процентных пунктах почти не наблюдается. Это значит, что краткосрочно на размер капитала больше влияет рынок (доходность портфеля в моменте), но долгосрочно сэкономленные сегодня на уменьшенных изъятиях активы дают больший размер капитала в будущем. Ожидаемо.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Учитывая то, какими разными бывают стратегии, и схожесть их результатов в части успешности, говорить о лучших и худших было бы странно. Это тот случай, когда каждый выбирает что-то подходящее к своей ситуации. Но можно попытаться сделать какие-то общие наблюдения.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Очевидно, что самой стабильной в плане расходов стоит признать простейшую стратегию с постоянной суммой (SWR). И, хоть стабильность это и плюс, у неё есть и пара недостатков, которые пытаются решить другие стратегии:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list {"ordered":true} --></p>
+<ol><!-- wp:list-item --></p>
+<li>слишком много денег может быть изъято во время плохой рыночной доходности, что скажется на размере капитала в будущем;</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>слишком мало денег может быть изъято во время хорошей, и тогда слишком много денег будет оставлено в портфеле неиспользованными.</li>
+<p><!-- /wp:list-item --></ol>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Kitces Ratchet</strong> пытается решить только вторую проблему, когда деньги остаются неиспользованными, причём потенциально увеличивает ваши расходы в старшем возрасте, тогда как это может быть более актуально в молодом. Но это реакция на увеличение капитала, который, естественно, растет лишь со временем. Отсюда в худших случаях имеем такие же результаты по сохранению текущей и конечной ПС капитала, как у SWR, ведь расходы в них так же не меняются отлично от инфляции, а в лучших случаях получаем неплохую прибавку к расходам при почти такой же скорости исчерпания капитала, потому что дополнительная индексация расходов довольно медленная и редкая.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Правила Гайтона/Клингера</strong> пытаются решить обе проблемы, реагируя на слишком сильное отклонение текущей ставки изъятия от изначальной в обе стороны, а также управляя индексацией расходов на инфляцияю. Так как скорость изменения расходов, предложенная авторами, довольно большая (до &plusmn;10% в год), а так же есть жесткое правило отмены индексации на инфляцию, которая в России была высокой, диапазон возможных исходов по суммам изъятий у неё самый широкий из всех стратегий на основе постоянной суммы. Можно воспринимать это как минус (волатильность), а можно и как плюс (отзывчивость, безопасность).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Правила <a rel="noreferrer noopener" href="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_izatij" data-type="URL" data-id="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_izatij" target="_blank">изъятий</a> и <a rel="noreferrer noopener" href="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_inflacii" data-type="URL" data-id="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_inflacii" target="_blank">инфляции</a> в экстремальных условиях российского рынка и инфляции 1998 года явно требовали ручного управления. На левых графиках видно как резко падали и долго восстанавливались расходы в реальном выражении. Это происходило не потому, что они снижались со скоростью 10% в год по <a rel="noreferrer noopener" href="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_sohranenia_kapitala" data-type="URL" data-id="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_sohranenia_kapitala" target="_blank">правилу сохранения капитала</a>, а потому, что индексация во время гиперинфляции ограничивалась или вовсе отменялась по правилам инфляции и изъятий, а когда кризис закончился, повышение расходов сверх инфляции на 10% в год по <a rel="noreferrer noopener" href="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_procvetania" data-type="URL" data-id="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/#Pravilo_procvetania" target="_blank">правилу процветания</a> оказалось слишком медленным. В реальной ситуации, видя, что портфель восстановился, а предполагаемые суммы изъятий сильно остали от комфортного уровня, инвестору пришлось бы корректировать их вручную.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><strong>Vanguard Dynamic Spending</strong> очень интересна тем, что сочетает в себе такие противоположности, как высокая стабильность и отражение динамики рынка в расходах. Из-за меньшей предельной скорости изменения расходов (до +5%/-2,5% в год) и отсутствия ограничений на индексацию разброс результатов по суммам изъятий у неё меньше, чем у правил Гайтона/Клингера. Это не совсем бесплатное улучшение - сохранение ПС конечного капитала и количество портфелей, сохранивших свою реальную начальную стоимость к концу периода, здесь всё-таки меньше, но сильного ухудшения нет.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Стратегия <strong>Target Percentage Adjustment</strong>, в основном, решает первую проблему - снижением скорости индексации расходов на инфляцию в случае, если текущая ставка изъятия превышает целевую. Лично я нахожу эту стратегию немного депрессивной - в отличии от других динамических, она предполагает, что ваши расходы могут только уменьшаться, в лучшем случае оставаясь на начальном уровне. И, однажды уменьшенные в худших сценариях, уже никогда не вырастут обратно. Как-то не внушает надежды.?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>С другой стороны, она даёт лучшие результаты в худших случаях среди динамических стратегий с возможностью снижения расходов, а также минимальную волатильность. Если возможный рост сумм изъятий вас совсем не прельщает, может быть, именно эта стратегия будет самой подходящей.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>В TPA и ГК изначальную ставку авторы, если и не предлагают повышать прямо, то активно на это намекают. Это интересный приём и сильная сторона двух стратегий, потому что позволяет не только улучшить сохранение покупательной способности сумм изъятий в случае их снижения, но и <mark>перенести более высокие расходы на молодые годы</mark>, что кажется логичным.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Авторы VDS и правила 95%, насколько мне известно, такой прием не предполагали, но для VDS, судя по результатам, в этом тоже может быть смысл. А вот для правила 95% - вряд ли, потому что это &laquo;процентная&raquo; стратегия, и повышение расходов там ожидается от самого рынка.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Абсолютно иной подход у стратегии <strong>постоянного процента</strong> и её вариантов, немного ограничивающих резкие изменения расходов - <strong>пол и потолок</strong> Бенгена и <strong>правило 95%</strong> Клята. <mark>Если предыдущие стратегии подстраиваются под инвестора, то в этих инвестор подстраивается под рынок.</mark> Проблемы с реакцией на кризисы урезанием потребления или реакцией на рыночный рост повышением потребления тут решаются автоматически, на сколько это позволяют правила.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Можно ли жить в режиме, когда возможная сумма вывода денег из портфеля скачет вслед за его доходностью? Думаю, да, особенно если в ваших расходах много дискреционных - вы всегда знаете от чего можно отказаться в кризис и, наоборот, что &laquo;лишнего&raquo; себе позволить в период бычьего рынка. Или если инвестиционный портфель финансирует только дискреционные расходы, а стабильная часть расходов обеспечивается как-то иначе. Либо можно использовать резервирование, которое я предложил выше. Наверное, Боб Клят подробно описал как жить по его правилу 95% в своей книге, раз предложил именно такую стратегию. Расскажите, если читали.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>При наличии стратегий Бенгена и Клята использовать голый вариант процентной стратегии вряд ли имеет смысл. Правило Клята хорошо снижает негативную волатильность расходов, при этом никак не мешая их росту. А пол и потолок для стратегии Бенгена можно выбрать любые, что автор в своей статье и предлагает. Чем ближе к 100% будут эти лимиты, тем больше стратегия будет похожа на SWR. Чем дальше - тем ближе результаты будут к стратегии постоянного процента.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>На этом свои копания в данных по теме я, пожалуй, останавлю, потому что без четких рекомендаций по лучшей стратегии они столько же помогают принимать решения, сколько вредят. По крайней мере пока не придумаю свою личную, более лучшую стратегию (шучу) или не придёт достаточно новых данных, чтобы был смысл запустить этот код ещё раз.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Главным выводом проделанной работы считаю то, что все стратегии вполне рабочие - даже на российском рынке без глобальной диверсификации они дают приемлемые вероятности. А также то, что стратегия вывода денег из портфеля должна подбираться и настраиваться индивидуально, и иногда уместно применять &laquo;ручное управление&raquo; по ситуации или &laquo;перезапуск&raquo; стратегии с учетом изменившихся условий.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Если мои статьи про жизнь с капитала были полезны, пожалуйста, отправьте ссылочки тем, кому они могут пригодиться: <a href="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/" data-type="URL" data-id="https://capital-gain.ru/posts/withdrawal-strategy-russian-flavour/">часть первая</a> и <a href="https://capital-gain.ru/posts/withdrawal-strategies-comparison/" data-type="URL" data-id="https://capital-gain.ru/posts/withdrawal-strategies-comparison/">часть вторая</a>.</p>
+<p><!-- /wp:paragraph --></p>

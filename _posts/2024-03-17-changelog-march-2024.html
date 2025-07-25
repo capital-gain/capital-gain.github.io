@@ -1,0 +1,90 @@
+---
+layout: post
+status: publish
+published: true
+title: Новое в инструментах, март 2024
+author:
+  display_name: Дмитрий Никитенко
+  login: Dmitry
+  email: dima.nikitenko@gmail.com
+  url: https://capital-gain.ru
+author_login: Dmitry
+author_email: dima.nikitenko@gmail.com
+author_url: https://capital-gain.ru
+excerpt: CAPE, P/E и EPS индекса акций Мосбиржи, новые данные в бэктестере, дробные
+  лоты в ребалансировщике, новые индексы облигаций в сравнении фондов и улучшения
+  в инструменте для анализа работы фондов.
+wordpress_id: 18664
+wordpress_url: https://capital-gain.ru/?p=18664
+date: '2024-03-17 14:57:31 +0600'
+date_gmt: '2024-03-17 11:57:31 +0600'
+categories:
+- Мета
+tags:
+- Инструменты
+comments: []
+---
+<p><!-- wp:paragraph --></p>
+<p><a href="https://capital-gain.ru/app/backtest" target="_blank" rel="noreferrer noopener">Бэктестер (анализ портфелей)</a>:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Добавлена история по золоту с 1871 до 1968 года по данным <a href="https://nma.org/" target="_blank" rel="noreferrer noopener">National Mining Association</a> (их использует Асват Дамодаран в <a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/histretSP.html" target="_blank" rel="noreferrer noopener">своей таблице</a>).</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Добавлена история BTC (2012+) и ETH (2016+).</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Если в портфеле всего один актив с долей 100%, для удобства его название будет показано в легенде графика капитала рядом с &laquo;Портфель 1/2/3&raquo;.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://capital-gain.ru/app/rebalance" target="_blank" rel="noreferrer noopener">Ребалансировка портфеля</a>:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Добавлена поддержка дробных лотов, что дало возможность покупать или продавать активы в размере меньше единицы (удобно для криптовалют).</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Исправлена проблема в логике ребалансировки, проявлявшаяся на небольших суммах пополнения.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://capital-gain.ru/app/funds/compare" target="_blank" rel="noreferrer noopener">Сравнение фондов</a>:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Добавлены некоторые из новых индексов облигаций, которые Мосбиржа <a href="https://www.moex.com/n67258?nt=108" target="_blank" rel="noreferrer noopener">запустила</a> в феврале с историей с конца 2022 года: ОФЗ-ПК и корпоративных с переменным купоном (RUFLBICP/TR), ОФЗ-ПК (RUFLGBICP/TR), ОФЗ длиннее 7 лет (RUGBICP7Y+/RUGBITR7Y+), замещающих облигаций (RURPLRUBCP/TR).</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Линии всех инструментов на графике теперь начинаются из первой точки в видимой области, а не предыдущей за ней.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Поиск фондов теперь происходит только по тикеру, провайдеру и ISIN, чтобы лишние слова не мешали поиску по некоторым тикерам.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p><a href="https://capital-gain.ru/app/funds/analyse" target="_blank" rel="noreferrer noopener">Анализ фондов</a>:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li>Возможность добавлять сразу до 5 фондов (или любых ценовых рядов), чтобы сравнивать их с бенчмарком на одном экране.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Вместо скользящего накопленного отклонения за выбранный период на графике теперь выводится накопленное отклонение за весь доступный период.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Статистика:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul><!-- wp:list-item --></p>
+<li><a href="https://capital-gain.ru/app/stats/cape" target="_blank" rel="noreferrer noopener">CAPE</a> российского рынка акций и его взаимосвязь с будущей реализованной доходностью, подробнее <a href="https://capital-gain.ru/posts/cape-and-future-returns-moex/">здесь</a> и <a href="https://capital-gain.ru/posts/cape-and-future-returns-moex/">здесь</a>.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Добавлены графики <a href="https://capital-gain.ru/app/stats/earnings" target="_blank" rel="noreferrer noopener">P/E и EPS</a> индекса акций Мосбиржи.</li>
+<p><!-- /wp:list-item --></p>
+<p><!-- wp:list-item --></p>
+<li>Добавлена история <a href="https://capital-gain.ru/app/stats/dividends" target="_blank" rel="noreferrer noopener">дивидендной доходности</a> по индексу акций Мосбиржи средней и малой капитализации.</li>
+<p><!-- /wp:list-item --></ul>
+<p><!-- /wp:list --></p>

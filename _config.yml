@@ -1,0 +1,34 @@
+title: Инвестирование и финансовая независимость
+email: contact@capital-gain.ru
+description: >- # this means to ignore newlines until "baseurl:"
+  От автора инструментов инвестора на Capital-Gain.ru
+  и книги «Речь о миллионах».
+lang: ru
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: "/posts/:slug/"
+telegram_username: capitalgainru
+locale: ru
+timezone: Asia/Omsk
+show_excerpts: true
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      title: ""
+sass:
+  style: compressed
+plugins:
+  - jekyll-feed
+  - jektex
+jektex:
+  cache_dir: ".jektex-cache"
+  ignore: ["*.xml"]
+  silent: false
+  macros:
+    - ["\\Q", "\\mathbb{Q}"]
+    - ["\\C", "\\mathbb{C}"]
+exclude:
+  - .jektex-cache/

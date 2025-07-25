@@ -1,0 +1,409 @@
+---
+layout: post
+status: publish
+published: true
+title: Учет инвестиций в программе Portfolio Performance
+author:
+  display_name: Дмитрий Никитенко
+  login: Dmitry
+  email: dima.nikitenko@gmail.com
+  url: https://capital-gain.ru
+author_login: Dmitry
+author_email: dima.nikitenko@gmail.com
+author_url: https://capital-gain.ru
+excerpt: В прошлом году весь свой учет инвестиций я перенес из таблицы в Google Sheets
+  в программу Portfolio Performance. Учет сделок и все расчеты структуры и результатов
+  портфеля теперь там, а личных финансов в целом (баланс, доходы и расходы, план)
+  остался в таблицах. За время использования программы накопился опыт её настройки,
+  которым и хочу поделиться. В конце будет бонус, так что загляните даже если уже
+  пользуетесь этим софтом.
+wordpress_id: 11972
+wordpress_url: https://capital-gain.ru/?p=11972
+date: '2022-08-02 17:33:37 +0600'
+date_gmt: '2022-08-02 14:33:37 +0600'
+categories:
+- Авторские тексты
+tags:
+- Инструменты
+- Учет
+- Личные финансы
+comments:
+- id: 3951
+  author: Nekto
+  author_email: nospam@mailinator.com
+  author_url: ''
+  date: '2022-08-03 21:35:20 +0600'
+  date_gmt: '2022-08-03 18:35:20 +0600'
+  content: Ура ) хоть что-то на русском. Я когда с ней разбирался смотрел немецкие
+    видео с переведенными субтитрами
+- id: 4000
+  author: Алексей
+  author_email: a.chursanov@gmail.com
+  author_url: ''
+  date: '2022-08-06 17:33:44 +0600'
+  date_gmt: '2022-08-06 14:33:44 +0600'
+  content: |-
+    Добрый день! Спасибо за рекомендацию.
+
+    Начал с создания активов (акции Мосбиржи). Не могу найти способа копировать уже созданные активы. Приходится каждый раз создавать заново и заполнять все поля. Неужели нет копирования?
+- id: 4002
+  author: Дмитрий Никитенко
+  author_email: dima.nikitenko@gmail.com
+  author_url: https://capital-gain.ru
+  date: '2022-08-06 18:06:52 +0600'
+  date_gmt: '2022-08-06 15:06:52 +0600'
+  content: Да, мне тоже не хватало иногда, но, похоже, копирования нет.
+- id: 4043
+  author: KitchenFinance
+  author_email: kitchenfinance@mail.ru
+  author_url: ''
+  date: '2022-08-10 17:04:57 +0600'
+  date_gmt: '2022-08-10 14:04:57 +0600'
+  content: "Если речь идет о копировании актива из одного портфеля в другой, то это
+    возможно следующим образом: \n1. В портфеле (файле.xml), куда хотели бы перемещать
+    ценную бумагу, создать Watchlist.\n2. Разделить экран PP на два портфеля так,
+    чтобы они были видны рядом друг с другом. Это можно делать, таская мышкой портфель
+    (название) слегка вниз - PP тогда предлагает разделение экрана. (Потом так же
+    можно таскать обратно, чтобы иметь только 1 портфель на весь экран)\n3. Перетаскать
+    мышью ценную бумагу в Watchlist. Она также появится среди всех ценнных бумаг портфеля.
+    Параметры и история котировок передаются, сделки - нет."
+- id: 4044
+  author: Дмитрий Никитенко
+  author_email: dima.nikitenko@gmail.com
+  author_url: https://capital-gain.ru
+  date: '2022-08-10 17:14:07 +0600'
+  date_gmt: '2022-08-10 14:14:07 +0600'
+  content: Жесть)) Спасибо за лайфхак! По-моему это так сложно, что проще настройки
+    котировок скопировать в любой текстовый редактор и из него ручками копировать
+    в новые активы, всё равно их надо немного править. А больше там вроде и копировать
+    особо нечего (названия, тикеры, ISIN у каждого актива свои).
+- id: 5612
+  author: Алексей
+  author_email: prieffi@gmail.com
+  author_url: ''
+  date: '2023-03-12 16:19:17 +0600'
+  date_gmt: '2023-03-12 13:19:17 +0600'
+  content: Как заставить программу использовать курс валюты из данных Мосбиржи, а
+    не последние данные ЕЦБ на март прошлого года, для отчетов? А то она использует
+    курс примерно 110,71 и данные в рублях по долларовым бумагам завышены.
+- id: 5613
+  author: Алексей
+  author_email: prieffi@gmail.com
+  author_url: ''
+  date: '2023-03-12 16:35:36 +0600'
+  date_gmt: '2023-03-12 13:35:36 +0600'
+  content: Разобрался. Сам немного накосячил при создании нового валютного курса )
+- id: 11029
+  author: Алексей Сотов
+  author_email: xechehot@gmail.com
+  author_url: ''
+  date: '2024-04-26 12:02:09 +0600'
+  date_gmt: '2024-04-26 09:02:09 +0600'
+  content: |-
+    Спасибо за статью, смотрел на красивые  графики в блоге про Итоги и задавался вопросом - как сделать такое же для своего портфеля.
+    У меня вопросы:
+    1. Как правильно учитывать stock options? Если от компании в которой я работаю периодически вестятся акции, то как их правильно учитывать в портфеле?
+    На форуме пишут, что нужно делать Inbound transfer на соотвествующий Securities аккаунт. Вроде это правильнее, чем оформлять транзакцию, как покупку?
+    2. Я продаю акции за X и покупаю другие активы за X. При этом из своего внешнего источника дохода я плачу налоги за продажу акций. Как правильно учитывать налоги в этом случае? Стоит ли их учитывать в портфеле?
+- id: 11030
+  author: Дмитрий Никитенко
+  author_email: dima.nikitenko@gmail.com
+  author_url: https://capital-gain.ru
+  date: '2024-04-27 15:15:34 +0600'
+  date_gmt: '2024-04-27 12:15:34 +0600'
+  content: |-
+    <ol>
+    <li>Да, то, что досталось бесплатно (ну, как вознаграждение), я бы зачислял напрямую на securities account.</li>
+    <li>В общем-то, как хотите. Я хочу видеть чистую доходность <em>инвестиций</em> в статистике этой программы, поэтому учитываю в ней сколько налога заплатил, равно как и комиссии. А вот вычет по ИИС, который ФНС деньгами выплачивает, в PP не учитываю, такое уже отдельно в спредшите с личными финансами.</li>
+    </ol>
+- id: 12150
+  author: Иван
+  author_email: mivang@yandex.ru
+  author_url: ''
+  date: '2024-08-12 22:56:51 +0600'
+  date_gmt: '2024-08-12 19:56:51 +0600'
+  content: Получилось подгрузить данные Historical Quotes и Latest Quote путем обращения
+    к JSON Feed URL API МосБиржи для Board TQBR и TQPI (Фондовый рынок Т+ Акции и
+    ДР и Фондовый рынок Т+ Акции ПИР соответственно), но для Board MTQR (Внебиржевой
+    рынок акций с ЦК режим "Непрерывный аукцион с ЦК") возвращает пустые данные по
+    обоим URL'ам. Если кто-нибудь добрый подскажет, как починить, был бы благодарен
+    )
+---
+<p><!-- wp:paragraph --></p>
+<p><a rel="noreferrer noopener" href="https://www.portfolio-performance.info/en/" data-type="URL" data-id="https://www.portfolio-performance.info/en/" target="_blank">Portfolio Performance</a> - немецкий open source проект (с <a rel="noreferrer noopener" href="https://github.com/buchen/portfolio" data-type="URL" data-id="https://github.com/buchen/portfolio" target="_blank">открытым</a> исходным кодом), десктопная программа для учета инвестиций. Я выбрал именно её, потому что увидел ряд преимуществ в сравнении с другими решениями:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Хранит данные на диске вашего компьютера. В отличие от онлайн-сервисов для учета инвестиций (например, <a rel="noreferrer noopener" href="https://intelinvest.ru/?registration=true&amp;ref=34036" data-type="URL" data-id="https://intelinvest.ru/?registration=true&amp;ref=34036" target="_blank">IntelInvest</a>), <strong>доступ к данным есть только у вас</strong>. Они хранятся в XML-файле, который, при желании, можно бэкапить в облако любым удобным способом.</li>
+<li><strong>Открытость кода</strong> позволяет сообществу пользователей рассчитывать на отсутствие всевозможных закладок, майнеров, бэкдоров и проверять правильность расчётов.</li>
+<li>Написана на Java, а значит доступна для практически <strong>любой десктопной операционной системы</strong>.</li>
+<li><strong>Легче, чем создавать свои таблицы</strong>, особенно когда речь заходит о расчете TWR (доходности, очищенной от влияния покупок и продаж), сплитах, отображения данных в разных валютах и выборе периодов для просмотра статистики.</li>
+<li><strong>Данные сделок могут быть экспортированы</strong> в CSV или JSON, что оставляет возможность для дальнейших автоматизированных переездов в другой софт. Если умеете писать скрипты для конвертации файлов.</li>
+<li>Бесплатно!</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:heading --></p>
+<h2>Возможности</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":12046,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/pp1.png" target="_blank" rel="noopener"><img src="/assets/images/pp1-1024x676.png" alt="" class="wp-image-12046"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":12044,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/pp2.png" target="_blank" rel="noopener"><img src="/assets/images/pp2-1024x676.png" alt="" class="wp-image-12044"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":12045,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/pp3.png" target="_blank" rel="noopener"><img src="/assets/images/pp3-1024x676.png" alt="" class="wp-image-12045"/></a></figure>
+<p><!-- /wp:image --><br />
+<figcaption class="blocks-gallery-caption">Скриншоты довольно старой версии программы с официального сайта</figcaption>
+</figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Объединяет сделки по разным счетам в одном месте. Мало у кого всего один брокерский счет, из-за чего статистика в кабинетах отдельных брокеров бесполезна. Здесь весь зоопарк будет учтен в едином интерфейсе с объединенными результатами.</li>
+<li>Отображение структуры, результатов (TWR, IRR, волатильность, просадки и прочее) и динамики портфеля и отдельных активов в таблицах и на графиках, которые вы создаете сами как угодно. Состав колонок в таблицах можно менять под себя, а на графиках отображать не только портфель, но и отдельные активы, бенчмарки, курсы валют и инфляцию.</li>
+<li>Отображение статистики вашей активности - пополнений портфеля и торговли, в частности уплаченных комиссий, оборачиваемости, количества сделок, среднего времени удержания позиции и тому подобного.</li>
+<li>Учет любых комиссий по счетам в расчете доходностей - как привязанных к конкретным сделкам (вводятся вместе со сделками), так и удержанных по счетам в другое время.</li>
+<li>Учет налогов и налоговых вычетов.</li>
+<li>Учет процентных платежей по денежным счетам, в том числе отрицательных и облагаемых налогом.</li>
+<li>Знает курсы валют (даже с рублем, если настроить) и умеет показывать результаты портфеля в любой валюте.</li>
+<li>Учет переводов денег и ценных бумаг между счетами и конвертаций валюты.</li>
+<li>Учет дробления акций/паев (сплитов). Указываете дату и коэффициент дробления, дальше всё происходит само.</li>
+<li>Есть локализации интерфейса в разные языки, которые выбираются в настройках. Я пользуюсь английской версией, но есть и русская (качество локализации не проверял).</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Есть и возможность импорта данных из отчетов различных брокеров. Но поддержки российских брокеров нет, в основном немецких, так что сделки придется вбивать руками. Есть экспериментальный импорт из XML-отчета Interactive Brokers (Activity Flex Query), но я не разбирался как им пользоваться (и не нашел внятных инструкций на сайте PP).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Также стоит отметить, что в левом меню есть полезная секция таксономий. У меня их две: классы активов (equity, debt, cash, real) и размещение активов (asset location - Russia, US). Денежные счета я добавляю в cash и соответствующую страну брокера, активы - в свой класс активов и страну, где они хранятся. Программа сама посчитает сколько процентов активов к какому элементу таксономии относится и покажет распределение в таблице или на графике, в том числе изменение весов во времени. Есть даже встроенный помощник для ребалансировки на основе таксономии, но, конечно, <a href="https://capital-gain.ru/rebalancing/">мой</a> круче.?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>Работа с программой</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Перечислю общий порядок действий, чтобы вы знали с чего лучше начать и чем закончить, потому что кнопочек и пунктиков меню тут много.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Пополнения брокерских счетов (вами или, например, зачислением дивидендов) и вывод с них денег учитываются по денежным счетам в программе, а покупка и продажа ценных бумаг - по бумажным.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Сперва лучше добавить денежные брокерские счета. У одного брокера их может быть несколько в разных валютах, если у вас есть конвертации. Можно добавить и банковские счета или депозиты, если вы хотите их здесь учитывать. После этого добавляете бумажные брокерские счета (&laquo;депо&raquo;) у тех же брокеров. По ним учитываются движения бумаг и остатки.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Для ценных бумаг в левом меню лучше сразу создать несколько списков (watchlists), куда вы их будете помещать, чтобы не путаться. Например, у меня есть такие списки: Активы, Валюты и Бенчмарки (для сравнения с ними портфеля - фондовые индексы, фонды, которыми я не владею, ИПЦ).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>В секции ценных бумаг добавляете нужные валютные курсы через кнопку +, пункт New exchange rate. Российским инвесторам чаще всего, конечно, нужен USDRUB. Добавление валют и настройка автоматического получения котировок подробно описаны ниже.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Дальше через ту же кнопку +, New instrument добавляете активы - те, что находятся в портфеле и те, за которыми хотите следить или сравнивать с ними результаты портфеля. Настройки описаны ниже.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Заводите все свои пополнения счетов в конкретных валютах, конвертации (через подменю денежного счета Перевод), сделки с бумагами и комиссии, переводы денег и бумаг, зачисления выплат на счета от эмитентов и выводы денег. Всё это называется общим словом Транзакции. В этот момент у вас начнут рассчитываться результаты инвестирования, даже если вы не настроите обновление котировок, потому что программа знает цены сделок и считает последней ценой наиболее недавнюю.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>В секции отчеты есть много разной уже готовой информации - покликайте, там всё должно быть знакомо - динамика портфеля, результаты инвестирования, график доходности / волатильности, круговая (и не только) диаграмма долей активов. На экране Performance можно сделать несколько вкладок с разными наборами доступных виджетов статистики, в итоге получится персонализированный дашборд, отображающий текущее положение дел как вам удобно (или несколько разных). На экране Chart есть возможность построить несколько графиков с разными наборами активов.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading --></p>
+<h2>Обновление котировок</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Переходим к самому интересному. Скажу сразу, сложность настройки автоматического сбора котировок из разных API или сайтов довольно высокая, кто-то даже может почувствовать себя программистом. Делать это не обязательно, данные можно вбивать вручную (например, раз в месяц), или же они в любом случае обновятся при добавлении транзакций, что не идеально, но посчитает вам доходность. Но с автообновлением котировок и красивыми графиками жить всё-таки лучше, веселее (особенно когда они падают на 60% за неделю).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Далее я иногда буду упоминать какое-то &laquo;API&raquo; - если не знаете, что это, то и не надо. Можно считать, что это просто специальные ссылки на сайты, из которых одни программы могут получать какие-то данные из других программ, а вы только один раз им поможете найти друг друга, всё правильно настроив.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Для всего зарубежного (ETF) можно использовать сервисы <a rel="noreferrer noopener" href="https://finance.yahoo.com/" data-type="URL" data-id="https://finance.yahoo.com/" target="_blank">Yahoo Finance</a> или <a rel="noreferrer noopener" href="https://www.alphavantage.co/" data-type="URL" data-id="https://www.alphavantage.co/" target="_blank">Alpha Vantage</a>. Первое делается вообще элементарно, а для второго нужно зарегистрироваться на их сайте, получить ключ от API и указать его в общих настройках Portfolio Performance. Котировки российских инструментов будем получать из API МосБиржи - это посложнее.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>Yahoo Finance</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Настроим забор данных для фонда Vanguard FTSE All-World UCITS ETF (Acc) под тикером VWRA на LSE. В Yahoo Finance его можно найти под тикером <a rel="noreferrer noopener" href="https://finance.yahoo.com/quote/VWRA.L/" data-type="URL" data-id="https://finance.yahoo.com/quote/VWRA.L/" target="_blank">VWRA.L</a>, последняя буква после точки - это обозначение биржи. Жмем плюс в списке ценных бумаг и выбираем пункт New Instrument, далее по списку и скриншотам:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Поиск по инструментам на Yahoo Finance встроен в саму программу. Если найдете там что нужно и выберете, это немного предзаполнит данные в следующих формах. Пользоваться поиском не обязательно, можно нажать кнопку Empty Instrument и вбить данные самостоятельно.</li>
+<li>Во вкладке Security Master Data не забудьте выбрать валюту, указать Symbol как на Yahoo Finance и выбрать правильный календарь биржи. Можете заполнить ISIN, чтобы работало открытие ссылки на justETF и другие сервисы в браузере (доступно в подменю Open in browser по клику правой кнопкой мыши на инструменте).</li>
+<li>История котировок во вкладке Historical Quotes найдется автоматически по указанному тикеру, когда выберете правильный источник (Yahoo Finance).</li>
+<li>В качестве источника для последней цены во вкладке Latest Quote тоже нужно выбрать Yahoo. Это позволит забирать изменения цены внутри дня, если вы зачем-то хотите их видеть.</li>
+<li>Во вкладке Additional Attributes можно указать, например, TER. Во вкладке Taxonomies - указать класс активов и любые другие категоризации, что вы себе создали.</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:gallery {"ids":[12018,12017,12019,12020],"columns":4,"linkTarget":"_blank","linkTo":"media"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-4 is-cropped"><!-- wp:image {"id":12018,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/PP-VWRA-lse-search.png" target="_blank" rel="noopener"><img src="/assets/images/PP-VWRA-lse-search.png" alt="" class="wp-image-12018"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":12017,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/PP-VWRA-general.png" target="_blank" rel="noopener"><img src="/assets/images/PP-VWRA-general.png" alt="" class="wp-image-12017"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":12019,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/PP-VWRA-history.png" target="_blank" rel="noopener"><img src="/assets/images/PP-VWRA-history.png" alt="" class="wp-image-12019"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":12020,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/PP-VWRA-latest.png" target="_blank" rel="noopener"><img src="/assets/images/PP-VWRA-latest-1024x730.png" alt="" class="wp-image-12020"/></a></figure>
+<p><!-- /wp:image --></figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>Alpha Vantage</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Чтобы у вас был запасной вариант в случае, если Yahoo по какой-то причине отвалится, проделаем всё то же самое, но с другим источником истории котировок - alphavantage.co:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li><a rel="noreferrer noopener" href="https://www.alphavantage.co/support/#api-key" data-type="URL" data-id="https://www.alphavantage.co/support/#api-key" target="_blank">Получаем</a> свой API key (можно считать это паролем), который затем вставляем в настройки Portfolio Performance, чтобы приложение могло обращаться к их API.</li>
+<li>Как обычно, создаем новый инструмент. Поиск можно пропустить, здесь он нам ничем не поможет, и сразу нажать Empty Instrument.</li>
+<li>В поле Symbol указываем тот же тикер VWRA.L, потому что именование биржи на Alpha Vantage совпадает.</li>
+<li>В истории котировок выбираем источник Alpha Vantage, котировки загрузятся автоматически.</li>
+<li>Последнюю цену можно попытаться забирать с Alpha Vantage, но у меня это почему-то не работает, а можно выбрать Yahoo.</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":12025,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/PP-alpha-vantage-settings.png" target="_blank" rel="noopener"><img src="/assets/images/PP-alpha-vantage-settings.png" alt="" class="wp-image-12025"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":12027,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/PP-VWRA-general-alpha.png" target="_blank" rel="noopener"><img src="/assets/images/PP-VWRA-general-alpha.png" alt="" class="wp-image-12027"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":12026,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/PP-VWRA-history-alpha.png" target="_blank" rel="noopener"><img src="/assets/images/PP-VWRA-history-alpha.png" alt="" class="wp-image-12026"/></a></figure>
+<p><!-- /wp:image --></figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>БПИФ на МосБирже</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Для всего отечественного можно использовать бесплатный (для личного использования) API МосБиржи. Настройка получения данных здесь будет зависеть от типа инструмента, я покажу пример с БПИФ EQMX (бывший <a href="https://capital-gain.ru/posts/vtbx-fund-analysis/" data-type="post" data-id="3940">VTBX</a>) и курсом USDRUB. Начнем с первого:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>В качестве провайдера данных во вкладке Historical Quotes выбираем JSON. Это не сервис, а формат данных, который умеют отдавать почти все современные API, в том числе и МосБиржа.</li>
+<li>В поле Feed URL скопируйте такую ссылку: <code>https://iss.moex.com/iss/history/engines/stock/markets/shares/boards/TQTF/securities/<strong>EQMX</strong>.json?history.columns=TRADEDATE,CLOSE,LOW,HIGH,VOLUME&amp;iss.meta=off&amp;limit=100&amp;from={DATE:yyyy-MM-01}</code> - в ней мы выбрали секцию под кодом TQTF в разделе stock (акции), где и торгуются БПИФы в рублях, а в параметрах отключили передачу лишней информации, настроили поля данных, которые хотим получать и подставили специальный шаблон выбора даты начала данных, чтобы Portfolio Performance мог воспользоваться пагинацией, ведь на один запрос API МосБиржи отдает максимум 100 строк, а дней в истории котировок больше.</li>
+<li>Поле Date Format можно не заполнять или указать yyyy-MM-dd - программа поймет возвращаемую МосБиржей в стандартном формате дату в любом случае.</li>
+<li>В оставшихся полях указываем путь к интересующим нас данным в виде $.history.data[*][0, 1, 2, 3 или 4] (смотрите скриншот). Число в квадратных скобках здесь - это индекс (номер, начинающийся с нуля) колонки, которую мы указали в ссылке (например, TRADEDATE у нас первая, её индекс 0).</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Аналогично настраивается получение текущей цены, только ссылка будет другой: <code>https://iss.moex.com/iss/engines/stock/markets/shares/boards/TQTF/securities/<strong>EQMX</strong>.json?iss.meta=off&amp;iss.only=marketdata&amp;marketdata.columns=SYSTIME,LAST,HIGH,LOW,VOLTODAY</code>. Доступ к данным здесь будет по такому пути: $.marketdata.data[*][0, 1, 2, 3 или 4] (см. скриншот).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":12031,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/EQMX-moex-history.png" target="_blank" rel="noopener"><img src="/assets/images/EQMX-moex-history-1024x765.png" alt="" class="wp-image-12031"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":12032,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/EQMX-moex-latest.png" target="_blank" rel="noopener"><img src="/assets/images/EQMX-moex-latest-1024x755.png" alt="" class="wp-image-12032"/></a><br />
+<figcaption>Low, high и volume указывать не обязательно</figcaption>
+</figure>
+<p><!-- /wp:image --></figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>Обменные курсы</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Portfolio Performance собирает курсы множества валют к евро с сайта ЕЦБ, но EURRUB перестал там публиковаться в марте, а USDRUB никогда и не было. Поэтому динамику валютных пар с участием рубля лучше забирать с МосБиржи, что на примере USDRUB делается так:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>В списке бумаг кликаете плюс и выбираете New <strong>exchange rate</strong>.</li>
+<li>В первой вкладке заполняете коды валют в правильном порядке.</li>
+<li>На вкладке с историей всё то же самое, что и с БПИФ выше, но ссылка будет другая: <code>https://iss.moex.com/iss/history/engines/currency/markets/selt/boards/CETS/securities/<strong>USD000UTSTOM</strong>.json?history.columns=TRADEDATE,CLOSE,LOW,HIGH,VOLRUR&amp;iss.meta=off&amp;limit=100&amp;from={DATE:yyyy-MM-01}</code>. Код других валютных пар (USD000UTSTOM в этой ссылке) ищите на странице инструмента на сайте МосБирже. Для EURRUB можете взять код <strong>EUR_RUB__TOM</strong>.</li>
+<li>Ссылка для получения последней цены выглядит так: <code>https://iss.moex.com/iss/engines/currency/markets/selt/boards/CETS/securities/<strong>USD000UTSTOM</strong>.json?iss.meta=off&amp;iss.only=marketdata&amp;marketdata.columns=SYSTIME,LAST,HIGH,LOW,VOLTODAY</code></li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":12037,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/PP-USDRUB-moex-general.png" target="_blank" rel="noopener"><img src="/assets/images/PP-USDRUB-moex-general-1024x749.png" alt="" class="wp-image-12037"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":12039,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/PP-USDRUB-moex-history.png" target="_blank" rel="noopener"><img src="/assets/images/PP-USDRUB-moex-history-1024x761.png" alt="" class="wp-image-12039"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":12038,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/PP-USDRUB-moex-latest.png" target="_blank" rel="noopener"><img src="/assets/images/PP-USDRUB-moex-latest-1024x759.png" alt="" class="wp-image-12038"/></a></figure>
+<p><!-- /wp:image --></figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:paragraph --></p>
+<p>Остальные валютные курсы добавлять отдельно вам вряд ли понадобится, потому что PP уже собирает курсы множества валют к евро и через кросс-курсы может привести стоимость активов практически в любых валютах к вашей, выбранной основной в программе, в том числе к рублю.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Обновление котировок драгоценных металлов на МосБирже (GLDRUB, SLVRUB) настраивается точно так же, как и валюты, потому что они торгуются на валютном рынке.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:heading {"level":3} --></p>
+<h3>Фондовые индексы</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>Зарубежные индексы можно брать с Yahoo Finance, правда, <a rel="noreferrer noopener" href="https://finance.yahoo.com/world-indices" data-type="URL" data-id="https://finance.yahoo.com/world-indices" target="_blank">ассортимент</a> там ограничен ценовыми страновыми индексами (S&amp;P 500, FTSE 100, DAX, CAC 40 и т. д.), а из индексов полной доходности есть разве что <a rel="noreferrer noopener" href="https://finance.yahoo.com/quote/%5ESP500TR/" data-type="URL" data-id="https://finance.yahoo.com/quote/%5ESP500TR/" target="_blank">^SP500TR</a> (у остальных от S&amp;P с полной доходностью вроде бы нет истории, а мультистрановых индексов от MSCI или FTSE там вообще нет). Если они вам нужны, вместо индекса полной доходности можно найти ирландский ETF, реинвестирующий дивиденды, на этот или похожий индекс. И не забывайте выбирать правильную валюту при добавлении индексов.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Данные российских бенчмарков можно забирать с МосБиржи. Настраивается всё точно так же, отличие будет только в ссылке на API МосБиржи. Например, для индекса российских акций MCFTR:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Получение истории котировок: <code>https://iss.moex.com/iss/history/engines/stock/markets/index/securities/<strong>MCFTR</strong>.json?history.columns=TRADEDATE,CLOSE,LOW,HIGH,VOLUME&amp;iss.meta=off&amp;limit=100&amp;from={DATE:yyyy-MM-01}</code></li>
+<li>Получение последней цены: <code>https://iss.moex.com/iss/engines/stock/markets/index/securities/<strong>MCFTR</strong>.json?iss.meta=off&amp;iss.only=marketdata&amp;marketdata.columns=TRADEDATE,CURRENTVALUE,HIGH,LOW,VOLTODAY</code></li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:image {"id":12067,"width":800,"height":468,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large is-resized"><a href="/assets/images/Performance_Chart_World_View.png" target="_blank" rel="noopener"><img src="/assets/images/Performance_Chart_World_View-1024x600.png" alt="" class="wp-image-12067" width="800" height="468"/></a><br />
+<figcaption>Доходность фондовых индексов разных стран с начала 2022 года в долларах США (без дивидендов).<br>В программе график кликабельный - открывается тултип с доходностями с начала периода до места, куда вы нажали. Кроме выбора периода есть и выбор интервала отображения - день, неделя, месяц или год.</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:heading --></p>
+<h2>Учет облигаций</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>У Portfolio Performance есть один большой недостаток - полное непонимание программой облигаций. Здесь просто нет такого понятия. Программа заточена под ETF, но, поскольку любой ETF - это акция, то её легко использовать и для отдельных акций, если вам это нужно (дивиденды, сплиты - всё поддерживается).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Но вот про облигации, у которых номинал и текущие цены живут отдельной жизнью, тут нет ничего. Поэтому их котировки остается периодически считать в деньгах и обновлять вручную. Делается это не сложно (может, даже проще, чем в таблицах), то есть недостаток именно в отсутствии прямой возможности это автоматизировать (если вы, конечно, не напишите какой-нибудь веб-сервис, который будет делать это автоматически и отдавать данные, пригодные для импорта в Portfolio Performance).</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Текущих цен у облигаций две - с НКД (грязная) и без (чистая), и нам логично учитывать грязную, то есть с добавленным НКД, потому что именно за неё мы можем облигацию продать. В момент выплаты купона НКД заменится на зачисленные на счет деньги, а цена облигации упадет на сумму выплаты.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Для расчета грязной цены в деньгах берем текущий размер номинала облигации и умножаем на её цену в процентах с биржи, прибавляем НКД (тоже публикуется на бирже). Результат можно использовать как очередную котировку, которую можно добавить в программу вручную на экране списка ценных бумаг (вкладка Historical Quotes, правый клик, пункт меню Add), а сумму купона в день его выплаты можно учесть как дивиденд - это такое же зачисление денег на счет.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":11975,"width":300,"height":296,"sizeSlug":"medium","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-medium is-resized"><a href="/assets/images/SU52002RMFS1.png" target="_blank" rel="noopener"><img src="/assets/images/SU52002RMFS1-300x296.png" alt="" class="wp-image-11975" width="300" height="296"/></a><br />
+<figcaption>На примере <a rel="noreferrer noopener" href="https://www.moex.com/ru/issue.aspx?board=TQOB&amp;code=SU52002RMFS1" target="_blank">ОФЗ-ИН 52002</a> все данные можно найти на сайте МосБиржи.<br>Нам нужны три подчеркнутых числа (кликабельно).<br>Грязная цена этой облигации на 29.07.22 = 1364.21 * 95.61% + 16.19 = 1320.51 руб.</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:heading --></p>
+<h2>Инфляция</h2>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:paragraph --></p>
+<p>В Portfolio Performance есть встроенная возможность забирать данные страновых ИПЦ с сайта ЕЦБ, причем среди стран там не только относящиеся к Евросоюзу. Но среди них нет России, да и имеющиеся данные не всегда последние (например, по США в июле были только апрельские), поэтому тут придется импровизировать.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Чтобы добавить динамику ИПЦ Росстата, нужен какой-нибудь подходящий источник данных, который бы отдавал рост инфляции именно в виде индекса, то есть увеличивая предыдущее своё значение на последний прирост цен. Если вы знаете такой источник, напишите в комментах, лишним не будет.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Я не знаю, поэтому для себя и вас сделал свой API (<mark>тот самый бонус</mark>) - автоматически обновляемый ряд значений <a rel="noreferrer noopener" href="https://rosstat.gov.ru/price" data-type="URL" data-id="https://rosstat.gov.ru/price" target="_blank">индекса потребительских цен Росстата</a> накопленным итогом:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":11981,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/cpi-ru-settings.png" target="_blank" rel="noopener"><img src="/assets/images/cpi-ru-settings-1024x745.png" alt="" class="wp-image-11981"/></a></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:list --></p>
+<ul>
+<li>Формат: JSON</li>
+<li>URL: <a href="https://capital-gain.ru/data/CPI_RU.json" target="_blank" rel="noreferrer noopener">https://capital-gain.ru/data/CPI_RU.json</a></li>
+<li>Дата: [*].date</li>
+<li>Цена закрытия: [*].close</li>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>Данные начинаются в январе 1991 года с 1 рубля, который каждый месяц индексируется на инфляцию. К июню 2022 года рублей стало уже 131 262. Ну а дальше эти данные можно использовать как бенчмарк своего портфеля или просто делать всякие визуализации для понимания ситуации. Например, у меня есть такой график сравнения индекса ОФЗ, фонда на него, фонда облигаций Арсагеры и пары отдельных ОФЗ-ИН с инфляцией:</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":11982,"sizeSlug":"large","linkDestination":"media"} --></p>
+<figure class="wp-block-image size-large"><a href="/assets/images/bonds-vs-cpi-ru.png" target="_blank" rel="noopener"><img src="/assets/images/bonds-vs-cpi-ru-1024x617.png" alt="" class="wp-image-11982"/></a><br />
+<figcaption>Динамика активов за последние 3 года.</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>То же самое есть и для US CPI (индекс инфляции в США), его данные с 1913 года можно получить по ссылке: <a href="https://capital-gain.ru/data/CPI_US.json" target="_blank" rel="noreferrer noopener">https://capital-gain.ru/data/CPI_US.json</a></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>На этом всё. Если я что-то забыл или остались непонятные моменты, пишите вопросы в комментариях!</p>
+<p><!-- /wp:paragraph --></p>
