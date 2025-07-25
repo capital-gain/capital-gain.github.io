@@ -27,7 +27,7 @@ layout: default
     </p>
   </header>
 
-  {%- if page.excerpt and page.excerpt != content %}
+  {%- if page.excerpt != "" %}
     <p class="post-excerpt">{{ page.excerpt }}</p>
   {%- endif %}
 
@@ -43,9 +43,24 @@ layout: default
   </div>
   {% endif %}
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+  {% if page.comments and page.comments.size > 0 %}
+    <hr />
+
+    <div class="post-comments">
+      <h3>Комментарии</h3>
+      <ul>
+        {% for comment in page.comments %}
+          <li class="post-comment">
+            <strong>{{ comment.author }}</strong>
+            <small>({{ comment.date | date: "%d.%m.%Y %H:%M" }})</small><br>
+            {{ comment.content }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  {%- include tg_comments.html -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
@@ -55,7 +70,7 @@ layout: default
 <script>
   MathJax = {
     tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      inlineMath: [['\\(', '\\)']],
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
       processEscapes: true,
       processEnvironments: true
@@ -66,6 +81,5 @@ layout: default
     }
   };
 </script>
-<script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 {%- endif -%}

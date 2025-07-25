@@ -10,14 +10,16 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
-      {%- for post in site.posts -%}
+      {%- for post in paginator.posts -%}
       <li>
         <span class="post-meta">
           {{ post.date | date: "%d.%m.%Y" }}
           {% if post.categories and post.categories.size > 0 %} •
             {{ post.categories | join: ", " }}
+          {% endif %}
+          {% if post.comments and post.comments.size > 0 %} •
+            Комментариев: {{ post.comments.size }}
           {% endif %}
           {% if post.title == "" %} •
             <a class="post-link-icon" href="{{ post.url | relative_url }}">
@@ -32,14 +34,31 @@ layout: default
             </a>
           </h3>
         {% endif %}
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+        {%- if site.show_excerpts %}
+          {%- if post.excerpt == "" -%}
+            {{ post.content }}
+          {%- else -%}
+            {{ post.excerpt }}
+          {%- endif %}
+        {%- endif %}
       </li>
       {%- endfor -%}
     </ul>
-
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
 
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="pagination_prev">
+        &larr; Назад
+      </a>
+    {% endif %}
+    <span class="pagination__page">
+      Страница: {{ paginator.page }} из {{ paginator.total_pages }}
+    </span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="pagination__next">
+        Вперед &rarr;
+      </a>
+    {% endif %}
+  </div>
 </div>

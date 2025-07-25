@@ -1,16 +1,21 @@
-title: Инвестирование и финансовая независимость
+title: Дмитрий Никитенко
 email: contact@capital-gain.ru
-description: >- # this means to ignore newlines until "baseurl:"
-  От автора инструментов инвестора на Capital-Gain.ru
-  и книги «Речь о миллионах».
+description: >-
+  Блог о пассивном инвестировании по стратегии распределения активов
+  и финансовой независимости. Полезные инструменты для инвесторов.
+tagline: Инвестирование и финансовая независимость
 lang: ru
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+locale: ru_RU
+logo: /assets/logo-512.png
+url: "https://capital-gain.ru"
+baseurl: ""
 permalink: "/posts/:slug/"
-telegram_username: capitalgainru
-locale: ru
 timezone: Asia/Omsk
 show_excerpts: true
+telegram_username: capitalgainru
+vk_username: capitalgain
+github_username: nDmitry
+rss: Atom
 # GitHub Pages defaults
 lsi: false
 safe: true
@@ -30,8 +35,16 @@ defaults:
     values:
       layout: "post"
       title: ""
+      excerpt: ""
 sass:
   style: compressed
 plugins:
   - jekyll-feed
+  - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-sitemap
+paginate: 5
+paginate_path: "/page/:num/"
+seo_paginator_message: "Страница %{current} из %{total} | "
+feed:
+  path: /feed/
