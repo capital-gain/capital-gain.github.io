@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: /wp-admin/
+Disallow: */category/*
+Disallow: */tag/*
+Disallow: */feed/
+Disallow: *?amp
+Disallow: *&amp
+Disallow: /app/*?
+Sitemap: https://capital-gain.ru/sitemap.xml
