@@ -402,6 +402,20 @@
   }
 }
 
+.mirror {
+  color: $grey-color;
+  border-bottom: 1px dashed $grey-color;
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: 0;
+  }
+
+  &:visited {
+    color: $grey-color;
+  }
+}
+
 /**
  * Utilities
  */

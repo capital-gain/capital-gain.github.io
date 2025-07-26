@@ -5,4 +5,5 @@ Disallow: */tag/*
 Disallow: *?amp
 Disallow: *&amp
 Disallow: /app/*?
+Host: https://capital-gain.ru
 Sitemap: https://capital-gain.ru/sitemap.xml

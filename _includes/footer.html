@@ -5,7 +5,14 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <div>© {{ site.title | escape }}, {{ site.time | date: '%Y' }}</div>
-        <small>Jekyll {{ jekyll.version }}</small>
+        <small>
+          Jekyll {{ jekyll.version }}, <a
+            href="https://capital-gain.github.io/"
+            rel="nofollow"
+            class="mirror">
+            зеркало
+          </a>
+        </small>
         {%- include search-form.html -%}
       </div>
 
