@@ -37,6 +37,7 @@ defaults:
       layout: "post"
       title: ""
       excerpt: ""
+      author: "Дмитрий Никитенко"
 sass:
   style: compressed
 plugins:
