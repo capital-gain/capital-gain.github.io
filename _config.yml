@@ -14,6 +14,7 @@ timezone: Asia/Omsk
 show_excerpts: true
 telegram_username: capitalgainru
 vk_username: capitalgain
+dzen_username: capitalgain
 github_username: nDmitry
 rss: Atom
 # GitHub Pages defaults
