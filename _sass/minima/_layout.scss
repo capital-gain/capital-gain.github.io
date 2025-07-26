@@ -233,6 +233,7 @@
 
   > li {
     margin-bottom: $spacing-unit;
+    @include relative-font-size(1.0625);
   }
 }
 
@@ -270,7 +271,7 @@
 }
 
 .post-excerpt {
-  @include relative-font-size(1.1);
+  @include relative-font-size(1.125);
   color: $grey-color-dark;
   padding: $spacing-unit * 0.35 $spacing-unit * 0.5;
   background: #fff;
@@ -304,6 +305,12 @@
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
+  }
+
+  p,
+  ul,
+  ol {
+    @include relative-font-size(1.125);
   }
 }
 
@@ -396,7 +403,7 @@
   }
 
   &__format {
-    font-size: 13px;
+    font-size: 13px !important;
     text-align: center;
     text-transform: uppercase;
   }
