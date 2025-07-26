@@ -27,6 +27,7 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+  smart_quotes: bdquo,ldquo,laquo,raquo
 # End of GitHub Pages
 defaults:
   - scope:

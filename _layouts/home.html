@@ -30,7 +30,7 @@ layout: default
         {% if post.title %}
           <h3>
             <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title }}
+              {{ post.title | smartify }}
             </a>
           </h3>
         {% endif %}
@@ -38,7 +38,7 @@ layout: default
           {%- if post.excerpt == "" -%}
             {{ post.content }}
           {%- else -%}
-            {{ post.excerpt }}
+            {{ post.excerpt | smartify }}
           {%- endif %}
         {%- endif %}
       </li>
