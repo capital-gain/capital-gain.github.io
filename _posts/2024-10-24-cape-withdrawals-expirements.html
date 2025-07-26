@@ -32,7 +32,10 @@ comments: []
 <p>Для начала я просто реализовал правило изъятий с использованием CAPE из <a href="https://earlyretirementnow.com/2017/08/30/the-ultimate-guide-to-safe-withdrawal-rates-part-18-flexibility-cape-based-rules/" target="_blank" rel="noreferrer noopener">этого поста</a> ERN и запустил его на российских данных, которые я уже использовал в <a href="https://capital-gain.ru/?s=%D0%96%D0%B8%D0%B7%D0%BD%D1%8C+%D1%81+%D0%BA%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BB%D0%B0">серии постов про жизнь с капитала</a>. Правило для определения очередной суммы изъятия выглядит так:</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph {"align":"center"} --></p>
-<p class="has-text-align-center">$$W_{t} = (a + b \times \text{CAEY}_{t}) \times P_{t}$$<br>$$\text{CAEY}_{t} = 1 \div \text{CAPE}_{t}$$</p>
+<p class="has-text-align-center">
+  $$W_{t} = (a + b \times \text{CAEY}_{t}) \times P_{t}$$
+  $$\text{CAEY}_{t} = 1 \div \text{CAPE}_{t}$$
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
 <p>Здесь CAEY (cyclically adjusted earnings yield) &mdash; это обратная величина CAPE, выраженная в процентах. Используется для оценки будущей долгосрочной реальной доходности (сколько прибыли покупаем за текущую цену). <em>a</em> &mdash; произвольная константная величина ставки изъятий, которую будем модифицировать. <em>b</em> &mdash; коэффициент для выбора величины воздействия текущего значения CAEY на итоговую ставку изъятия. <em>P<sub>t</sub></em> &mdash; текущая стоимость портфеля.</p>
