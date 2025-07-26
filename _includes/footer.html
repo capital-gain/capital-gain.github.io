@@ -6,6 +6,7 @@
       <div class="footer-col footer-col-1">
         <div>© {{ site.title | escape }}, {{ site.time | date: '%Y' }}</div>
         <small>Jekyll {{ jekyll.version }}</small>
+        {%- include search-form.html -%}
       </div>
 
       <div class="footer-col footer-col-3">

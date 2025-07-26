@@ -151,6 +151,60 @@
   flex: 1;
 }
 
+/**
+ * Search form
+ */
+.search-form {
+  margin-top: $spacing-unit * 0.5;
+
+  &__wrapper {
+    display: flex;
+    border: 1px solid $grey-color-light;
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 250px;
+  }
+
+  &__input {
+    flex: 1;
+    padding: 6px 10px;
+    border: none;
+    font-size: $small-font-size;
+    background: $background-color;
+    color: $text-color;
+
+    &:focus {
+      outline: none;
+      background: #fff;
+    }
+
+    &::placeholder {
+      color: $grey-color;
+    }
+  }
+
+  &__button {
+    padding: 6px 10px;
+    border: none;
+    background: $grey-color-light;
+    color: $grey-color-dark;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: $grey-color;
+      color: #fff;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 @include media-query($on-palm) {
   .footer-col-wrapper {
     flex-direction: column;
