@@ -185,6 +185,7 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+  text-align: center;
 }
 
 .post-link {
@@ -207,6 +208,7 @@
   @include relative-font-size(2.625);
   font-weight: 700;
   line-height: 1;
+  text-align: center;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
@@ -275,5 +277,82 @@
   &__page {
     color: $grey-color;
     @include relative-font-size(0.9);
+  }
+}
+
+.book {
+  &__subtitle {
+    font-size: 1.2rem !important;
+    text-transform: uppercase;
+    text-align: center;
+    border-top: 2px solid;
+    padding-top: 0.3em;
+  }
+
+  &__annotation {
+    display: flex;
+
+    p {
+      @include relative-font-size(1.19);
+      text-align: justify;
+      hyphens: auto;
+      line-height: 1.55;
+    }
+  }
+
+  &__cover {
+    margin: 0.5em 1em 0.5em 0;
+    img {
+      max-width: 220px;
+    }
+  }
+
+  &__buttons {
+    @extend %vertical-rhythm;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: $spacing-unit * 0.5;
+    padding: $spacing-unit * 0.5;
+    margin-top: $spacing-unit * 0.5;
+    background-color: $accent-color;
+  }
+
+  &__btn {
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000;
+    border: 2px solid #000;
+
+    &:hover,
+    &:visited {
+      color: #000;
+    }
+
+    &--action {
+      background: #000;
+      color: $grey-color-light;
+
+      &:hover,
+      &:visited {
+        color: $grey-color-light;
+      }
+    }
+  }
+
+  &__format {
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+/**
+ * Utilities
+ */
+.text {
+  &--center {
+    text-align: center;
   }
 }

@@ -260,7 +260,7 @@ table {
 }
 
 hr {
-  margin: $spacing-unit * 0.8 0;
+  margin: $spacing-unit * 1.2 0 $spacing-unit;
   background: linear-gradient(
     to left,
     $grey-color calc(50% - 16px),
