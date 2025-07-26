@@ -48,3 +48,4 @@ paginate_path: "/page/:num/"
 seo_paginator_message: "Страница %{current} из %{total} | "
 feed:
   path: /feed/
+counter_id: 56626909
