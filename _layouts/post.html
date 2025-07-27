@@ -60,7 +60,10 @@ layout: default
     </div>
   {% endif %}
 
-  {%- include tg_comments.html -%}
+  {% assign page_url = page.url | absolute_url %}
+
+  {%- include tg-comments.html
+    url=page_url -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
