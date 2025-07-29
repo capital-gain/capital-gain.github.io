@@ -1,5 +1,5 @@
 .SILENT:
-.PHONY: serve
+.PHONY: serve build
 
 serve:
 	bundle exec jekyll serve --drafts --future

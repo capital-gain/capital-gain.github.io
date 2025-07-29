@@ -16,6 +16,9 @@
         "plugins": ["@shopify/prettier-plugin-liquid"]
       }
     },
+    "Make": {
+      "format_on_save": "off"
+    },
     "Markdown": {
       "formatter": {
         "external": {
