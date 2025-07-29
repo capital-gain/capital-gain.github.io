@@ -319,7 +319,7 @@
   margin: 0 4px 8px;
   text-transform: lowercase;
   padding: 2px 8px;
-  background: #eee;
+  background: lighten($accent-color, 10%);
   border-radius: 8px;
 }
 
