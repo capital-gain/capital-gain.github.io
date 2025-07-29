@@ -9,8 +9,6 @@
 
   "languages": {
     "Liquid": {
-      "format_on_save": "off",
-
       "prettier": {
         "allowed": true,
         "plugins": ["@shopify/prettier-plugin-liquid"]

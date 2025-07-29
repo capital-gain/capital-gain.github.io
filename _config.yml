@@ -7,9 +7,9 @@ tagline: Инвестирование и финансовая независим
 lang: ru
 locale: ru_RU
 logo: /assets/logo-512.png
-url: "https://capital-gain.ru"
-baseurl: ""
-permalink: "/posts/:slug/"
+url: 'https://capital-gain.ru'
+baseurl: ''
+permalink: '/posts/:slug/'
 timezone: Asia/Omsk
 show_excerpts: true
 telegram_username: capitalgainru
@@ -20,7 +20,7 @@ rss: Atom
 # GitHub Pages defaults
 lsi: false
 safe: true
-source: "./"
+source: './'
 incremental: false
 highlighter: rouge
 gist:
@@ -32,13 +32,13 @@ kramdown:
 # End of GitHub Pages
 defaults:
   - scope:
-      path: ""
-      type: "posts"
+      path: ''
+      type: 'posts'
     values:
-      layout: "post"
-      title: ""
-      excerpt: ""
-      author: "Дмитрий Никитенко"
+      layout: 'post'
+      title: ''
+      excerpt: ''
+      author: 'Дмитрий Никитенко'
 sass:
   style: compressed
 plugins:
@@ -46,6 +46,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 paginate: 10
-paginate_path: "/page/:num/"
-seo_paginator_message: "Страница %{current} из %{total} | "
+paginate_path: '/page/:num/'
+seo_paginator_message: 'Страница %{current} из %{total} | '
 counter_id: 56626909

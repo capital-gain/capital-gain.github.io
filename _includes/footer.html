@@ -1,12 +1,13 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <data class="u-url" href="{{ '/' | relative_url }}"></data>
 
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <div>© {{ site.title | escape }}, {{ site.time | date: '%Y' }}</div>
         <small>
-          Jekyll {{ jekyll.version }}, <a
+          Jekyll {{ jekyll.version }},
+          <a
             href="https://capital-gain.github.io/"
             rel="nofollow"
             class="mirror">
@@ -16,11 +17,7 @@
         {%- include search-form.html -%}
       </div>
 
-      <div class="footer-col footer-col-3">
-        {%- include social.html -%}
-      </div>
+      <div class="footer-col footer-col-3">{%- include social.html -%}</div>
     </div>
-
   </div>
-
 </footer>

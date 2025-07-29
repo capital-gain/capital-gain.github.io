@@ -3,214 +3,559 @@ layout: post
 status: publish
 published: true
 title: Новое в инструментах, февраль 2023
-excerpt: За последний месяц много нового появилось в бэктестере, в сравнение фондов
+excerpt:
+  За последний месяц много нового появилось в бэктестере, в сравнение фондов
   добавлено больше интересной статистики и ещё несколько небольших изменений было
   в других инструментах.
 wordpress_id: 13985
 wordpress_url: https://capital-gain.ru/?p=13985
 date: '2023-02-25 09:07:59 +0600'
 categories:
-- Мета
+  - Мета
 tags:
-- Инструменты
+  - Инструменты
 comments:
-- id: 5506
-  author: Васян Колбасян
-  author_email: vasyan@yandex.ru
-  author_url: ''
-  date: '2023-02-28 15:54:41 +0600'
-  date_gmt: '2023-02-28 12:54:41 +0600'
-  content: |-
-    Дмитрий, как всегда большая благодарность за Вашу работу!
-    Есть неточность:
-    с 25.08.2020 (старт фонда EQMX, тогда ещё VTBX): - это дата старта TMOS, а EQMX(VTBX) - 02.03.2020
-- id: 5507
-  author: Дмитрий Никитенко
-  author_email: dima.nikitenko@gmail.com
-  author_url: https://capital-gain.ru
-  date: '2023-02-28 16:39:47 +0600'
-  date_gmt: '2023-02-28 13:39:47 +0600'
-  content: Спасибо, поправил.
+  - id: 5506
+    author: Васян Колбасян
+    author_email: vasyan@yandex.ru
+    author_url: ''
+    date: '2023-02-28 15:54:41 +0600'
+    date_gmt: '2023-02-28 12:54:41 +0600'
+    content: |-
+      Дмитрий, как всегда большая благодарность за Вашу работу!
+      Есть неточность:
+      с 25.08.2020 (старт фонда EQMX, тогда ещё VTBX): - это дата старта TMOS, а EQMX(VTBX) - 02.03.2020
+  - id: 5507
+    author: Дмитрий Никитенко
+    author_email: dima.nikitenko@gmail.com
+    author_url: https://capital-gain.ru
+    date: '2023-02-28 16:39:47 +0600'
+    date_gmt: '2023-02-28 13:39:47 +0600'
+    content: Спасибо, поправил.
 ---
+
 <p><!-- wp:paragraph --></p>
-<p>Кроме очередного раунда доработки самих инструментов, в этот раз я уделил немного времени внешнему виду графиков и того, что находится вокруг них, добавив немного &laquo;фирменного стиля&raquo; проекта в цветовые схемы, как можно будет заметить на скриншотах ниже. Не могу сказать, что всё это финальный результат, но что-то уже близкое к нему.</p>
+<p>
+  Кроме очередного раунда доработки самих инструментов, в этот раз я уделил
+  немного времени внешнему виду графиков и того, что находится вокруг них,
+  добавив немного &laquo;фирменного стиля&raquo; проекта в цветовые схемы, как
+  можно будет заметить на скриншотах ниже. Не могу сказать, что всё это
+  финальный результат, но что-то уже близкое к нему.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:heading --></p>
 <h2>Новые графики в бэктестере</h2>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:paragraph --></p>
-<p>В инструменте для <a href="https://capital-gain.ru/app/backtest" data-type="URL" data-id="https://capital-gain.ru/app/backtest">анализа портфелей</a> появились два новых графика, а старые были обновлены.</p>
+<p>
+  В инструменте для
+  <a
+    href="https://capital-gain.ru/app/backtest"
+    data-type="URL"
+    data-id="https://capital-gain.ru/app/backtest"
+    >анализа портфелей</a
+  >
+  появились два новых графика, а старые были обновлены.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>Над графиком доходности портфелей по годам или периодам, а также графиком риска и доходности, появились селекторы периодов от 1 года до 30 лет (в зависимости от наличия данных). Раньше графики годовых доходности показывались отдельно, что только занимало лишнее место. График доходностей теперь по-умолчанию показывается линиями, а не столбиками, что удобнее, если период очень длинный:</p>
+<p>
+  Над графиком доходности портфелей по годам или периодам, а также графиком
+  риска и доходности, появились селекторы периодов от 1 года до 30 лет (в
+  зависимости от наличия данных). Раньше графики годовых доходности показывались
+  отдельно, что только занимало лишнее место. График доходностей теперь
+  по-умолчанию показывается линиями, а не столбиками, что удобнее, если период
+  очень длинный:
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":13988,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-dyh.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-dyh-1024x384.png" alt="" class="wp-image-13988"/></a></figure>
-<p><!-- /wp:image --></p>
-<p><!-- wp:image {"id":13989,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-dyt.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-dyt-1024x383.png" alt="" class="wp-image-13989"/></a></figure>
-<p><!-- /wp:image --><br />
-<figcaption class="blocks-gallery-caption wp-element-caption">Изображения кликабельны.</figcaption>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
+  <!-- wp:image {"id":13988,"sizeSlug":"large","linkDestination":"media"} -->
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-dyh.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-dyh-1024x384.png"
+        alt=""
+        class="wp-image-13988"
+    /></a>
+  </figure>
+  <p><!-- /wp:image --></p>
+  <p>
+    <!-- wp:image {"id":13989,"sizeSlug":"large","linkDestination":"media"} -->
+  </p>
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-dyt.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-dyt-1024x383.png"
+        alt=""
+        class="wp-image-13989"
+    /></a>
+  </figure>
+  <p>
+    <!-- /wp:image --><br />
+    <figcaption class="blocks-gallery-caption wp-element-caption">
+      Изображения кликабельны.
+    </figcaption>
+  </p>
 </figure>
 <p><!-- /wp:gallery --></p>
 <p><!-- wp:paragraph --></p>
-<p>Примеры выше демонстрируют результаты портфеля из акций США, Великобритании, Германии и Франции, долгосрочных гос. облигаций США и казначейских векселей США в пропорции (30, 10, 10, 10) / (20, 20) соответственно. История по всем этим активам есть с 1871 года.</p>
+<p>
+  Примеры выше демонстрируют результаты портфеля из акций США, Великобритании,
+  Германии и Франции, долгосрочных гос. облигаций США и казначейских векселей
+  США в пропорции (30, 10, 10, 10) / (20, 20) соответственно. История по всем
+  этим активам есть с 1871 года.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>Разумеется, тут можно сравнивать и несколько портфелей. Вот, например, битва двух модельных портфелей с большим количеством золота, рублевыми акциями (индекс МосБиржи) и облигациями (ОФЗ) — Лежебоки С. Спирина (портфель 1) и Вечного портфеля Г. Брауна (портфель 2, в нем еще есть депозиты):</p>
+<p>
+  Разумеется, тут можно сравнивать и несколько портфелей. Вот, например, битва
+  двух модельных портфелей с большим количеством золота, рублевыми акциями
+  (индекс МосБиржи) и облигациями (ОФЗ) — Лежебоки С. Спирина (портфель 1) и
+  Вечного портфеля Г. Брауна (портфель 2, в нем еще есть депозиты):
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":13992,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-e7a.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-e7a-1024x460.png" alt="" class="wp-image-13992"/></a></figure>
-<p><!-- /wp:image --></p>
-<p><!-- wp:image {"id":13990,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-e7r.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-e7r-1024x389.png" alt="" class="wp-image-13990"/></a></figure>
-<p><!-- /wp:image --></p>
-<p><!-- wp:image {"id":13991,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-e81.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-e81-1024x391.png" alt="" class="wp-image-13991"/></a></figure>
-<p><!-- /wp:image --></figure>
-<p><!-- /wp:gallery --></p>
-<p><!-- wp:paragraph --></p>
-<p>На график доходностей (тот, что по центру) также добавлены линии минимальной и максимальной доходности сравниваемых портфелей на заданном интервале.</p>
-<p><!-- /wp:paragraph --></p>
-<p><!-- wp:paragraph --></p>
-<p>Один из новых графиков — это <strong>история коррекций и восстановлений</strong>. Данные, которые можно на нем увидеть, раньше нельзя было получить из результатов анализа в готовом виде. Если вернуться к мировому портфелю, можно увидеть, что он пережил за полтора века доступной истории:</p>
-<p><!-- /wp:paragraph --></p>
-<p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":13994,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-eb3.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-eb3-1024x426.png" alt="" class="wp-image-13994"/></a></figure>
-<p><!-- /wp:image --></p>
-<p><!-- wp:image {"id":13993,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-ebl.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-ebl-1024x429.png" alt="" class="wp-image-13993"/></a></figure>
-<p><!-- /wp:image --><br />
-<figcaption class="blocks-gallery-caption wp-element-caption">Если портфелей несколько, между ними можно переключаться.</figcaption>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
+  <!-- wp:image {"id":13992,"sizeSlug":"large","linkDestination":"media"} -->
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-e7a.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-e7a-1024x460.png"
+        alt=""
+        class="wp-image-13992"
+    /></a>
+  </figure>
+  <p><!-- /wp:image --></p>
+  <p>
+    <!-- wp:image {"id":13990,"sizeSlug":"large","linkDestination":"media"} -->
+  </p>
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-e7r.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-e7r-1024x389.png"
+        alt=""
+        class="wp-image-13990"
+    /></a>
+  </figure>
+  <p><!-- /wp:image --></p>
+  <p>
+    <!-- wp:image {"id":13991,"sizeSlug":"large","linkDestination":"media"} -->
+  </p>
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-e81.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-e81-1024x391.png"
+        alt=""
+        class="wp-image-13991"
+    /></a>
+  </figure>
+  <p><!-- /wp:image --></p>
 </figure>
 <p><!-- /wp:gallery --></p>
 <p><!-- wp:paragraph --></p>
-<p>Как видите, самой глубокой и долгосрочной оказалась просадка времен <a href="https://capital-gain.ru/posts/what-if-great-depression-returns/" data-type="post" data-id="1528">Великой депрессии</a> — портфель терял 35% стоимости к третьему году снижения от предыдущего пика, а восстановление заняло семь лет. Что тут скажешь, тяжело жилось людям при золотых деньгах и постоянных дефляциях! А ведь кто-то сейчас выступает за возврат к такой системе.</p>
+<p>
+  На график доходностей (тот, что по центру) также добавлены линии минимальной и
+  максимальной доходности сравниваемых портфелей на заданном интервале.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>По принципу расчета это обычный underwater chart, который показывает просадки от текущего пика стоимости до его повторного преодоления, что позволяет понять сразу две вещи — на сколько может просесть стоимость портфеля, и сколько придется ждать пока она восстановится. Линия на горизонтальной оси показывает среднюю длительность восстановления стоимости среди всех случаев её падения, в нашем случае с 60% акций это вполне ожидаемые 3 года.</p>
+<p>
+  Один из новых графиков — это
+  <strong>история коррекций и восстановлений</strong>. Данные, которые можно на
+  нем увидеть, раньше нельзя было получить из результатов анализа в готовом
+  виде. Если вернуться к мировому портфелю, можно увидеть, что он пережил за
+  полтора века доступной истории:
+</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:gallery {"linkTarget":"_blank","linkTo":"media"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
+  <!-- wp:image {"id":13994,"sizeSlug":"large","linkDestination":"media"} -->
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-eb3.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-eb3-1024x426.png"
+        alt=""
+        class="wp-image-13994"
+    /></a>
+  </figure>
+  <p><!-- /wp:image --></p>
+  <p>
+    <!-- wp:image {"id":13993,"sizeSlug":"large","linkDestination":"media"} -->
+  </p>
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-ebl.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-ebl-1024x429.png"
+        alt=""
+        class="wp-image-13993"
+    /></a>
+  </figure>
+  <p>
+    <!-- /wp:image --><br />
+    <figcaption class="blocks-gallery-caption wp-element-caption">
+      Если портфелей несколько, между ними можно переключаться.
+    </figcaption>
+  </p>
+</figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:paragraph --></p>
+<p>
+  Как видите, самой глубокой и долгосрочной оказалась просадка времен
+  <a
+    href="https://capital-gain.ru/posts/what-if-great-depression-returns/"
+    data-type="post"
+    data-id="1528"
+    >Великой депрессии</a
+  >
+  — портфель терял 35% стоимости к третьему году снижения от предыдущего пика, а
+  восстановление заняло семь лет. Что тут скажешь, тяжело жилось людям при
+  золотых деньгах и постоянных дефляциях! А ведь кто-то сейчас выступает за
+  возврат к такой системе.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>И последний новый график в бэктестере — это <strong>гистограмма распределения доходностей</strong>, для которой можно выбрать интервал расчета доходностей (аналогично от 1 года до 30 лет в зависимости от наличия данных) и актив для анализа (любой из портфелей или использованных активов):</p>
+<p>
+  По принципу расчета это обычный underwater chart, который показывает просадки
+  от текущего пика стоимости до его повторного преодоления, что позволяет понять
+  сразу две вещи — на сколько может просесть стоимость портфеля, и сколько
+  придется ждать пока она восстановится. Линия на горизонтальной оси показывает
+  среднюю длительность восстановления стоимости среди всех случаев её падения, в
+  нашем случае с 60% акций это вполне ожидаемые 3 года.
+</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>
+  И последний новый график в бэктестере — это
+  <strong>гистограмма распределения доходностей</strong>, для которой можно
+  выбрать интервал расчета доходностей (аналогично от 1 года до 30 лет в
+  зависимости от наличия данных) и актив для анализа (любой из портфелей или
+  использованных активов):
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:gallery {"columns":2,"linkTarget":"_blank","linkTo":"media"} --></p>
-<figure class="wp-block-gallery has-nested-images columns-2 is-cropped"><!-- wp:image {"id":13998,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-ejw.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-ejw-1024x455.png" alt="" class="wp-image-13998"/></a></figure>
-<p><!-- /wp:image --></p>
-<p><!-- wp:image {"id":13995,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-ekg.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-ekg-1024x461.png" alt="" class="wp-image-13995"/></a></figure>
-<p><!-- /wp:image --></p>
-<p><!-- wp:image {"id":13997,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-el9.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-el9-1024x463.png" alt="" class="wp-image-13997"/></a></figure>
-<p><!-- /wp:image --></p>
-<p><!-- wp:image {"id":13996,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-elr.png" target="_blank" rel="noopener"><img src="/assets/images/SCR-20230225-elr-1024x460.png" alt="" class="wp-image-13996"/></a></figure>
-<p><!-- /wp:image --></figure>
+<figure class="wp-block-gallery has-nested-images columns-2 is-cropped">
+  <!-- wp:image {"id":13998,"sizeSlug":"large","linkDestination":"media"} -->
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-ejw.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-ejw-1024x455.png"
+        alt=""
+        class="wp-image-13998"
+    /></a>
+  </figure>
+  <p><!-- /wp:image --></p>
+  <p>
+    <!-- wp:image {"id":13995,"sizeSlug":"large","linkDestination":"media"} -->
+  </p>
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-ekg.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-ekg-1024x461.png"
+        alt=""
+        class="wp-image-13995"
+    /></a>
+  </figure>
+  <p><!-- /wp:image --></p>
+  <p>
+    <!-- wp:image {"id":13997,"sizeSlug":"large","linkDestination":"media"} -->
+  </p>
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-el9.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-el9-1024x463.png"
+        alt=""
+        class="wp-image-13997"
+    /></a>
+  </figure>
+  <p><!-- /wp:image --></p>
+  <p>
+    <!-- wp:image {"id":13996,"sizeSlug":"large","linkDestination":"media"} -->
+  </p>
+  <figure class="wp-block-image size-large">
+    <a href="/assets/images/SCR-20230225-elr.png" target="_blank" rel="noopener"
+      ><img
+        src="/assets/images/SCR-20230225-elr-1024x460.png"
+        alt=""
+        class="wp-image-13996"
+    /></a>
+  </figure>
+  <p><!-- /wp:image --></p>
+</figure>
 <p><!-- /wp:gallery --></p>
 <p><!-- wp:paragraph --></p>
-<p>Гистограмма отображает частоту вхождения значения в определенные интервалы, в нашем случае — доходностей в интервалы с шагом в 10% от -100% до бесконечности. На таком графике можно увидеть много интересного:</p>
+<p>
+  Гистограмма отображает частоту вхождения значения в определенные интервалы, в
+  нашем случае — доходностей в интервалы с шагом в 10% от -100% до
+  бесконечности. На таком графике можно увидеть много интересного:
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:list --></p>
-<ul><!-- wp:list-item --></p>
-<li>наш глобальный портфель на интервалах в 1 год был убыточен 18% времени;</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>ни разу за 152 года доходность за отдельный календарный год не опускалась ниже 30% (на графике доходностей видно, что минимум был -23,1%);</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>среднее арифметическое годовых доходностей портфеля выше медианы, что указывает на позитивную асимметрию (skewness) в распределении;</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>на скользящих интервалах в 10 лет доходность портфеля никогда не опускалась в отрицательную зону;</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>акции США приносили убыток в 26%-ах календарных лет — примерно в полтора раза чаще, чем портфель, в котором их 30%;</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>у акций США распределение годовых доходностей почти нормальное, асимметрия доходностей близка к нулю (слега отрицательная);</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>немецкие акции 3 раза были &laquo;втоптаны в землю&raquo;, принеся убыток в интервале от -80 до -90%, и два раза совершали камбэки эпических масштабов по 700&ndash;800% за год — самая наглядная иллюстрация асимметрии (skewness) и толстых хвостов кривой распределения (kurtosis);</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>ничего подобного не происходило с диверсифицированным портфелем, который включает 10% немецких акций;</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>и т. д.</li>
-<p><!-- /wp:list-item --></ul>
+<ul>
+  <!-- wp:list-item -->
+  <li>
+    наш глобальный портфель на интервалах в 1 год был убыточен 18% времени;
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    ни разу за 152 года доходность за отдельный календарный год не опускалась
+    ниже 30% (на графике доходностей видно, что минимум был -23,1%);
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    среднее арифметическое годовых доходностей портфеля выше медианы, что
+    указывает на позитивную асимметрию (skewness) в распределении;
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    на скользящих интервалах в 10 лет доходность портфеля никогда не опускалась
+    в отрицательную зону;
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    акции США приносили убыток в 26%-ах календарных лет — примерно в полтора
+    раза чаще, чем портфель, в котором их 30%;
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    у акций США распределение годовых доходностей почти нормальное, асимметрия
+    доходностей близка к нулю (слега отрицательная);
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    немецкие акции 3 раза были &laquo;втоптаны в землю&raquo;, принеся убыток в
+    интервале от -80 до -90%, и два раза совершали камбэки эпических масштабов
+    по 700&ndash;800% за год — самая наглядная иллюстрация асимметрии (skewness)
+    и толстых хвостов кривой распределения (kurtosis);
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    ничего подобного не происходило с диверсифицированным портфелем, который
+    включает 10% немецких акций;
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>и т. д.</li>
+  <p><!-- /wp:list-item --></p>
+</ul>
 <p><!-- /wp:list --></p>
 <p><!-- wp:heading --></p>
 <h2>Выбор периодичности ребалансировки</h2>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:paragraph --></p>
-<p>В бэктестере теперь можно не просто включить восстановление изначальных весов активов в портфеле или выключить его, но и выбрать частоту этого действия в диапазоне от 1 года до 5 лет:</p>
+<p>
+  В бэктестере теперь можно не просто включить восстановление изначальных весов
+  активов в портфеле или выключить его, но и выбрать частоту этого действия в
+  диапазоне от 1 года до 5 лет:
+</p>
 <p><!-- /wp:paragraph --></p>
-<p><!-- wp:image {"id":13999,"width":768,"height":349,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large is-resized"><a href="/assets/images/SCR-20230225-f5y.png" target="_blank" rel="noreferrer noopener"><img src="/assets/images/SCR-20230225-f5y-1024x465.png" alt="" class="wp-image-13999" width="768" height="349"/></a></figure>
+<p>
+  <!-- wp:image {"id":13999,"width":768,"height":349,"sizeSlug":"large","linkDestination":"media"} -->
+</p>
+<figure class="wp-block-image size-large is-resized">
+  <a
+    href="/assets/images/SCR-20230225-f5y.png"
+    target="_blank"
+    rel="noreferrer noopener"
+    ><img
+      src="/assets/images/SCR-20230225-f5y-1024x465.png"
+      alt=""
+      class="wp-image-13999"
+      width="768"
+      height="349"
+  /></a>
+</figure>
 <p><!-- /wp:image --></p>
 <p><!-- wp:paragraph --></p>
-<p>Например, если выбрать 3 года, ребалансировка будет происходить на каждом 3-м году существования портфеля, то есть на 3-м, 6-м, 9-м и т. д. По моим наблюдениям, чем реже проводится ребалансировка, тем выше будет риск портфеля (стандартное отклонение) и неопределенность конечных результатов. При этом повышенный риск не всегда компенсируется доходностью — она может оказаться и ниже, чем при ежегодном восстановлении весов.</p>
+<p>
+  Например, если выбрать 3 года, ребалансировка будет происходить на каждом 3-м
+  году существования портфеля, то есть на 3-м, 6-м, 9-м и т. д. По моим
+  наблюдениям, чем реже проводится ребалансировка, тем выше будет риск портфеля
+  (стандартное отклонение) и неопределенность конечных результатов. При этом
+  повышенный риск не всегда компенсируется доходностью — она может оказаться и
+  ниже, чем при ежегодном восстановлении весов.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:heading --></p>
 <h2>Больше статистики в сравнении фондов</h2>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:paragraph --></p>
-<p>В таблицу <a href="https://capital-gain.ru/app/funds/compare" data-type="URL" data-id="https://capital-gain.ru/app/funds/compare">сравнения фондов</a> добавлено больше статистики о том как фонд отслеживает свой бенчмарк. Она появляется в том случае, если фонд следит за известным инструменту индексом (например, МосБиржи или S&amp;P 500).</p>
+<p>
+  В таблицу
+  <a
+    href="https://capital-gain.ru/app/funds/compare"
+    data-type="URL"
+    data-id="https://capital-gain.ru/app/funds/compare"
+    >сравнения фондов</a
+  >
+  добавлено больше статистики о том как фонд отслеживает свой бенчмарк. Она
+  появляется в том случае, если фонд следит за известным инструменту индексом
+  (например, МосБиржи или S&amp;P 500).
+</p>
 <p><!-- /wp:paragraph --></p>
-<p><!-- wp:image {"id":14000,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-fic.png" target="_blank" rel="noreferrer noopener"><img src="/assets/images/SCR-20230225-fic-1024x417.png" alt="" class="wp-image-14000"/></a></figure>
-<p><!-- /wp:image --></p>
-<p><!-- wp:paragraph --></p>
-<p>Новые показатели здесь, справку по которым можно почитать в самом инструменте в подсказке на иконке вопросика (отображается при наведении курсора), это:</p>
-<p><!-- /wp:paragraph --></p>
-<p><!-- wp:list --></p>
-<ul><!-- wp:list-item --></p>
-<li>ошибка слежения за индексом;</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>коэффициент детерминации или R<sup>2</sup> между дневными доходностями фонда и индекса;</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>коэффициент beta дневных доходностей фонда к индексу (по нему также показывается p-value, если навести курсор на само значение).</li>
-<p><!-- /wp:list-item --></ul>
-<p><!-- /wp:list --></p>
-<p><!-- wp:paragraph --></p>
-<p>Все показатели рассчитаны по биржевым ценам закрытия торгов, а не СЧА (как это обычно принято делать), то есть включают в себя деятельность маркет-мейкеров и вообще &laquo;событий в стакане&raquo;, а не только работу управляющей компании.</p>
-<p><!-- /wp:paragraph --></p>
-<p><!-- wp:paragraph --></p>
-<p>По ним сразу становится видно, что наши БПИФ в сравнении с ETF (SPY) смотрятся немного смешно и грустно со своими ошибками слежения по 5–10%+ и бетой к индексу сильно ниже единицы даже в относительно спокойные времена. Особенно если включить в выборку февраль 2022 года, которого на скриншоте выше нет, потому что фонд INRU появился позже. Тем не менее, всё это больше относится к точности отслеживания индекса в моменте, на дневных доходностях, и не значит, что БПИФ не могут выдать доходность индекса долгосрочно.</p>
-<p><!-- /wp:paragraph --></p>
-<p><!-- wp:paragraph --></p>
-<p>Пока видно, что в целом могут, за вычетом своих комиссий и какого-то случайного дисконта за плохое управление, что видно по отклонениям от индекса в процентах годовых на периоде подольше с 25.08.2020 (старт фонда TMOS):</p>
-<p><!-- /wp:paragraph --></p>
-<p><!-- wp:image {"id":14001,"sizeSlug":"large","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-large"><a href="/assets/images/SCR-20230225-fyh.png" target="_blank" rel="noreferrer noopener"><img src="/assets/images/SCR-20230225-fyh-1024x416.png" alt="" class="wp-image-14001"/></a><br />
-<figcaption class="wp-element-caption">Здесь февромарт 2022 года уже включен в данные, поэтому показатели качества слежения за индексом, использующие дневные доходности, такие плохие. А у EQMX примерно в тот же период что-то произошло, и они где-то потеряли 1% доходности, отправив свой фонд на последнее место.</figcaption>
+<p>
+  <!-- wp:image {"id":14000,"sizeSlug":"large","linkDestination":"media"} -->
+</p>
+<figure class="wp-block-image size-large">
+  <a
+    href="/assets/images/SCR-20230225-fic.png"
+    target="_blank"
+    rel="noreferrer noopener"
+    ><img
+      src="/assets/images/SCR-20230225-fic-1024x417.png"
+      alt=""
+      class="wp-image-14000"
+  /></a>
 </figure>
 <p><!-- /wp:image --></p>
 <p><!-- wp:paragraph --></p>
-<p>Напомню, что чуть больше статистики слежения за индексом и возможность загрузить любые данные фондов (биржевые цены или СЧА) и индексов в виде CSV есть в <a href="https://capital-gain.ru/app/funds/analyse" data-type="URL" data-id="https://capital-gain.ru/app/funds/analyse">инструменте для анализа фондов</a>.</p>
+<p>
+  Новые показатели здесь, справку по которым можно почитать в самом инструменте
+  в подсказке на иконке вопросика (отображается при наведении курсора), это:
+</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:list --></p>
+<ul>
+  <!-- wp:list-item -->
+  <li>ошибка слежения за индексом;</li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    коэффициент детерминации или R<sup>2</sup> между дневными доходностями фонда
+    и индекса;
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    коэффициент beta дневных доходностей фонда к индексу (по нему также
+    показывается p-value, если навести курсор на само значение).
+  </li>
+  <p><!-- /wp:list-item --></p>
+</ul>
+<p><!-- /wp:list --></p>
+<p><!-- wp:paragraph --></p>
+<p>
+  Все показатели рассчитаны по биржевым ценам закрытия торгов, а не СЧА (как это
+  обычно принято делать), то есть включают в себя деятельность маркет-мейкеров и
+  вообще &laquo;событий в стакане&raquo;, а не только работу управляющей
+  компании.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>Также была исправлена неточность в расчете отклонения от индекса, которую иногда можно было поймать из-за появления лишнего дня в начале данных после выбора периода сравнения на графике.</p>
+<p>
+  По ним сразу становится видно, что наши БПИФ в сравнении с ETF (SPY) смотрятся
+  немного смешно и грустно со своими ошибками слежения по 5–10%+ и бетой к
+  индексу сильно ниже единицы даже в относительно спокойные времена. Особенно
+  если включить в выборку февраль 2022 года, которого на скриншоте выше нет,
+  потому что фонд INRU появился позже. Тем не менее, всё это больше относится к
+  точности отслеживания индекса в моменте, на дневных доходностях, и не значит,
+  что БПИФ не могут выдать доходность индекса долгосрочно.
+</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>
+  Пока видно, что в целом могут, за вычетом своих комиссий и какого-то
+  случайного дисконта за плохое управление, что видно по отклонениям от индекса
+  в процентах годовых на периоде подольше с 25.08.2020 (старт фонда TMOS):
+</p>
+<p><!-- /wp:paragraph --></p>
+<p>
+  <!-- wp:image {"id":14001,"sizeSlug":"large","linkDestination":"media"} -->
+</p>
+<figure class="wp-block-image size-large">
+  <a
+    href="/assets/images/SCR-20230225-fyh.png"
+    target="_blank"
+    rel="noreferrer noopener"
+    ><img
+      src="/assets/images/SCR-20230225-fyh-1024x416.png"
+      alt=""
+      class="wp-image-14001" /></a
+  ><br />
+  <figcaption class="wp-element-caption">
+    Здесь февромарт 2022 года уже включен в данные, поэтому показатели качества
+    слежения за индексом, использующие дневные доходности, такие плохие. А у
+    EQMX примерно в тот же период что-то произошло, и они где-то потеряли 1%
+    доходности, отправив свой фонд на последнее место.
+  </figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>
+  Напомню, что чуть больше статистики слежения за индексом и возможность
+  загрузить любые данные фондов (биржевые цены или СЧА) и индексов в виде CSV
+  есть в
+  <a
+    href="https://capital-gain.ru/app/funds/analyse"
+    data-type="URL"
+    data-id="https://capital-gain.ru/app/funds/analyse"
+    >инструменте для анализа фондов</a
+  >.
+</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>
+  Также была исправлена неточность в расчете отклонения от индекса, которую
+  иногда можно было поймать из-за появления лишнего дня в начале данных после
+  выбора периода сравнения на графике.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:heading --></p>
 <h2>Прочие изменения</h2>
 <p><!-- /wp:heading --></p>
 <p><!-- wp:list --></p>
-<ul><!-- wp:list-item --></p>
-<li>На <a href="https://capital-gain.ru/app/stats/coupons" data-type="URL" data-id="https://capital-gain.ru/app/stats/coupons">графике купонной доходности облигаций</a> индекс ОФЗ-ИН теперь показывается только в режиме реальной доходности, потому что её купонная доходность фактически выше инфляции.</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>В <a href="https://capital-gain.ru/app/stats/corrections" data-type="URL" data-id="https://capital-gain.ru/app/stats/corrections">таблице доходностей после коррекций</a> добавлены короткие периоды в 3 и 6 месяцев. Мне просто захотелось посмотреть что делали рынки после недавнего дна в сентябре-октябре 2022 года.</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>Ссылки в скринер justETF из сравнения фондов теперь ведут напрямую на страницы фондов, а не на результаты поиска.</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>Из <a href="https://capital-gain.ru/app/funds/expenses" data-type="URL" data-id="https://capital-gain.ru/app/funds/expenses">сводки по комиссиям</a> исключены ликвидированные биржевые фонды (ряд фондов АТОН и FXRB). Те фонды, что временно не торгуются, продолжают учитываться.</li>
-<p><!-- /wp:list-item --></ul>
+<ul>
+  <!-- wp:list-item -->
+  <li>
+    На
+    <a
+      href="https://capital-gain.ru/app/stats/coupons"
+      data-type="URL"
+      data-id="https://capital-gain.ru/app/stats/coupons"
+      >графике купонной доходности облигаций</a
+    >
+    индекс ОФЗ-ИН теперь показывается только в режиме реальной доходности,
+    потому что её купонная доходность фактически выше инфляции.
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    В
+    <a
+      href="https://capital-gain.ru/app/stats/corrections"
+      data-type="URL"
+      data-id="https://capital-gain.ru/app/stats/corrections"
+      >таблице доходностей после коррекций</a
+    >
+    добавлены короткие периоды в 3 и 6 месяцев. Мне просто захотелось посмотреть
+    что делали рынки после недавнего дна в сентябре-октябре 2022 года.
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    Ссылки в скринер justETF из сравнения фондов теперь ведут напрямую на
+    страницы фондов, а не на результаты поиска.
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    Из
+    <a
+      href="https://capital-gain.ru/app/funds/expenses"
+      data-type="URL"
+      data-id="https://capital-gain.ru/app/funds/expenses"
+      >сводки по комиссиям</a
+    >
+    исключены ликвидированные биржевые фонды (ряд фондов АТОН и FXRB). Те фонды,
+    что временно не торгуются, продолжают учитываться.
+  </li>
+  <p><!-- /wp:list-item --></p>
+</ul>
 <p><!-- /wp:list --></p>

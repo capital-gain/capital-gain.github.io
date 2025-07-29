@@ -4,61 +4,47 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- if site.posts.size > 0 -%}
-    <ul class="post-list">
-      {%- for post in paginator.posts -%}
-      <li>
-        <span class="post-meta">
-          {{ post.date | date: "%d.%m.%Y" }}
-          {% if post.categories and post.categories.size > 0 %} •
-            {{ post.categories | join: ", " }}
-          {% endif %}
-          {% if post.comments and post.comments.size > 0 %} •
-            Комментариев: {{ post.comments.size }}
-          {% endif %}
-          {% if post.title == "" %} •
-            <a class="post-link-icon" href="{{ post.url | relative_url }}">
-              🔗
-            </a>
-          {% endif %}
-        </span>
-        {% if post.title %}
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | smartify }}
-            </a>
-          </h3>
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%} {{ content }} {%- if site.posts.size > 0 -%}
+  <ul class="post-list">
+    {%- for post in paginator.posts -%}
+    <li>
+      <span class="post-meta">
+        {{ post.date | date: "%d.%m.%Y" }} {% if post.categories and
+        post.categories.size > 0 %} • {{ post.categories | join: ", " }} {%
+        endif %} {% if post.comments and post.comments.size > 0 %} •
+        Комментариев: {{ post.comments.size }} {% endif %} {% if post.title ==
+        "" %} •
+        <a class="post-link-icon" href="{{ post.url | relative_url }}"> 🔗 </a>
         {% endif %}
-        {%- if site.show_excerpts %}
-          {%- if post.excerpt == "" -%}
-            {{ post.content }}
-          {%- else -%}
-            {{ post.excerpt | smartify }}
-          {%- endif %}
-        {%- endif %}
-      </li>
-      {%- endfor -%}
-    </ul>
+      </span>
+      {% if post.title %}
+      <h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title | smartify }}
+        </a>
+      </h3>
+      {% endif %} {%- if site.show_excerpts %} {%- if post.excerpt == "" -%} {{
+      post.content }} {%- else -%} {{ post.excerpt | smartify }} {%- endif %}
+      {%- endif %}
+    </li>
+    {%- endfor -%}
+  </ul>
   {%- endif -%}
 
   <div class="pagination">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="pagination_prev">
-        &larr; Назад
-      </a>
+    <a href="{{ paginator.previous_page_path }}" class="pagination_prev">
+      &larr; Назад
+    </a>
     {% endif %}
     <span class="pagination__page">
       Страница: {{ paginator.page }} из {{ paginator.total_pages }}
     </span>
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="pagination__next">
-        Вперед &rarr;
-      </a>
+    <a href="{{ paginator.next_page_path }}" class="pagination__next">
+      Вперед &rarr;
+    </a>
     {% endif %}
   </div>
 </div>

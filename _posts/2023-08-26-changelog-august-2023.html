@@ -3,55 +3,182 @@ layout: post
 status: publish
 published: true
 title: Новое в инструментах, август 2023
-excerpt: Несколько новых возможностей и небольших улучшений за последние шесть месяцев,
+excerpt:
+  Несколько новых возможностей и небольших улучшений за последние шесть месяцев,
   прошедшие с последнего обзора изменений.
 wordpress_id: 15808
 wordpress_url: https://capital-gain.ru/?p=15808
 date: '2023-08-26 06:53:14 +0600'
 categories:
-- Мета
+  - Мета
 tags:
-- Инструменты
+  - Инструменты
 comments: []
 ---
-<p><!-- wp:image {"id":15811,"width":261,"height":38,"sizeSlug":"full","linkDestination":"none"} --></p>
-<figure class="wp-block-image size-full is-resized"><img src="/assets/images/SCR-20230826-inpk.png" alt="" class="wp-image-15811" width="261" height="38"/></figure>
+
+<p>
+  <!-- wp:image {"id":15811,"width":261,"height":38,"sizeSlug":"full","linkDestination":"none"} -->
+</p>
+<figure class="wp-block-image size-full is-resized">
+  <img
+    src="/assets/images/SCR-20230826-inpk.png"
+    alt=""
+    class="wp-image-15811"
+    width="261"
+    height="38" />
+</figure>
 <p><!-- /wp:image --></p>
 <p><!-- wp:paragraph --></p>
-<p>По просьбам пользователей в <a rel="noreferrer noopener" href="https://capital-gain.ru/app/rebalance" data-type="URL" data-id="https://capital-gain.ru/app/rebalance" target="_blank">ребалансировке</a> и <a rel="noreferrer noopener" href="https://capital-gain.ru/app/planning" data-type="URL" data-id="https://capital-gain.ru/app/planning" target="_blank">финансовом плане</a> добавил <strong>экспорт и импорт настроек</strong>. Чтобы сохранять приватность ваших финансовых данных, настройки в этих инструментах хранятся на локальном устройстве, поэтому при смене устройства или очистке локального хранилища теряются. Теперь их можно заранее выгрузить в виде текстового файла с расширением .json и затем импортировать обратно, чтобы не вводить все данные заново.</p>
+<p>
+  По просьбам пользователей в
+  <a
+    rel="noreferrer noopener"
+    href="https://capital-gain.ru/app/rebalance"
+    data-type="URL"
+    data-id="https://capital-gain.ru/app/rebalance"
+    target="_blank"
+    >ребалансировке</a
+  >
+  и
+  <a
+    rel="noreferrer noopener"
+    href="https://capital-gain.ru/app/planning"
+    data-type="URL"
+    data-id="https://capital-gain.ru/app/planning"
+    target="_blank"
+    >финансовом плане</a
+  >
+  добавил <strong>экспорт и импорт настроек</strong>. Чтобы сохранять
+  приватность ваших финансовых данных, настройки в этих инструментах хранятся на
+  локальном устройстве, поэтому при смене устройства или очистке локального
+  хранилища теряются. Теперь их можно заранее выгрузить в виде текстового файла
+  с расширением .json и затем импортировать обратно, чтобы не вводить все данные
+  заново.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>Ряд доработок был сделан в инструменте <a rel="noreferrer noopener" href="https://capital-gain.ru/app/funds/analyse" data-type="URL" data-id="https://capital-gain.ru/app/funds/analyse" target="_blank">анализа фондов</a> (как выглядит часть из них видно на скриншотах в <a rel="noreferrer noopener" href="https://capital-gain.ru/posts/moex-tracking-using-funds-portfolio/" data-type="URL" data-id="https://capital-gain.ru/posts/moex-tracking-using-funds-portfolio/" target="_blank">этой статье</a>):</p>
+<p>
+  Ряд доработок был сделан в инструменте
+  <a
+    rel="noreferrer noopener"
+    href="https://capital-gain.ru/app/funds/analyse"
+    data-type="URL"
+    data-id="https://capital-gain.ru/app/funds/analyse"
+    target="_blank"
+    >анализа фондов</a
+  >
+  (как выглядит часть из них видно на скриншотах в
+  <a
+    rel="noreferrer noopener"
+    href="https://capital-gain.ru/posts/moex-tracking-using-funds-portfolio/"
+    data-type="URL"
+    data-id="https://capital-gain.ru/posts/moex-tracking-using-funds-portfolio/"
+    target="_blank"
+    >этой статье</a
+  >):
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:list --></p>
-<ul><!-- wp:list-item --></p>
-<li>Обновлен расчет характерных доходностей и отклонения по ним от индекса, чтобы сделать его точно таким же как в сравнении фондов.</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>Добавлено поле для ввода номера строки конца данных (кроме уже имеющегося начала данных), что даёт возможность выбрать период сравнения без модификации загруженного CSV-файла.</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>В превью данных после загрузки CSV теперь показываются все данные, а не только их начало — контейнер с данными можно скроллить.</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>Из имен загруженных файлов с данными или выбранных индексов теперь берутся названия инструментов для таблицы и графиков, чтобы их было проще отличать (полезно, если в разных вкладках открыто несколько сравнений).</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>На график отклонений от индекса (tracking difference) добавлено отображение скользящего N-месячное накопленного отклонения, N можно задать в поле под графиком (по-умолчанию равно 12).</li>
-<p><!-- /wp:list-item --></p>
-<p><!-- wp:list-item --></p>
-<li>Формат даты по-умолчанию установлен в DD.MM.YYYY как более часто встречающийся в выгрузках с сайтов российских УК.</li>
-<p><!-- /wp:list-item --></ul>
+<ul>
+  <!-- wp:list-item -->
+  <li>
+    Обновлен расчет характерных доходностей и отклонения по ним от индекса,
+    чтобы сделать его точно таким же как в сравнении фондов.
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    Добавлено поле для ввода номера строки конца данных (кроме уже имеющегося
+    начала данных), что даёт возможность выбрать период сравнения без
+    модификации загруженного CSV-файла.
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    В превью данных после загрузки CSV теперь показываются все данные, а не
+    только их начало — контейнер с данными можно скроллить.
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    Из имен загруженных файлов с данными или выбранных индексов теперь берутся
+    названия инструментов для таблицы и графиков, чтобы их было проще отличать
+    (полезно, если в разных вкладках открыто несколько сравнений).
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    На график отклонений от индекса (tracking difference) добавлено отображение
+    скользящего N-месячное накопленного отклонения, N можно задать в поле под
+    графиком (по-умолчанию равно 12).
+  </li>
+  <p><!-- /wp:list-item --></p>
+  <p><!-- wp:list-item --></p>
+  <li>
+    Формат даты по-умолчанию установлен в DD.MM.YYYY как более часто
+    встречающийся в выгрузках с сайтов российских УК.
+  </li>
+  <p><!-- /wp:list-item --></p>
+</ul>
 <p><!-- /wp:list --></p>
 <p><!-- wp:paragraph --></p>
-<p>В <a rel="noreferrer noopener" href="https://capital-gain.ru/app/funds/compare" data-type="URL" data-id="https://capital-gain.ru/app/funds/compare" target="_blank">сравнении фондов</a> промежутки без торгов дольше 4 дней теперь отображаются на графике (как пустота). В качестве страны листинга фонда добавлено больше вариантов (пытаюсь учесть стремительно меняющуюся реальность) — Казахстан (FXKZ), Неизвестно (остальные фонды FinEx после делистинга с МосБиржи) и Нет листинга (закрытые фонды). Вариантов для статуса торгов тоже стало чуть больше — Идут, Остановлены (когда данные с биржи перестали поступать, но фонды продолжают существовать) и Прекращены (для закрытых фондов).</p>
+<p>
+  В
+  <a
+    rel="noreferrer noopener"
+    href="https://capital-gain.ru/app/funds/compare"
+    data-type="URL"
+    data-id="https://capital-gain.ru/app/funds/compare"
+    target="_blank"
+    >сравнении фондов</a
+  >
+  промежутки без торгов дольше 4 дней теперь отображаются на графике (как
+  пустота). В качестве страны листинга фонда добавлено больше вариантов (пытаюсь
+  учесть стремительно меняющуюся реальность) — Казахстан (FXKZ), Неизвестно
+  (остальные фонды FinEx после делистинга с МосБиржи) и Нет листинга (закрытые
+  фонды). Вариантов для статуса торгов тоже стало чуть больше — Идут,
+  Остановлены (когда данные с биржи перестали поступать, но фонды продолжают
+  существовать) и Прекращены (для закрытых фондов).
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>В статистике <a rel="noreferrer noopener" href="https://capital-gain.ru/app/stats/dividends" data-type="URL" data-id="https://capital-gain.ru/app/stats/dividends" target="_blank">дивидендной доходности</a> добавился график просадок её годового значения относительно последнего пика.</p>
+<p>
+  В статистике
+  <a
+    rel="noreferrer noopener"
+    href="https://capital-gain.ru/app/stats/dividends"
+    data-type="URL"
+    data-id="https://capital-gain.ru/app/stats/dividends"
+    target="_blank"
+    >дивидендной доходности</a
+  >
+  добавился график просадок её годового значения относительно последнего пика.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>И последнее — график расходов в <a rel="noreferrer noopener" href="https://capital-gain.ru/app/planning" data-type="URL" data-id="https://capital-gain.ru/app/planning" target="_blank">финансовом плане</a> стал блочной диаграммой вместо линий (появляется на вкладке Визуализация только тогда, когда в параметрах денежных потоков заданы настройки гибких изъятий).</p>
+<p>
+  И последнее — график расходов в
+  <a
+    rel="noreferrer noopener"
+    href="https://capital-gain.ru/app/planning"
+    data-type="URL"
+    data-id="https://capital-gain.ru/app/planning"
+    target="_blank"
+    >финансовом плане</a
+  >
+  стал блочной диаграммой вместо линий (появляется на вкладке Визуализация
+  только тогда, когда в параметрах денежных потоков заданы настройки гибких
+  изъятий).
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>Предыдуший список изменений можно найти <a href="https://capital-gain.ru/posts/changelog-february-2023/" data-type="URL" data-id="https://capital-gain.ru/posts/changelog-february-2023/">здесь</a>.</p>
+<p>
+  Предыдуший список изменений можно найти
+  <a
+    href="https://capital-gain.ru/posts/changelog-february-2023/"
+    data-type="URL"
+    data-id="https://capital-gain.ru/posts/changelog-february-2023/"
+    >здесь</a
+  >.
+</p>
 <p><!-- /wp:paragraph --></p>

@@ -1,14 +1,139 @@
 <ul class="social-media-list">
-  {%- if site.telegram_username -%}<li><a href="https://t.me/{{ site.telegram_username| cgi_escape | escape }}" target="_blank"><svg  class="svg-icon" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg> <span class="username">Telegram</span></a></li>{%- endif -%}
-  {%- if site.vk_username -%}<li><a href="https://vk.com/{{ site.vk_username| cgi_escape | escape }}" target="_blank"><svg class="svg-icon" viewBox="0 0 24 24"><path d="m9.489.004.729-.003h3.564l.73.003.914.01.433.007.418.011.403.014.388.016.374.021.36.025.345.03.333.033c1.74.196 2.933.616 3.833 1.516.9.9 1.32 2.092 1.516 3.833l.034.333.029.346.025.36.02.373.025.588.012.41.013.644.009.915.004.98-.001 3.313-.003.73-.01.914-.007.433-.011.418-.014.403-.016.388-.021.374-.025.36-.03.345-.033.333c-.196 1.74-.616 2.933-1.516 3.833-.9.9-2.092 1.32-3.833 1.516l-.333.034-.346.029-.36.025-.373.02-.588.025-.41.012-.644.013-.915.009-.98.004-3.313-.001-.73-.003-.914-.01-.433-.007-.418-.011-.403-.014-.388-.016-.374-.021-.36-.025-.345-.03-.333-.033c-1.74-.196-2.933-.616-3.833-1.516-.9-.9-1.32-2.092-1.516-3.833l-.034-.333-.029-.346-.025-.36-.02-.373-.025-.588-.012-.41-.013-.644-.009-.915-.004-.98.001-3.313.003-.73.01-.914.007-.433.011-.418.014-.403.016-.388.021-.374.025-.36.03-.345.033-.333c.196-1.74.616-2.933 1.516-3.833.9-.9 2.092-1.32 3.833-1.516l.333-.034.346-.029.36-.025.373-.02.588-.025.41-.012.644-.013.915-.009ZM6.79 7.3H4.05c.13 6.24 3.25 9.99 8.72 9.99h.31v-3.57c2.01.2 3.53 1.67 4.14 3.57h2.84c-.78-2.84-2.83-4.41-4.11-5.01 1.28-.74 3.08-2.54 3.51-4.98h-2.58c-.56 1.98-2.22 3.78-3.8 3.95V7.3H10.5v6.92c-1.6-.4-3.62-2.34-3.71-6.92Z"/></svg> <span class="username">VK</span></a></li>{%- endif -%}
-  {%- if site.dzen_username -%}<li><a href="https://dzen.ru/{{ site.dzen_username | cgi_escape | escape }}" target="_blank"><svg class="svg-icon" viewBox="0 0 129 129"><path d="M128.389 62.7804C128.389 62.1406 127.869 61.6108 127.229 61.5808C104.266 60.7111 90.2906 57.782 80.5136 48.0051C70.7167 38.2081 67.7976 24.2225 66.9279 1.20969C66.9079 0.569886 66.3781 0.0500488 65.7283 0.0500488H63.0491C62.4093 0.0500488 61.8795 0.569886 61.8495 1.20969C60.9797 24.2125 58.0607 38.2081 48.2637 48.0051C38.4768 57.792 24.5111 60.7111 1.54831 61.5808C0.908509 61.6008 0.388672 62.1306 0.388672 62.7804V65.4596C0.388672 66.0994 0.908509 66.6292 1.54831 66.6592C24.5111 67.529 38.4868 70.458 48.2637 80.235C58.0407 90.0119 60.9597 103.958 61.8395 126.88C61.8595 127.52 62.3893 128.04 63.0391 128.04H65.7283C66.3681 128.04 66.8979 127.52 66.9279 126.88C67.8076 103.958 70.7267 90.0119 80.5036 80.235C90.2906 70.448 104.256 67.529 127.219 66.6592C127.859 66.6392 128.379 66.1094 128.379 65.4596V62.7804H128.389Z"/></svg> <span class="username">Дзен</span></a></li>{%- endif -%}
-  {%- if site.facebook_username -%}<li><a href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}" target="_blank"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#facebook' | relative_url }}"></use></svg> <span class="username">{{ site.facebook_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.github_username -%}<li><a href="https://github.com/{{ site.github_username| cgi_escape | escape }}" target="_blank"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> <span class="username">GitHub</span></a></li>{%- endif -%}
-  {%- if site.instagram_username -%}<li><a href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}" target="_blank"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#instagram' | relative_url }}"></use></svg> <span class="username">{{ site.instagram_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.linkedin_username -%}<li><a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}" target="_blank"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg> <span class="username">{{ site.linkedin_username| escape }}</span></a></li>{%- endif -%}
-  {%- for mst in site.mastodon -%}{%- if mst.username and mst.instance -%}<li><a href="https://{{ mst.instance| cgi_escape | escape}}/@{{mst.username}}" target="_blank"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#mastodon' | relative_url }}"></use></svg> <span class="username">{{ mst.username|escape }}</span></a></li>{%- endif -%}{%- endfor -%}
-  {%- if site.twitter_username -%}<li><a href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}" target="_blank"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg> <span class="username">{{ site.twitter_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.youtube_username -%}<li><a href="https://youtube.com/{{ site.youtube_username| cgi_escape | escape }}" target="_blank"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#youtube' | relative_url }}"></use></svg> <span class="username">{{ site.youtube_username| escape }}</span></a></li>{%- endif -%}
-  {%- if site.rss -%}<li><a href="{{ '/feed.xml' | relative_url }}" target="_blank"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg> <span>{{ site.rss | escape }}</span></a></li>{%- endif -%}
-  <li><a href="mailto:contact@capital-gain.ru" target="_blank"><span class="svg-icon">@</span> <span>Email</span></a></li>
+  {%- if site.telegram_username -%}
+  <li>
+    <a
+      href="https://t.me/{{ site.telegram_username| cgi_escape | escape }}"
+      target="_blank"
+      ><svg class="svg-icon" viewBox="0 0 24 24">
+        <path
+          d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+      </svg>
+      <span class="username">Telegram</span></a
+    >
+  </li>
+  {%- endif -%} {%- if site.vk_username -%}
+  <li>
+    <a
+      href="https://vk.com/{{ site.vk_username| cgi_escape | escape }}"
+      target="_blank"
+      ><svg class="svg-icon" viewBox="0 0 24 24">
+        <path
+          d="m9.489.004.729-.003h3.564l.73.003.914.01.433.007.418.011.403.014.388.016.374.021.36.025.345.03.333.033c1.74.196 2.933.616 3.833 1.516.9.9 1.32 2.092 1.516 3.833l.034.333.029.346.025.36.02.373.025.588.012.41.013.644.009.915.004.98-.001 3.313-.003.73-.01.914-.007.433-.011.418-.014.403-.016.388-.021.374-.025.36-.03.345-.033.333c-.196 1.74-.616 2.933-1.516 3.833-.9.9-2.092 1.32-3.833 1.516l-.333.034-.346.029-.36.025-.373.02-.588.025-.41.012-.644.013-.915.009-.98.004-3.313-.001-.73-.003-.914-.01-.433-.007-.418-.011-.403-.014-.388-.016-.374-.021-.36-.025-.345-.03-.333-.033c-1.74-.196-2.933-.616-3.833-1.516-.9-.9-1.32-2.092-1.516-3.833l-.034-.333-.029-.346-.025-.36-.02-.373-.025-.588-.012-.41-.013-.644-.009-.915-.004-.98.001-3.313.003-.73.01-.914.007-.433.011-.418.014-.403.016-.388.021-.374.025-.36.03-.345.033-.333c.196-1.74.616-2.933 1.516-3.833.9-.9 2.092-1.32 3.833-1.516l.333-.034.346-.029.36-.025.373-.02.588-.025.41-.012.644-.013.915-.009ZM6.79 7.3H4.05c.13 6.24 3.25 9.99 8.72 9.99h.31v-3.57c2.01.2 3.53 1.67 4.14 3.57h2.84c-.78-2.84-2.83-4.41-4.11-5.01 1.28-.74 3.08-2.54 3.51-4.98h-2.58c-.56 1.98-2.22 3.78-3.8 3.95V7.3H10.5v6.92c-1.6-.4-3.62-2.34-3.71-6.92Z" />
+      </svg>
+      <span class="username">VK</span></a
+    >
+  </li>
+  {%- endif -%} {%- if site.dzen_username -%}
+  <li>
+    <a
+      href="https://dzen.ru/{{ site.dzen_username | cgi_escape | escape }}"
+      target="_blank"
+      ><svg class="svg-icon" viewBox="0 0 129 129">
+        <path
+          d="M128.389 62.7804C128.389 62.1406 127.869 61.6108 127.229 61.5808C104.266 60.7111 90.2906 57.782 80.5136 48.0051C70.7167 38.2081 67.7976 24.2225 66.9279 1.20969C66.9079 0.569886 66.3781 0.0500488 65.7283 0.0500488H63.0491C62.4093 0.0500488 61.8795 0.569886 61.8495 1.20969C60.9797 24.2125 58.0607 38.2081 48.2637 48.0051C38.4768 57.792 24.5111 60.7111 1.54831 61.5808C0.908509 61.6008 0.388672 62.1306 0.388672 62.7804V65.4596C0.388672 66.0994 0.908509 66.6292 1.54831 66.6592C24.5111 67.529 38.4868 70.458 48.2637 80.235C58.0407 90.0119 60.9597 103.958 61.8395 126.88C61.8595 127.52 62.3893 128.04 63.0391 128.04H65.7283C66.3681 128.04 66.8979 127.52 66.9279 126.88C67.8076 103.958 70.7267 90.0119 80.5036 80.235C90.2906 70.448 104.256 67.529 127.219 66.6592C127.859 66.6392 128.379 66.1094 128.379 65.4596V62.7804H128.389Z" />
+      </svg>
+      <span class="username">Дзен</span></a
+    >
+  </li>
+  {%- endif -%} {%- if site.facebook_username -%}
+  <li>
+    <a
+      href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}"
+      target="_blank"
+      ><svg class="svg-icon">
+        <use
+          xlink:href="{{ '/assets/minima-social-icons.svg#facebook' | relative_url }}"></use>
+      </svg>
+      <span class="username">{{ site.facebook_username| escape }}</span></a
+    >
+  </li>
+  {%- endif -%} {%- if site.github_username -%}
+  <li>
+    <a
+      href="https://github.com/{{ site.github_username| cgi_escape | escape }}"
+      target="_blank"
+      ><svg class="svg-icon">
+        <use
+          xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
+      </svg>
+      <span class="username">GitHub</span></a
+    >
+  </li>
+  {%- endif -%} {%- if site.instagram_username -%}
+  <li>
+    <a
+      href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}"
+      target="_blank"
+      ><svg class="svg-icon">
+        <use
+          xlink:href="{{ '/assets/minima-social-icons.svg#instagram' | relative_url }}"></use>
+      </svg>
+      <span class="username">{{ site.instagram_username| escape }}</span></a
+    >
+  </li>
+  {%- endif -%} {%- if site.linkedin_username -%}
+  <li>
+    <a
+      href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"
+      target="_blank"
+      ><svg class="svg-icon">
+        <use
+          xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use>
+      </svg>
+      <span class="username">{{ site.linkedin_username| escape }}</span></a
+    >
+  </li>
+  {%- endif -%} {%- for mst in site.mastodon -%}{%- if mst.username and
+  mst.instance -%}
+  <li>
+    <a
+      href="https://{{ mst.instance| cgi_escape | escape}}/@{{mst.username}}"
+      target="_blank"
+      ><svg class="svg-icon">
+        <use
+          xlink:href="{{ '/assets/minima-social-icons.svg#mastodon' | relative_url }}"></use>
+      </svg>
+      <span class="username">{{ mst.username|escape }}</span></a
+    >
+  </li>
+  {%- endif -%}{%- endfor -%} {%- if site.twitter_username -%}
+  <li>
+    <a
+      href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}"
+      target="_blank"
+      ><svg class="svg-icon">
+        <use
+          xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use>
+      </svg>
+      <span class="username">{{ site.twitter_username| escape }}</span></a
+    >
+  </li>
+  {%- endif -%} {%- if site.youtube_username -%}
+  <li>
+    <a
+      href="https://youtube.com/{{ site.youtube_username| cgi_escape | escape }}"
+      target="_blank"
+      ><svg class="svg-icon">
+        <use
+          xlink:href="{{ '/assets/minima-social-icons.svg#youtube' | relative_url }}"></use>
+      </svg>
+      <span class="username">{{ site.youtube_username| escape }}</span></a
+    >
+  </li>
+  {%- endif -%} {%- if site.rss -%}
+  <li>
+    <a href="{{ '/feed.xml' | relative_url }}" target="_blank"
+      ><svg class="svg-icon">
+        <use
+          xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+      </svg>
+      <span>{{ site.rss | escape }}</span></a
+    >
+  </li>
+  {%- endif -%}
+  <li>
+    <a href="mailto:contact@capital-gain.ru" target="_blank"
+      ><span class="svg-icon">@</span> <span>Email</span></a
+    >
+  </li>
 </ul>

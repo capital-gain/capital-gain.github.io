@@ -3,7 +3,8 @@ layout: post
 status: publish
 published: true
 title: Расширение данных в бэктестере
-excerpt: Данные по акциям развитых стран теперь начинаются с 1900 года, а по нескольким
+excerpt:
+  Данные по акциям развитых стран теперь начинаются с 1900 года, а по нескольким
   странам и раньше. Дополнены полные доходности длинных казначейских облигаций США,
   они начинаются в 1871 году, как и векселя. Экспериментировать с распределениями
   активов из диверсифицированного набора акций, облигаций и векселей США, а также
@@ -12,93 +13,226 @@ wordpress_id: 13004
 wordpress_url: https://capital-gain.ru/?p=13004
 date: '2022-11-20 09:50:47 +0600'
 categories:
-- Мета
+  - Мета
 tags:
-- Инструменты
+  - Инструменты
 comments: []
 ---
+
 <p><!-- wp:paragraph --></p>
-<p>Источником новых данных послужила экселька от Боннского университета &amp; co., которая всем доступна для загрузки на сайте <a rel="noreferrer noopener" href="https://www.macrohistory.net/database/" data-type="URL" data-id="https://www.macrohistory.net/database/" target="_blank">macrohistory.net</a>. Упоминание и использование этих данных я встретил в <a rel="noreferrer noopener" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4196168" data-type="URL" data-id="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4196168" target="_blank">этом</a> исследовании и, после многочисленных прошлых попыток найти данные по рынкам акций кроме США до 1970 года, которые всегда натыкались на (сильно) коммерческие решения, с удивлением обнаружил, что всё это лежит в открытом доступе под лицензией CC BY-NC-SA 4.0 (разрешено некоммерческое использование).</p>
+<p>
+  Источником новых данных послужила экселька от Боннского университета &amp;
+  co., которая всем доступна для загрузки на сайте
+  <a
+    rel="noreferrer noopener"
+    href="https://www.macrohistory.net/database/"
+    data-type="URL"
+    data-id="https://www.macrohistory.net/database/"
+    target="_blank"
+    >macrohistory.net</a
+  >. Упоминание и использование этих данных я встретил в
+  <a
+    rel="noreferrer noopener"
+    href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4196168"
+    data-type="URL"
+    data-id="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4196168"
+    target="_blank"
+    >этом</a
+  >
+  исследовании и, после многочисленных прошлых попыток найти данные по рынкам
+  акций кроме США до 1970 года, которые всегда натыкались на (сильно)
+  коммерческие решения, с удивлением обнаружил, что всё это лежит в открытом
+  доступе под лицензией CC BY-NC-SA 4.0 (разрешено некоммерческое
+  использование).
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>В итоге из 16 следующих стран я собрал равновзвешенный индекс (данных по капитализации у меня нет) полной доходности с ежегодной ребалансировкой и дополнил им данные до 1970 года (дальше в бэктестере используется уже market cap индекс MSCI World):</p>
+<p>
+  В итоге из 16 следующих стран я собрал равновзвешенный индекс (данных по
+  капитализации у меня нет) полной доходности с ежегодной ребалансировкой и
+  дополнил им данные до 1970 года (дальше в бэктестере используется уже market
+  cap индекс MSCI World):
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:list --></p>
 <ul>
-<li>Австралия</li>
-<li>Бельгия</li>
-<li>Великобритания</li>
-<li>Дания</li>
-<li>Финляндия</li>
-<li>Франция</li>
-<li>Германия</li>
-<li>Испания</li>
-<li>Италия</li>
-<li>Нидерланды</li>
-<li>Норвегия</li>
-<li>Португалия</li>
-<li>США (уже были в бэктестере с 1871 года по данным Шиллера)</li>
-<li>Швейцария</li>
-<li>Швеция</li>
-<li>Япония</li>
+  <li>Австралия</li>
+  <li>Бельгия</li>
+  <li>Великобритания</li>
+  <li>Дания</li>
+  <li>Финляндия</li>
+  <li>Франция</li>
+  <li>Германия</li>
+  <li>Испания</li>
+  <li>Италия</li>
+  <li>Нидерланды</li>
+  <li>Норвегия</li>
+  <li>Португалия</li>
+  <li>США (уже были в бэктестере с 1871 года по данным Шиллера)</li>
+  <li>Швейцария</li>
+  <li>Швеция</li>
+  <li>Япония</li>
 </ul>
 <p><!-- /wp:list --></p>
 <p><!-- wp:paragraph --></p>
-<p>Номинальные доходности в файле указаны в местных валютах, но даны и курсы их обмена к доллару США, что позволило всё привести к нему (кроме рублей и долларов в бэктестере валют нет). Данные по всем отдельным странам добавлять не стал — лично мне именно в бэктестере они не очень интересны по отдельности, но несколько стран в инструменте всё-таки есть и тоже были расширены в прошлое (после 1970 года используются индексы полной доходности MSCI):</p>
+<p>
+  Номинальные доходности в файле указаны в местных валютах, но даны и курсы их
+  обмена к доллару США, что позволило всё привести к нему (кроме рублей и
+  долларов в бэктестере валют нет). Данные по всем отдельным странам добавлять
+  не стал — лично мне именно в бэктестере они не очень интересны по отдельности,
+  но несколько стран в инструменте всё-таки есть и тоже были расширены в прошлое
+  (после 1970 года используются индексы полной доходности MSCI):
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:list --></p>
 <ul>
-<li>Великобритания (1871+)</li>
-<li>Германия (1871+)</li>
-<li>Франция (1871+)</li>
-<li>Япония (1886+)</li>
+  <li>Великобритания (1871+)</li>
+  <li>Германия (1871+)</li>
+  <li>Франция (1871+)</li>
+  <li>Япония (1886+)</li>
 </ul>
 <p><!-- /wp:list --></p>
 <p><!-- wp:paragraph --></p>
-<p>Данные по длинным US Treasuries теперь тоже начинаются с 1871 года — это полные доходности 10-летних облигаций США, а с 1987 года по прежнему используется фонд Vanguard VUSTX (его дюрация больше, около 16 лет).</p>
+<p>
+  Данные по длинным US Treasuries теперь тоже начинаются с 1871 года — это
+  полные доходности 10-летних облигаций США, а с 1987 года по прежнему
+  используется фонд Vanguard VUSTX (его дюрация больше, около 16 лет).
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>Аналогов инструменту по числу глобальных активов и длине их истории в интернете не было и раньше, теперь их нет и подавно. ?</p>
+<p>
+  Аналогов инструменту по числу глобальных активов и длине их истории в
+  интернете не было и раньше, теперь их нет и подавно. ?
+</p>
 <p><!-- /wp:paragraph --></p>
-<p><!-- wp:image {"id":13006,"sizeSlug":"full","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-full"><a href="/assets/images/chart-growth.png" target="_blank" rel="noopener"><img src="/assets/images/chart-growth.png" alt="" class="wp-image-13006"/></a><br />
-<figcaption>Портфель из акций разных стран в сравнении с крупными фондовыми рынками уступает только отдельно взятым США. Масштаб логарифмический.</figcaption>
+<p>
+  <!-- wp:image {"id":13006,"sizeSlug":"full","linkDestination":"media"} -->
+</p>
+<figure class="wp-block-image size-full">
+  <a href="/assets/images/chart-growth.png" target="_blank" rel="noopener"
+    ><img
+      src="/assets/images/chart-growth.png"
+      alt=""
+      class="wp-image-13006" /></a
+  ><br />
+  <figcaption>
+    Портфель из акций разных стран в сравнении с крупными фондовыми рынками
+    уступает только отдельно взятым США. Масштаб логарифмический.
+  </figcaption>
 </figure>
 <p><!-- /wp:image --></p>
-<p><!-- wp:image {"id":13007,"sizeSlug":"full","linkDestination":"media"} --></p>
-<figure class="wp-block-image size-full"><a href="/assets/images/chart-risk-return.png" target="_blank" rel="noopener"><img src="/assets/images/chart-risk-return.png" alt="" class="wp-image-13007"/></a><br />
-<figcaption>Портфель из акций разных стран в последние 122 года был привлекательнее, чем отдельные страны, не считая аномальных США.</figcaption>
+<p>
+  <!-- wp:image {"id":13007,"sizeSlug":"full","linkDestination":"media"} -->
+</p>
+<figure class="wp-block-image size-full">
+  <a href="/assets/images/chart-risk-return.png" target="_blank" rel="noopener"
+    ><img
+      src="/assets/images/chart-risk-return.png"
+      alt=""
+      class="wp-image-13007" /></a
+  ><br />
+  <figcaption>
+    Портфель из акций разных стран в последние 122 года был привлекательнее, чем
+    отдельные страны, не считая аномальных США.
+  </figcaption>
 </figure>
 <p><!-- /wp:image --></p>
 <p><!-- wp:paragraph --></p>
-<p>Так как в бэктестере есть история по диверсифицированному портфелю акций, облигациям, векселям и биржевым товарам (были дополнены ранее) за весь XX век, в своих экспериментах вы теперь можете заглянуть в совсем далекое прошлое, и посмотреть как работала бы портфельная теория до её изобретения!</p>
+<p>
+  Так как в бэктестере есть история по диверсифицированному портфелю акций,
+  облигациям, векселям и биржевым товарам (были дополнены ранее) за весь XX век,
+  в своих экспериментах вы теперь можете заглянуть в совсем далекое прошлое, и
+  посмотреть как работала бы портфельная теория до её изобретения!
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>Для <a rel="noreferrer noopener" href="https://capital-gain.ru/app/backtest/?values=eyJpbml0aWFsU3VtIjoxMDAsImluaXRpYWxTdW1DdXJyZW5jeSI6InVzZCIsImFkanVzdG1lbnRUeXBlIjoiIiwiYWRqdXN0bWVudFZhbHVlIjoiIiwiYWRqdXN0bWVudENhcCI6IiIsImFkanVzdG1lbnRJbmZsYXRpb24iOnRydWUsInJlYmFsYW5jZSI6dHJ1ZSwicmVhbFJldHVybiI6ZmFsc2UsInN0YXJ0WWVhciI6MTg3MSwiZW5kWWVhciI6MjAyMSwid2VpZ2h0cyI6W3sid29ybGQiOjU0LCJ1c3Rsb25nIjoxOCwidXN0YmlsbCI6MTgsImNvbW1vZCI6MTB9LHsid29ybGQiOjYwLCJ1c3Rsb25nIjoyMCwidXN0YmlsbCI6MjB9XSwiZXhwZW5zZXMiOnt9fQ%253D%253D&amp;utm_medium=copy_link" data-type="URL" data-id="https://capital-gain.ru/app/backtest/?values=eyJpbml0aWFsU3VtIjoxMDAsImluaXRpYWxTdW1DdXJyZW5jeSI6InVzZCIsImFkanVzdG1lbnRUeXBlIjoiIiwiYWRqdXN0bWVudFZhbHVlIjoiIiwiYWRqdXN0bWVudENhcCI6IiIsImFkanVzdG1lbnRJbmZsYXRpb24iOnRydWUsInJlYmFsYW5jZSI6dHJ1ZSwicmVhbFJldHVybiI6ZmFsc2UsInN0YXJ0WWVhciI6MTg3MSwiZW5kWWVhciI6MjAyMSwid2VpZ2h0cyI6W3sid29ybGQiOjU0LCJ1c3Rsb25nIjoxOCwidXN0YmlsbCI6MTgsImNvbW1vZCI6MTB9LHsid29ybGQiOjYwLCJ1c3Rsb25nIjoyMCwidXN0YmlsbCI6MjB9XSwiZXhwZW5zZXMiOnt9fQ%253D%253D&amp;utm_medium=copy_link" target="_blank">примера</a> я составил пару портфелей из акций (60%), облигаций и векселей (40%, взял и то, и другое, чтобы усреднить дюрацию до более соответствующей современным рекомендациям) и в один из них добавил 10% биржевых товаров:</p>
+<p>
+  Для
+  <a
+    rel="noreferrer noopener"
+    href="https://capital-gain.ru/app/backtest/?values=eyJpbml0aWFsU3VtIjoxMDAsImluaXRpYWxTdW1DdXJyZW5jeSI6InVzZCIsImFkanVzdG1lbnRUeXBlIjoiIiwiYWRqdXN0bWVudFZhbHVlIjoiIiwiYWRqdXN0bWVudENhcCI6IiIsImFkanVzdG1lbnRJbmZsYXRpb24iOnRydWUsInJlYmFsYW5jZSI6dHJ1ZSwicmVhbFJldHVybiI6ZmFsc2UsInN0YXJ0WWVhciI6MTg3MSwiZW5kWWVhciI6MjAyMSwid2VpZ2h0cyI6W3sid29ybGQiOjU0LCJ1c3Rsb25nIjoxOCwidXN0YmlsbCI6MTgsImNvbW1vZCI6MTB9LHsid29ybGQiOjYwLCJ1c3Rsb25nIjoyMCwidXN0YmlsbCI6MjB9XSwiZXhwZW5zZXMiOnt9fQ%253D%253D&amp;utm_medium=copy_link"
+    data-type="URL"
+    data-id="https://capital-gain.ru/app/backtest/?values=eyJpbml0aWFsU3VtIjoxMDAsImluaXRpYWxTdW1DdXJyZW5jeSI6InVzZCIsImFkanVzdG1lbnRUeXBlIjoiIiwiYWRqdXN0bWVudFZhbHVlIjoiIiwiYWRqdXN0bWVudENhcCI6IiIsImFkanVzdG1lbnRJbmZsYXRpb24iOnRydWUsInJlYmFsYW5jZSI6dHJ1ZSwicmVhbFJldHVybiI6ZmFsc2UsInN0YXJ0WWVhciI6MTg3MSwiZW5kWWVhciI6MjAyMSwid2VpZ2h0cyI6W3sid29ybGQiOjU0LCJ1c3Rsb25nIjoxOCwidXN0YmlsbCI6MTgsImNvbW1vZCI6MTB9LHsid29ybGQiOjYwLCJ1c3Rsb25nIjoyMCwidXN0YmlsbCI6MjB9XSwiZXhwZW5zZXMiOnt9fQ%253D%253D&amp;utm_medium=copy_link"
+    target="_blank"
+    >примера</a
+  >
+  я составил пару портфелей из акций (60%), облигаций и векселей (40%, взял и
+  то, и другое, чтобы усреднить дюрацию до более соответствующей современным
+  рекомендациям) и в один из них добавил 10% биржевых товаров:
+</p>
 <p><!-- /wp:paragraph --></p>
-<p><!-- wp:image {"id":13008,"sizeSlug":"large","linkDestination":"none"} --></p>
-<figure class="wp-block-image size-large"><img src="/assets/images/SCR-20221120-gvf-1024x321.png" alt="" class="wp-image-13008"/></figure>
+<p>
+  <!-- wp:image {"id":13008,"sizeSlug":"large","linkDestination":"none"} -->
+</p>
+<figure class="wp-block-image size-large">
+  <img
+    src="/assets/images/SCR-20221120-gvf-1024x321.png"
+    alt=""
+    class="wp-image-13008" />
+</figure>
 <p><!-- /wp:image --></p>
 <p><!-- wp:paragraph --></p>
-<p>Портфельная теория сработала. Имея корреляцию около 0 с другими активами, добавление биржевых товаров с их низкой доходностью и высоким риском на фоне ежегодной ребалансировки портфеля немного увеличило доходность портфеля и снизило его риск (СКО).</p>
+<p>
+  Портфельная теория сработала. Имея корреляцию около 0 с другими активами,
+  добавление биржевых товаров с их низкой доходностью и высоким риском на фоне
+  ежегодной ребалансировки портфеля немного увеличило доходность портфеля и
+  снизило его риск (СКО).
+</p>
 <p><!-- /wp:paragraph --></p>
-<p><!-- wp:image {"id":13009,"sizeSlug":"large","linkDestination":"none"} --></p>
-<figure class="wp-block-image size-large"><img src="/assets/images/SCR-20221120-gy4-1024x268.png" alt="" class="wp-image-13009"/><br />
-<figcaption>Корреляции активов в портфелях и инфляции за 122 года (векселя повторяются, потому что это &laquo;безрисковый актив&raquo; для долларового расчета, который, как и инфляции, отображается в таблице всегда).</figcaption>
+<p>
+  <!-- wp:image {"id":13009,"sizeSlug":"large","linkDestination":"none"} -->
+</p>
+<figure class="wp-block-image size-large">
+  <img
+    src="/assets/images/SCR-20221120-gy4-1024x268.png"
+    alt=""
+    class="wp-image-13009" /><br />
+  <figcaption>
+    Корреляции активов в портфелях и инфляции за 122 года (векселя повторяются,
+    потому что это &laquo;безрисковый актив&raquo; для долларового расчета,
+    который, как и инфляции, отображается в таблице всегда).
+  </figcaption>
 </figure>
 <p><!-- /wp:image --></p>
 <p><!-- wp:list --></p>
 <ul>
-<li>CAGR портфеля с биржевыми товарами 7,41%, без них: 7,26%. Самих товаров 6,01% при инфляции 2,95%.</li>
-<li>Стандартное отклонение портфеля с биржевыми товарами 9,95%, без них: 10,22%. Самих товаров 25,66%, что больше акций, у которых 16,83%.</li>
+  <li>
+    CAGR портфеля с биржевыми товарами 7,41%, без них: 7,26%. Самих товаров
+    6,01% при инфляции 2,95%.
+  </li>
+  <li>
+    Стандартное отклонение портфеля с биржевыми товарами 9,95%, без них: 10,22%.
+    Самих товаров 25,66%, что больше акций, у которых 16,83%.
+  </li>
 </ul>
 <p><!-- /wp:list --></p>
 <p><!-- wp:paragraph --></p>
-<p>Таких примеров с двумя-тремя не слишком скоррелированными активами можно придумать много. Например, аналогичный эффект мы привыкли наблюдать с золотом, но его добавление в портфель до 1970 года особого смысла не имеет, потому что доллары раньше им были обеспечены, то есть золото фактически было кэшем.</p>
+<p>
+  Таких примеров с двумя-тремя не слишком скоррелированными активами можно
+  придумать много. Например, аналогичный эффект мы привыкли наблюдать с золотом,
+  но его добавление в портфель до 1970 года особого смысла не имеет, потому что
+  доллары раньше им были обеспечены, то есть золото фактически было кэшем.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>Данные, уходящие так глубоко в историю, местами условны, потому что добываются исследователями из архивов и не обладают той же точностью, что современные, поступающие с бирж в цифровом виде. Но получить наконец к ним доступ было интересно.</p>
+<p>
+  Данные, уходящие так глубоко в историю, местами условны, потому что добываются
+  исследователями из архивов и не обладают той же точностью, что современные,
+  поступающие с бирж в цифровом виде. Но получить наконец к ним доступ было
+  интересно.
+</p>
 <p><!-- /wp:paragraph --></p>
 <p><!-- wp:paragraph --></p>
-<p>В будущем ещё хочется посмотреть на реальные доходности в местных валютах, а не в долларах, что с этими данными возможно сделать (там есть и страновые CPI). Например, было бы интересно поисследовать допустимые по риску уровни <a href="https://capital-gain.ru/posts/home-country-bias/" data-type="post" data-id="3244">&laquo;портфельного патриотизма&raquo;</a> на более полной выборке, чем с 1970 года.</p>
+<p>
+  В будущем ещё хочется посмотреть на реальные доходности в местных валютах, а
+  не в долларах, что с этими данными возможно сделать (там есть и страновые
+  CPI). Например, было бы интересно поисследовать допустимые по риску уровни
+  <a
+    href="https://capital-gain.ru/posts/home-country-bias/"
+    data-type="post"
+    data-id="3244"
+    >&laquo;портфельного патриотизма&raquo;</a
+  >
+  на более полной выборке, чем с 1970 года.
+</p>
 <p><!-- /wp:paragraph --></p>
