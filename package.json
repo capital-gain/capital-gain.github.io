@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "format": "pnpm exec prettier --write .",
     "lint": "pnpm exec eslint --quiet ."
   },
   "devDependencies": {
