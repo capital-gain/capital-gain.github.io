@@ -5,6 +5,8 @@
     "Liquid": ["html"]
   },
 
+  "format_on_save": "prettier",
+
   "languages": {
     "Liquid": {
       "format_on_save": "off",
@@ -12,6 +14,30 @@
       "prettier": {
         "allowed": true,
         "plugins": ["@shopify/prettier-plugin-liquid"]
+      }
+    },
+    "Markdown": {
+      "formatter": {
+        "external": {
+          "command": "node_modules/.bin/prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "language_servers": ["eslint", "..."]
+    }
+  },
+
+  "lsp": {
+    "eslint": {
+      "initialization_options": {
+        "validate": ["javascript", "markdown"],
+        "workingDirectories": ["."],
+        "options": {
+          "extensions": [".js", ".md"]
+        }
       }
     }
   }

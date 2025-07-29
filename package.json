@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "lint": "pnpm exec eslint --quiet ."
+  },
+  "devDependencies": {
+    "@eslint/markdown": "^7.1.0",
+    "eslint": "^9.32.0",
+    "prettier": "^3.6.2"
+  }
+}
