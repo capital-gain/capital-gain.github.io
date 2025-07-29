@@ -331,6 +331,10 @@
   margin-bottom: 1em;
 }
 
+.external-comments {
+  margin-top: $spacing-unit * 0.5;
+}
+
 .pagination {
   display: flex;
   justify-content: space-between;
