@@ -225,8 +225,12 @@ pre {
 .svg-icon {
   width: 16px;
   height: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
   display: inline-block;
   fill: #{$grey-color};
+  color: $grey-color;
   padding-right: 5px;
   vertical-align: text-top;
 }
