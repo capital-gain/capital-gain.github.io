@@ -59,6 +59,7 @@ ul,
 ol,
 dl,
 figure,
+table,
 %vertical-rhythm {
   margin-bottom: $spacing-unit * 0.5;
 }
@@ -98,6 +99,11 @@ figcaption {
       text-decoration: none;
     }
   }
+}
+
+table + figcaption {
+  margin-top: -$spacing-unit * 0.33;
+  @extend %vertical-rhythm;
 }
 
 /**
@@ -259,7 +265,6 @@ pre {
  * Tables
  */
 table {
-  margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
   color: color.adjust($text-color, $lightness: 18%);
