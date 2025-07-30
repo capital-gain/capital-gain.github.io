@@ -36,6 +36,7 @@ defaults:
 sass:
   style: compressed
 plugins:
+  - jekyll-archives
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -43,3 +44,12 @@ paginate: 10
 paginate_path: '/page/:num/'
 seo_paginator_message: 'Страница %{current} из %{total} | '
 counter_id: 56626909
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  slug_mode: pretty
+  permalinks:
+    tag: '/tag/:name/'
+    category: '/category/:name/'

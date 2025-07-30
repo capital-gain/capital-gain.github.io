@@ -11,10 +11,14 @@ layout: default
     <li>
       <span class="post-meta">
         {{ post.date | date: "%d.%m.%Y" }} {% if post.categories and
-        post.categories.size > 0 %} • {{ post.categories | join: ", " }} {%
-        endif %} {% if post.comments and post.comments.size > 0 %} •
-        Комментариев: {{ post.comments.size }} {% endif %} {% if post.title ==
-        "" %} •
+        post.categories.size > 0 %} • {% for category in post.categories %}{%
+        assign category_slug = category | slugify: 'pretty' %}{% assign
+        category_url = '/category/' | append: category_slug | append: '/' %}<a
+          href="{{ category_url | relative_url }}"
+          >{{ category }}</a
+        >{% unless forloop.last %}, {% endunless %}{% endfor %} {% endif %} {%
+        if post.comments and post.comments.size > 0 %} • Комментариев: {{
+        post.comments.size }} {% endif %} {% if post.title == "" %} •
         <a class="post-link-icon" href="{{ post.url | relative_url }}"> 🔗 </a>
         {% endif %}
       </span>

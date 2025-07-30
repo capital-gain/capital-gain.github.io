@@ -240,10 +240,24 @@
   }
 }
 
+.post-archive {
+  margin-left: 0;
+  list-style: none;
+}
+
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
   text-align: center;
+
+  a {
+    color: $grey-color;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .post-link {
@@ -357,6 +371,17 @@
   padding: 2px 8px;
   background: color.adjust($accent-color, $lightness: 10%);
   border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    background: color.adjust($accent-color, $lightness: 5%);
+    text-decoration: none;
+  }
 }
 
 .post-comments {
