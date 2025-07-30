@@ -315,6 +315,39 @@
   ol {
     @include relative-font-size(1.125);
   }
+
+  /* Gallery */
+  figure:has(figure) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $spacing-unit * 0.2;
+
+    /* Fallback для браузеров без поддержки subgrid */
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+          max(200px, calc(33.333% - calc(#{$spacing-unit * 0.2} * 2 / 3))),
+          1fr
+        )
+      );
+    }
+
+    figcaption {
+      grid-column: 1 / -1;
+      margin-top: 0;
+    }
+  }
+
+  figure > figure {
+    margin-bottom: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
 }
 
 .post-tag {
