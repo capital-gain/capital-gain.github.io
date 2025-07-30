@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'variables' as *;
+
 /**
  * Site header
  */
@@ -319,7 +322,7 @@
   margin: 0 4px 8px;
   text-transform: lowercase;
   padding: 2px 8px;
-  background: lighten($accent-color, 10%);
+  background: color.adjust($accent-color, $lightness: 10%);
   border-radius: 8px;
 }
 
