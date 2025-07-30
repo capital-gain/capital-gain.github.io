@@ -1,5 +1,8 @@
 source "https://rubygems.org"
-gem "github-pages", group: :jekyll_plugins
+
+gem "jekyll", "~> 4.4"
+gem "kramdown-math-katex"
+gem "katex", "~> 0.10.0"
 
 group :jekyll_plugins do
   gem "jekyll-paginate", "~> 1.1"

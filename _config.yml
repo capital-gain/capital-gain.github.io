@@ -17,19 +17,13 @@ vk_username: capitalgain
 dzen_username: capitalgain
 github_username: nDmitry
 rss: Atom
-# GitHub Pages defaults
-lsi: false
-safe: true
-source: './'
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
 kramdown:
-  math_engine: mathjax
+  math_engine: katex
+  math_engine_opts:
+    delimiters:
+      - {left: '$$', right: '$$', display: true}
   syntax_highlighter: rouge
   smart_quotes: bdquo,ldquo,laquo,raquo
-# End of GitHub Pages
 defaults:
   - scope:
       path: ''
