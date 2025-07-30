@@ -148,7 +148,7 @@ comments:
   выпавшую часть дохода уже не так легко, как в молодости.
 </p>
 
-<h2 class="wp-block-heading">Данные</h2>
+<h2>Данные</h2>
 
 <p>
   Повторяться и анализировать американские или мировые данные в сто первый раз я
@@ -214,29 +214,26 @@ comments:
   результаты его добавление почти не влияло, поэтому для простоты его исключил.
 </p>
 
-<figure class="wp-block-image size-full">
+<figure>
   <a href="/assets/images/wd-data.png" target="_blank" rel="noreferrer noopener"
-    ><img src="/assets/images/wd-data.png" alt="" class="wp-image-15611"
+    ><img src="/assets/images/wd-data.png" alt=""
   /></a>
 </figure>
 
-<figure class="wp-block-image size-full">
+<figure>
   <a
     href="/assets/images/wd-monthly-inflation.png"
     target="_blank"
     rel="noreferrer noopener"
-    ><img
-      src="/assets/images/wd-monthly-inflation.png"
-      alt=""
-      class="wp-image-15584"
+    ><img src="/assets/images/wd-monthly-inflation.png" alt=""
   /></a>
-  <figcaption class="wp-element-caption">
+  <figcaption>
     Уровень инфляции снизился с ~0,9% до ~0,5% в месяц за 20 лет (c 11% до ~6% в
     годовом выражении).
   </figcaption>
 </figure>
 
-<figure class="wp-block-image size-full is-resized">
+<figure>
   <a
     href="/assets/images/wd-monthly-data-correlation.png"
     target="_blank"
@@ -244,10 +241,9 @@ comments:
     ><img
       src="/assets/images/wd-monthly-data-correlation.png"
       alt=""
-      class="wp-image-15613"
       style="width: 400px"
   /></a>
-  <figcaption class="wp-element-caption">
+  <figcaption>
     Ранговые корреляции месячных доходностей по методу Спирмена.
   </figcaption>
 </figure>
@@ -296,7 +292,7 @@ comments:
   моменте, в отличие от инфляции, не всегда растёт. Но об этом позже.
 </p>
 
-<h2 class="wp-block-heading">Методология</h2>
+<h2>Методология</h2>
 
 <p>
   Раз у нас есть только 15-летние периоды для анализа, можно считать, что наш
@@ -381,9 +377,7 @@ comments:
   практические вопросы.
 </p>
 
-<h3 class="wp-block-heading">
-  Безопасная ставка изъятий (safe withdrawal rate, SWR)
-</h3>
+<h3>Безопасная ставка изъятий (safe withdrawal rate, SWR)</h3>
 
 <p>Начнём с самого простого варианта стратегии:</p>
 
@@ -508,7 +502,7 @@ comments:
   суммы в каждом месяце.
 </p>
 
-<h3 class="wp-block-heading">Критерии успешности</h3>
+<h3>Критерии успешности</h3>
 
 <p>
   Успешным исходом стратегии SWR считается такой, в котором в последний год
@@ -571,7 +565,7 @@ comments:
   капитала в неудачных исходах.
 </p>
 
-<h3 class="wp-block-heading">Правило инфляции</h3>
+<h3>Правило инфляции</h3>
 
 <p>
   Здесь и далее я сначала описываю правила в точности как они представлены в
@@ -611,7 +605,7 @@ comments:
   эквивалентом выбранного лимита: 1,12 ^ (1/12).
 </p>
 
-<h3 class="wp-block-heading">Правило изъятий</h3>
+<h3>Правило изъятий</h3>
 
 <p>
   Определяет условия, при которых индексация следующей суммы изъятия
@@ -635,7 +629,7 @@ comments:
   изъятия в этом месяце не индексируется.
 </p>
 
-<h3 class="wp-block-heading">Правило управления портфелем</h3>
+<h3>Правило управления портфелем</h3>
 
 <p>Определяет источник финансирования суммы изъятия:</p>
 
@@ -670,7 +664,7 @@ comments:
   по нему, если избыточной доли других активов не хватило.
 </p>
 
-<h3 class="wp-block-heading">Правило сохранения капитала</h3>
+<h3>Правило сохранения капитала</h3>
 
 <ul>
   <li>
@@ -704,7 +698,7 @@ comments:
   применялся, потому что периоды для анализа короткие.
 </p>
 
-<h3 class="wp-block-heading">Правило процветания</h3>
+<h3>Правило процветания</h3>
 
 <ul>
   <li>
@@ -727,9 +721,7 @@ comments:
 
 <p>Использую без изменений.</p>
 
-<h2 class="wp-block-heading">
-  Распределение активов и простейший вариант стратегии
-</h2>
+<h2>Распределение активов и простейший вариант стратегии</h2>
 
 <p>
   Для начала нам нужно определиться с весами классов активов в портфеле, из
@@ -820,7 +812,7 @@ comments:
 
 <p>Запутались в числах? Ниже будет сводная таблица.</p>
 
-<h2 class="wp-block-heading">Добавление правил</h2>
+<h2>Добавление правил</h2>
 
 <p>
   Если применить правила инфляции (IR), изъятия (WR) и управления портфелем
@@ -848,17 +840,14 @@ comments:
   первого по последний месяц каждого из периодов:
 </p>
 
-<figure class="wp-block-image size-full">
+<figure>
   <a
     href="/assets/images/wd-rolling-capital-ir-wr-pmr.png"
     target="_blank"
     rel="noreferrer noopener"
-    ><img
-      src="/assets/images/wd-rolling-capital-ir-wr-pmr.png"
-      alt=""
-      class="wp-image-15617"
+    ><img src="/assets/images/wd-rolling-capital-ir-wr-pmr.png" alt=""
   /></a>
-  <figcaption class="wp-element-caption">
+  <figcaption>
     Год в легенде — это год месяца, в котором начинается 12 периодов,
     относящихся к этому году.<br />Месяц по оси X — номер месяца в каждом из
     15-летних скользящих периодов.<br />Стартовая сумма капитала всегда 1 000
@@ -866,17 +855,14 @@ comments:
   </figcaption>
 </figure>
 
-<figure class="wp-block-image size-full">
+<figure>
   <a
     href="/assets/images/wd-rolling-withdrawals-ir-wr-pmr.png.png"
     target="_blank"
     rel="noreferrer noopener"
-    ><img
-      src="/assets/images/wd-rolling-withdrawals-ir-wr-pmr.png.png"
-      alt=""
-      class="wp-image-15618"
+    ><img src="/assets/images/wd-rolling-withdrawals-ir-wr-pmr.png.png" alt=""
   /></a>
-  <figcaption class="wp-element-caption">
+  <figcaption>
     Год в легенде — аналогично предыдущему графику.<br />Помимо изменений сумм
     изъятий с учётом правил, оранжевым цветом для сравнения показаны изъятия с
     постоянной индексацией на инфляцию.
@@ -899,7 +885,7 @@ comments:
   результата.
 </p>
 
-<figure class="wp-block-table">
+<figure>
   <table>
     <thead>
       <tr>
@@ -942,7 +928,7 @@ comments:
       </tr>
     </tbody>
   </table>
-  <figcaption class="wp-element-caption">
+  <figcaption>
     SWR — safe withdrawal rate, безопасная ставка изъятия<br />IR — inflation
     rule, правило инфляции<br />WR — withdrawal rule, правило изъятия<br />PMR —
     portfolio management rule, правило управления портфелем<br />CPR — capital
@@ -972,20 +958,17 @@ comments:
 
 <p>В динамике стратегия со всеми правилами выглядит так (кликабельно):</p>
 
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
-  <figure class="wp-block-image size-large">
+<figure>
+  <figure>
     <a
       href="/assets/images/wd-rolling-capital-ir-wr-pmr-cpr-pr.png"
       target="_blank"
       rel="noopener"
-      ><img
-        src="/assets/images/wd-rolling-capital-ir-wr-pmr-cpr-pr.png"
-        alt=""
-        class="wp-image-15623"
+      ><img src="/assets/images/wd-rolling-capital-ir-wr-pmr-cpr-pr.png" alt=""
     /></a>
   </figure>
 
-  <figure class="wp-block-image size-large">
+  <figure>
     <a
       href="/assets/images/wd-rolling-withdrawals-ir-wr-pmr-cpr-pr.png"
       target="_blank"
@@ -993,7 +976,6 @@ comments:
       ><img
         src="/assets/images/wd-rolling-withdrawals-ir-wr-pmr-cpr-pr.png"
         alt=""
-        class="wp-image-15624"
     /></a>
   </figure>
 </figure>
@@ -1011,40 +993,31 @@ comments:
   периодов на вертикальной оси и месяцем начала периода на горизонтальной:
 </p>
 
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
-  <figure class="wp-block-image size-large">
+<figure>
+  <figure>
     <a
       href="/assets/images/wd-capital-pp-preservation.png"
       target="_blank"
       rel="noopener"
-      ><img
-        src="/assets/images/wd-capital-pp-preservation.png"
-        alt=""
-        class="wp-image-15638"
+      ><img src="/assets/images/wd-capital-pp-preservation.png" alt=""
     /></a>
   </figure>
 
-  <figure class="wp-block-image size-large">
+  <figure>
     <a
       href="/assets/images/wd-withdrawal-pp-preservation.png"
       target="_blank"
       rel="noopener"
-      ><img
-        src="/assets/images/wd-withdrawal-pp-preservation.png"
-        alt=""
-        class="wp-image-15637"
+      ><img src="/assets/images/wd-withdrawal-pp-preservation.png" alt=""
     /></a>
   </figure>
 
-  <figure class="wp-block-image size-large">
+  <figure>
     <a
       href="/assets/images/wd-cuts-and-raises.png"
       target="_blank"
       rel="noopener"
-      ><img
-        src="/assets/images/wd-cuts-and-raises.png"
-        alt=""
-        class="wp-image-15639"
+      ><img src="/assets/images/wd-cuts-and-raises.png" alt=""
     /></a>
   </figure>
 </figure>
@@ -1081,28 +1054,22 @@ comments:
   периодам.
 </p>
 
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
-  <figure class="wp-block-image size-full">
+<figure>
+  <figure>
     <a
       href="/assets/images/wd-capital-boxplot.png"
       target="_blank"
       rel="noopener"
-      ><img
-        src="/assets/images/wd-capital-boxplot.png"
-        alt=""
-        class="wp-image-15672"
+      ><img src="/assets/images/wd-capital-boxplot.png" alt=""
     /></a>
   </figure>
 
-  <figure class="wp-block-image size-full">
+  <figure>
     <a
       href="/assets/images/wd-withdrawal-boxplot-1.png"
       target="_blank"
       rel="noopener"
-      ><img
-        src="/assets/images/wd-withdrawal-boxplot-1.png"
-        alt=""
-        class="wp-image-15674"
+      ><img src="/assets/images/wd-withdrawal-boxplot-1.png" alt=""
     /></a>
   </figure>
 </figure>
@@ -1122,7 +1089,7 @@ comments:
   том, что эта стратегия способна прожить и дольше 15 лет.
 </p>
 
-<h2 class="wp-block-heading">Результаты по другим ставкам</h2>
+<h2>Результаты по другим ставкам</h2>
 
 <p>
   Посмотрим теперь как влияет на результат изменение изначальной ставки изъятий,
@@ -1131,7 +1098,7 @@ comments:
   результаты меняются так:
 </p>
 
-<figure class="wp-block-table">
+<figure>
   <table>
     <thead>
       <tr>
@@ -1184,19 +1151,16 @@ comments:
   года):
 </p>
 
-<figure class="wp-block-image size-full">
+<figure>
   <a
     href="/assets/images/wd-withdrawal-boxplot-3pct.png"
     target="_blank"
     rel="noreferrer noopener"
-    ><img
-      src="/assets/images/wd-withdrawal-boxplot-3pct.png"
-      alt=""
-      class="wp-image-15676"
+    ><img src="/assets/images/wd-withdrawal-boxplot-3pct.png" alt=""
   /></a>
 </figure>
 
-<h2 class="wp-block-heading">Комиссии</h2>
+<h2>Комиссии</h2>
 
 <p>
   У каждого инвестора они разные, в зависимости от выбранных фондов и брокеров.
@@ -1260,7 +1224,7 @@ comments:
   успешности результат.
 </p>
 
-<h2 class="wp-block-heading">Глобальная диверсификация</h2>
+<h2>Глобальная диверсификация</h2>
 
 <p>
   Наконец, несмотря на то что в этом анализе я рассматриваю результаты именно
@@ -1270,7 +1234,7 @@ comments:
   так:
 </p>
 
-<figure class="wp-block-table">
+<figure>
   <table>
     <thead>
       <tr>
@@ -1312,7 +1276,7 @@ comments:
       </tr>
     </tbody>
   </table>
-  <figcaption class="wp-element-caption">
+  <figcaption>
     Доля S&amp;P 500 в портфеле обеспечивается уменьшением доли российских
     акций.<br />0% S&amp;P 500 значит 50% российских акций (MCFTR), 50% S&amp;P
     500 = 0% MCFTR.<br />Лучшие значения выделены полужирным шрифтом.
@@ -1324,8 +1288,8 @@ comments:
   заметно кучнее варианта только с российскими акциями:
 </p>
 
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
-  <figure class="wp-block-image size-full">
+<figure>
+  <figure>
     <a
       href="/assets/images/wd-rolling-capital-ir-wr-pmr-cpr-pr-us-25.png"
       target="_blank"
@@ -1333,11 +1297,10 @@ comments:
       ><img
         src="/assets/images/wd-rolling-capital-ir-wr-pmr-cpr-pr-us-25.png"
         alt=""
-        class="wp-image-15823"
     /></a>
   </figure>
 
-  <figure class="wp-block-image size-full">
+  <figure>
     <a
       href="/assets/images/wd-rolling-withdrawals-ir-wr-pmr-cpr-pr-us-25.png"
       target="_blank"
@@ -1345,7 +1308,6 @@ comments:
       ><img
         src="/assets/images/wd-rolling-withdrawals-ir-wr-pmr-cpr-pr-us-25.png"
         alt=""
-        class="wp-image-15824"
     /></a>
   </figure>
 </figure>
@@ -1357,20 +1319,17 @@ comments:
   суммы появляются периоды, в которых за 15 лет было всего одно сокращение:
 </p>
 
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
-  <figure class="wp-block-image size-full">
+<figure>
+  <figure>
     <a
       href="/assets/images/wd-capital-pp-preservation-sp500-25.png"
       target="_blank"
       rel="noopener"
-      ><img
-        src="/assets/images/wd-capital-pp-preservation-sp500-25.png"
-        alt=""
-        class="wp-image-15825"
+      ><img src="/assets/images/wd-capital-pp-preservation-sp500-25.png" alt=""
     /></a>
   </figure>
 
-  <figure class="wp-block-image size-full">
+  <figure>
     <a
       href="/assets/images/wd-withdrawal-pp-preservation-sp500-25.png"
       target="_blank"
@@ -1378,19 +1337,15 @@ comments:
       ><img
         src="/assets/images/wd-withdrawal-pp-preservation-sp500-25.png"
         alt=""
-        class="wp-image-15826"
     /></a>
   </figure>
 
-  <figure class="wp-block-image size-full">
+  <figure>
     <a
       href="/assets/images/wd-cuts-and-raises-sp500-25.png"
       target="_blank"
       rel="noopener"
-      ><img
-        src="/assets/images/wd-cuts-and-raises-sp500-25.png"
-        alt=""
-        class="wp-image-15827"
+      ><img src="/assets/images/wd-cuts-and-raises-sp500-25.png" alt=""
     /></a>
   </figure>
 </figure>
@@ -1401,28 +1356,22 @@ comments:
   комфортнее для инвестора:
 </p>
 
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped">
-  <figure class="wp-block-image size-full">
+<figure>
+  <figure>
     <a
       href="/assets/images/wd-capital-boxplot-sp500-25.png"
       target="_blank"
       rel="noopener"
-      ><img
-        src="/assets/images/wd-capital-boxplot-sp500-25.png"
-        alt=""
-        class="wp-image-15829"
+      ><img src="/assets/images/wd-capital-boxplot-sp500-25.png" alt=""
     /></a>
   </figure>
 
-  <figure class="wp-block-image size-full">
+  <figure>
     <a
       href="/assets/images/wd-withdrawal-boxplot-sp500-25.png"
       target="_blank"
       rel="noopener"
-      ><img
-        src="/assets/images/wd-withdrawal-boxplot-sp500-25.png"
-        alt=""
-        class="wp-image-15831"
+      ><img src="/assets/images/wd-withdrawal-boxplot-sp500-25.png" alt=""
     /></a>
   </figure>
 </figure>
@@ -1433,7 +1382,7 @@ comments:
   рискованно.
 </p>
 
-<h2 class="wp-block-heading">Возможные изменения в стратегии</h2>
+<h2>Возможные изменения в стратегии</h2>
 
 <p>
   Какие есть варианты у инвестора, чтобы полученные результаты улучшить или хотя
@@ -1520,7 +1469,7 @@ comments:
   какой-то степени выравниваем доли изъятиями по правилу управления портфелем.
 </p>
 
-<h2 class="wp-block-heading">Выводы</h2>
+<h2>Выводы</h2>
 
 <p>
   Пожалуй, главный вывод этой статьи в том, что стратегия SWR с модификациями
