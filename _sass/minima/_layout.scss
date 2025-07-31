@@ -453,6 +453,7 @@
   &__buttons {
     @extend %vertical-rhythm;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-basis: 100%;
     gap: $spacing-unit * 0.5;
@@ -484,10 +485,28 @@
     }
   }
 
-  &__format {
+  &__version {
+    margin-bottom: 0;
+    padding-bottom: 0.3em;
+    flex-basis: 100%;
+    @include relative-font-size(1.1);
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px dotted #000;
+  }
+
+  &__note {
+    flex-basis: 100%;
     font-size: 13px !important;
     text-align: center;
     text-transform: uppercase;
+
+    code {
+      text-transform: none;
+      background: $background-color;
+    }
   }
 }
 
