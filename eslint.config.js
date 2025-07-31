@@ -14,6 +14,7 @@ export default defineConfig([
     extends: ['markdown/recommended'],
     rules: {
       'markdown/no-duplicate-headings': 'error',
+      'markdown/no-missing-label-refs': 'off', // collides with Liquid
     },
   },
 ]);
