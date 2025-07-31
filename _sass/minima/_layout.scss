@@ -279,8 +279,9 @@
   @include relative-font-size(1.5);
 }
 
+.post-link-icon,
 .post-link-icon:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /**
