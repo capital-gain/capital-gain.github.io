@@ -152,6 +152,20 @@
 
 .footer-col-1 {
   flex: 1;
+
+  a {
+    color: $grey-color;
+    border-bottom: 1px dotted $grey-color;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: 0;
+    }
+
+    &:visited {
+      color: $grey-color;
+    }
+  }
 }
 
 /**
@@ -471,20 +485,6 @@
     font-size: 13px !important;
     text-align: center;
     text-transform: uppercase;
-  }
-}
-
-.mirror {
-  color: $grey-color;
-  border-bottom: 1px dashed $grey-color;
-
-  &:hover {
-    text-decoration: none;
-    border-bottom: 0;
-  }
-
-  &:visited {
-    color: $grey-color;
   }
 }
 
