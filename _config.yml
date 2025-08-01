@@ -15,6 +15,7 @@ show_excerpts: true
 telegram_username: capitalgainru
 vk_username: capitalgain
 dzen_username: capitalgain
+substack_username: capitalgainru
 rss: Atom
 kramdown:
   math_engine: katex

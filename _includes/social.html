@@ -35,6 +35,15 @@
       <span class="username">Дзен</span></a
     >
   </li>
+  {%- endif -%} {%- if site.substack_username -%}
+  <li>
+    <a
+      href="https://{{ site.substack_username | cgi_escape | escape }}.substack.com/subscribe"
+      target="_blank">
+      <span class="svg-icon">@</span>
+      <span class="username">Получать посты на email</span></a
+    >
+  </li>
   {%- endif -%} {%- if site.facebook_username -%}
   <li>
     <a
