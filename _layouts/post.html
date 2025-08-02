@@ -23,7 +23,11 @@ layout: default
       page.categories %}{% assign category_slug = category | slugify: 'pretty'
       %}{% assign category_url = '/category/' | append: category_slug | append:
       '/' %}<a href="{{ category_url | relative_url }}">{{ category }}</a>{%
-      unless forloop.last %}, {% endunless %}{% endfor %} {% endif %}
+      unless forloop.last %}, {% endunless %}{% endfor %} {% endif %} • {%
+      assign time_to_read = content | reading_time %}
+      <time datetime="{{ time_to_read }}M" title="Время на чтение"
+        >{{ time_to_read }} мин</time
+      >
     </p>
   </header>
 
