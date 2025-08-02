@@ -6,6 +6,7 @@
   },
   "devDependencies": {
     "@eslint/markdown": "^7.1.0",
+    "@shopify/prettier-plugin-liquid": "^1.9.3",
     "eslint": "^9.32.0",
     "prettier": "^3.6.2"
   }
