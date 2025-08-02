@@ -53,3 +53,6 @@ jekyll-archives:
   permalinks:
     tag: '/tag/:name/'
     category: '/category/:name/'
+header_pages:
+  - favourites/index.html
+  - about/index.html
