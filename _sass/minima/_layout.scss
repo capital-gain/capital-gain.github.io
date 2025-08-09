@@ -341,6 +341,30 @@
     }
   }
 
+  .heading-anchor {
+    opacity: 0;
+    margin-left: 0.1em;
+    font-weight: normal;
+    text-decoration: none;
+    color: $grey-color;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-color;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:hover .heading-anchor {
+      opacity: 1;
+    }
+  }
+
   p,
   ul,
   ol {

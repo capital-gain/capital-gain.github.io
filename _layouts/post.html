@@ -35,7 +35,9 @@ layout: default
   <p class="post-excerpt">{{ page.excerpt | smartify }}</p>
   {%- endif %}
 
-  <div class="post-content e-content" itemprop="articleBody">{{ content }}</div>
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content | add_heading_anchors }}
+  </div>
 
   {% if page.tags and page.tags.size > 0 %}
   <div class="post-tags">
