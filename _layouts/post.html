@@ -53,7 +53,7 @@ layout: default
     <h3>Комментарии</h3>
     <ul>
       {% for comment in page.comments %}
-      <li class="post-comment">
+      <li class="post-comment" id="comment-{{ comment.id }}">
         <strong>{{ comment.author }}</strong>
         <small>({{ comment.date | date: "%d.%m.%Y %H:%M" }})</small><br />
         {{ comment.content }}
