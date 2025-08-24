@@ -474,6 +474,19 @@
     }
   }
 
+  @media (max-width: 639px) {
+    &__annotation {
+      flex-direction: column;
+    }
+
+    &__cover {
+      margin: 0 0 1em;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
   &__buttons {
     @extend %vertical-rhythm;
     display: flex;
@@ -530,6 +543,7 @@
     code {
       text-transform: none;
       background: $background-color;
+      white-space: nowrap;
     }
   }
 }
