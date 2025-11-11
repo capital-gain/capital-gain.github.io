@@ -189,7 +189,7 @@ blockquote {
  * Code formatting
  */
 pre,
-code {
+code:not(pre code) {
   @include relative-font-size(0.9375);
   border: 1px solid color.adjust($accent-color, $lightness: 10%);
   border-radius: 3px;

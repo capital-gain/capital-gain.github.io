@@ -540,7 +540,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    code {
+    code:not(pre code) {
       text-transform: none;
       background: $background-color;
       white-space: nowrap;
