@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /app/assets/
+Allow: /app/
+Disallow: /app/*?*
