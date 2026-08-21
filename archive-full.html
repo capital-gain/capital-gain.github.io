@@ -1,0 +1,44 @@
+---
+layout: print
+title: 'Архив статей из рубрики «Итоги»'
+---
+
+<div class="title-page">
+  <h1 style="font-size: 3em">{{ page.title }}</h1>
+  <p style="font-size: 1.5em">Дмитрий Никитенко</p>
+  <div style="margin-top: 10cm">
+    <p>capital-gain.ru</p>
+  </div>
+</div>
+
+<div class="toc-page">
+  <h2>Содержание</h2>
+  <ul class="toc-list">
+    {% for post in site.categories['Итоги'] reversed %}
+    <li>
+      <a href="#post-{{ forloop.index }}">
+        <span class="toc-title">{{ post.title }}</span>
+        <span class="toc-filler"></span>
+        <span class="toc-date">{{ post.date | date: "%d.%m.%Y" }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% for post in site.categories['Итоги'] reversed %}
+<article id="post-{{ forloop.index }}" class="article">
+  <h1>{{ post.title }}</h1>
+  <p class="date"><i>Опубликовано: {{ post.date | date: "%d.%m.%Y" }}</i></p>
+
+  {%- if post.excerpt != "" %}
+  <p class="post-excerpt">{{ post.excerpt | smartify }}</p>
+  {%- endif %}
+
+  <div class="post-content">{{ post.content }}</div>
+
+  {% unless forloop.last %}
+  <hr class="page-break" />
+  {% endunless %}
+</article>
+{% endfor %}
