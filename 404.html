@@ -47,11 +47,14 @@
         // 3. Блог
         if (
           path.startsWith("/posts/") ||
-          path.startsWith("/talking-millions/")
+          path.startsWith("/talking-millions/") ||
+          path.startsWith("/course/")
         ) {
           let slug = path.split("/")[2];
           if (path.startsWith("/talking-millions/")) {
             slug = "talking-millions";
+          } else if (path.startsWith("/course/")) {
+            slug = "course";
           } else if (slug) {
             slug = slug.replace(/\/$/, ""); // убираем trailing slash
           }
@@ -131,12 +134,14 @@
           } else if (oldCourseParts.includes(slug)) {
             window.location.replace("https://capital-gain.ru/book/");
           } else {
-            window.location.replace("https://boosty.to/capitalgain");
+            window.location.replace(
+              "https://boosty.to/capitalgain/bundle/45e522b7-e476-4120-8e9d-43bf790aa5ab",
+            );
           }
           return;
         }
 
-        window.location.replace("https://boosty.to/capitalgain");
+        window.location.replace("https://capitalgainru.substack.com");
       })();
     </script>
   </head>
