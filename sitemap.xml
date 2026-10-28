@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
-        <loc>
-            https://capital-gain.ru/app
-        </loc>
+        <loc>https://capital-gain.ru/app/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -15,11 +13,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/backtest
-        </loc>
+        <loc>https://capital-gain.ru/app/backtest/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -29,11 +25,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/rebalance
-        </loc>
+        <loc>https://capital-gain.ru/app/rebalance/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -43,11 +37,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/planning
-        </loc>
+        <loc>https://capital-gain.ru/app/planning/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -57,11 +49,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/funds/analyse
-        </loc>
+        <loc>https://capital-gain.ru/app/funds/analyse/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -71,11 +61,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/annual
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/annual/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -85,11 +73,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/corrections
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/corrections/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -99,11 +85,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/correlation
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/correlation/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -113,11 +97,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/ath
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/ath/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -127,11 +109,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/monthly-returns
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/monthly-returns/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -141,11 +121,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/best-worst-returns
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/best-worst-returns/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -155,11 +133,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/rebalancing
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/rebalancing/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -169,11 +145,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/inflation
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/inflation/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -183,11 +157,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/earnings
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/earnings/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -197,11 +169,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/cape
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/cape/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -211,11 +181,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/yields
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/yields/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -225,11 +193,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/total-returns
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/total-returns/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -239,11 +205,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/app/stats/compare-indices
-        </loc>
+        <loc>https://capital-gain.ru/app/stats/compare-indices/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly
@@ -253,11 +217,9 @@
         </priority>
     </url>
     <url>
-        <loc>
-            https://capital-gain.ru/book
-        </loc>
+        <loc>https://capital-gain.ru/book/</loc>
         <lastmod>
-            2026-10-24T11:21:31.307Z
+            2026-10-28T04:47:16.470Z
         </lastmod>
         <changefreq>
             weekly

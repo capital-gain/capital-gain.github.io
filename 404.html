@@ -3,17 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <title>Перенаправление...</title>
-    <noscript>
-      <meta
-        http-equiv="refresh"
-        content="2; url=https://boosty.to/capitalgain"
-      />
-    </noscript>
+    <meta name="robots" content="noindex, nofollow" />
 
     <script>
       (function () {
         const path = window.location.pathname;
         const search = window.location.search;
+        const hash = window.location.hash;
 
         // 1. Скачивание файлов WooCommerce
         if (search.includes("download_file")) {
@@ -23,20 +19,23 @@
 
         // 2. Старые ссылки на инструменты
         const appRoutes = {
-          "/backtest": "/app/#/backtest",
-          "/rebalance": "/app/#/rebalance",
-          "/funds-compare": "/app/#/funds/compare",
-          "/funds-analyse": "/app/#/funds/analyse",
-          "/planning": "/app/#/planning",
-          "/monte-carlo": "/app/#/planning",
+          "/backtest": "/app/backtest/",
+          "/rebalance": "/app/rebalance/",
+          "/funds-compare": "/app/funds/compare/",
+          "/funds-analyse": "/app/funds/analyse/",
+          "/planning": "/app/planning/",
+          "/monte-carlo": "/app/planning/",
         };
 
-        for (const [oldPath, newHashRoute] of Object.entries(appRoutes)) {
-          if (path.startsWith(oldPath)) {
-            window.location.replace(newHashRoute + search);
+        for (const [oldPath, newRoute] of Object.entries(appRoutes)) {
+          if (path === oldPath || path.startsWith(oldPath + "/")) {
+            window.location.replace(newRoute + search + hash);
             return;
           }
         }
+
+        // Неизвестный адрес приложения остаётся страницей 404 GitHub Pages.
+        if (path === "/app" || path.startsWith("/app/")) return;
 
         // Корневой редирект в инструменты
         if (path === "/" || path === "") {
@@ -145,5 +144,8 @@
       })();
     </script>
   </head>
-  <body></body>
+  <body>
+    <h1>Страница не найдена</h1>
+    <p><a href="/app/">Перейти к инструментам</a></p>
+  </body>
 </html>
