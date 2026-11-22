@@ -31270,6 +31270,56 @@
       "year": 2025,
       "value": 141400000000,
       "std": "MSFO"
+    },
+    {
+      "year": 2016,
+      "value": 0,
+      "std": "RSBU"
+    },
+    {
+      "year": 2017,
+      "value": 0,
+      "std": "RSBU"
+    },
+    {
+      "year": 2018,
+      "value": 0,
+      "std": "RSBU"
+    },
+    {
+      "year": 2019,
+      "value": 0,
+      "std": "RSBU"
+    },
+    {
+      "year": 2020,
+      "value": 0,
+      "std": "RSBU"
+    },
+    {
+      "year": 2021,
+      "value": 0,
+      "std": "RSBU"
+    },
+    {
+      "year": 2022,
+      "value": 0,
+      "std": "RSBU"
+    },
+    {
+      "year": 2023,
+      "value": 0,
+      "std": "RSBU"
+    },
+    {
+      "year": 2024,
+      "value": 874600000000,
+      "std": "RSBU"
+    },
+    {
+      "year": 2025,
+      "value": 825800000000,
+      "std": "RSBU"
     }
   ],
   "YKEN": [
